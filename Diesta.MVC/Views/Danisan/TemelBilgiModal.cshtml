@@ -1,0 +1,135 @@
+﻿<div class="modal-dialog modal- modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-body p-0">
+            <div class="card bg-secondary border-0 mb-0">
+
+                <div class="card-body px-lg-5 py-lg-5">
+                    <div class="text-center text-muted mb-4">
+                        <label>Lütfen temel kişi bilgilerini doldurun.</label>
+                    </div>
+                    <form role="form">
+                        <div class="form-group mb-3">
+
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" >Ad</label>
+                            <input type="text" id="input-temelBilgiAd" class="form-control" placeholder="Username" >
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" >Soyad</label>
+                            <input type="text" id="input-temelBilgiSoyad" class="form-control" placeholder="Username" value="lucky.jesse">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" >Doğum Tarih</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                </div>
+                                <input class="form-control datepicker" id="input-temelBilgiDogumTarih" placeholder="Select date" type="text" value="06/20/2020">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" >Cinsiyet</label>
+                            <div class="input-group">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="input-temelBilgiCErkek" name="temelBilgiCinsiyet" class="custom-control-input">
+                                    <label class="custom-control-label" for="temelBilgiCinsiyet">Erkek</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="input-temelBilgiCKadın" name="temelBilgiCinsiyet" class="custom-control-input">
+                                    <label class="custom-control-label" for="temelBilgiCinsiyet">Kadın</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label >Eğitim Durumu</label>
+                            <select class="form-control" id="input-temelBilgiEgitim">
+                                <option>İlköğretim</option>
+                                <option>Ortaöğretim</option>
+                                <option>Önlisans</option>
+                                <option>Lisans</option>
+                                <option>Lisanüstü</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label >Yaş Grubu</label>
+                            <select class="form-control" id="input-temelBilgiYas" >
+                                <option>18-25</option>
+                                <option>25-30</option>
+                                <option>30-40</option>
+                                <option>40-50</option>
+                                <option>50-60</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" >Telefon</label>
+                            <input type="text" id="input-temelBilgiTelefon" class="form-control" placeholder="Username" value="lucky.jesse">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" >E-Posta</label>
+                            <input type="email" id="input-temelBilgiMail" class="form-control" placeholder="jesse@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" >TC Kimlik No</label>
+                            <input type="text" id="input-temelBilgiTCKimlik" class="form-control" placeholder="Username" value="lucky.jesse">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" >Şehir</label>
+                            <select class="form-control" id="input-temelBilgiSehir">
+                                <option>İstanbul</option>
+                                <option>Ankara</option>
+                                <option>İzmir</option>
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label" >İlçe</label>
+                            <select class="form-control" id="input-temelBilgiIlce">
+                                <option>Kadıköy</option>
+                                <option>Pendik</option>
+                                <option>Beşiktaş</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Adres</label>
+                            <textarea id="input-temelBilgiAdres" rows="4" class="form-control" placeholder="A few words about you ...">Örnek bir adres...</textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" id="btnTemelBilgiEkle" class="btn btn-primary my-4">Ekle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script>
+    $('#btnTemelBilgiEkle').click(function () {
+        console.log("tredasa");
+        var gg = $('#input-temelBilgiAd').val();
+        gg = $('#input-temelBilgiSoyad').val();
+
+
+        gg = $('#input-temelBilgiDogumTarih').val();//cinsiyete bak
+        gg = $('#input-temelBilgiEgitim').val();
+
+        gg = $('#input-temelBilgiYas').val();
+        gg = $('#input-temelBilgiTelefon').val();
+
+        gg = $('#input-temelBilgiMail').val();
+        gg = $('#input-temelBilgiTCKimlik').val();
+
+
+        gg = $('#input-temelBilgiSehir selected:option').val();
+        gg = $('#input-temelBilgiIlce selected:option').val();
+
+        gg = $('#input-temelBilgiAdres').val();
+
+
+    });
+</script>
+
+
+

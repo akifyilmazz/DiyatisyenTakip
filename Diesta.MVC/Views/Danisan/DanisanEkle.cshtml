@@ -1,0 +1,1756 @@
+﻿
+@{
+    ViewBag.Title = "DanisanEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="main-content" id="panel">
+    <!-- Topnav -->
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Search form -->
+                <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+                    <div class="form-group mb-0">
+                        <div class="input-group input-group-alternative input-group-merge">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            </div>
+                            <input class="form-control" placeholder="Ara" type="text">
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main"
+                            aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </form>
+                <!-- Navbar links -->
+                <ul class="navbar-nav align-items-center  ml-md-auto ">
+                    <li class="nav-item d-xl-none">
+                        <!-- Sidenav toggler -->
+                        <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin"
+                             data-target="#sidenav-main">
+                            <div class="sidenav-toggler-inner">
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item d-sm-none">
+                        <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
+                            <i class="ni ni-zoom-split-in"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                            <i class="ni ni-bell-55"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
+                            <!-- Dropdown header -->
+                            <div class="px-3 py-3">
+                                <h6 class="text-sm text-muted m-0">
+                                    Toplam <strong class="text-primary">13</strong>
+                                    tane bildiriminiz vardır.
+                                </h6>
+                            </div>
+                            <!-- List group -->
+                            <div class="list-group list-group-flush">
+                                <a href="#!" class="list-group-item list-group-item-action">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <!-- Avatar -->
+                                            <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg"
+                                                 class="avatar rounded-circle">
+                                        </div>
+                                        <div class="col ml--2">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h4 class="mb-0 text-sm">Ali Ata</h4>
+                                                </div>
+                                                <div class="text-right text-muted">
+                                                    <small>2 saat önce</small>
+                                                </div>
+                                            </div>
+                                            <p class="text-sm mb-0">Randevu bilgilerini gönderdi.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#!" class="list-group-item list-group-item-action">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <!-- Avatar -->
+                                            <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg"
+                                                 class="avatar rounded-circle">
+                                        </div>
+                                        <div class="col ml--2">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h4 class="mb-0 text-sm">Hande Subaşı</h4>
+                                                </div>
+                                                <div class="text-right text-muted">
+                                                    <small>3 saat önce</small>
+                                                </div>
+                                            </div>
+                                            <p class="text-sm mb-0">Yeni bir referans ekledi.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#!" class="list-group-item list-group-item-action">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <!-- Avatar -->
+                                            <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg"
+                                                 class="avatar rounded-circle">
+                                        </div>
+                                        <div class="col ml--2">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h4 class="mb-0 text-sm">Şeyma Özdoğan</h4>
+                                                </div>
+                                                <div class="text-right text-muted">
+                                                    <small>5 saat önce</small>
+                                                </div>
+                                            </div>
+                                            <p class="text-sm mb-0">Test mesaj.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#!" class="list-group-item list-group-item-action">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <!-- Avatar -->
+                                            <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg"
+                                                 class="avatar rounded-circle">
+                                        </div>
+                                        <div class="col ml--2">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h4 class="mb-0 text-sm">Deren Aslan</h4>
+                                                </div>
+                                                <div class="text-right text-muted">
+                                                    <small>6 saat önce</small>
+                                                </div>
+                                            </div>
+                                            <p class="text-sm mb-0">Yeni bir referans ekledi</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#!" class="list-group-item list-group-item-action">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto">
+                                            <!-- Avatar -->
+                                            <img alt="Image placeholder" src="../assets/img/theme/team-5.jpg"
+                                                 class="avatar rounded-circle">
+                                        </div>
+                                        <div class="col ml--2">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h4 class="mb-0 text-sm">Ferdi Şimşek</h4>
+                                                </div>
+                                                <div class="text-right text-muted">
+                                                    <small>1 gün önce </small>
+                                                </div>
+                                            </div>
+                                            <p class="text-sm mb-0">Test mesaj.</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- View all -->
+                            <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">
+                                Tümünü
+                                Görüntüle
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                            <div class="media align-items-center">
+                                <span class="avatar avatar-sm rounded-circle">
+                                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
+                                </span>
+                                <div class="media-body  ml-2  d-none d-lg-block">
+                                    <span class="mb-0 text-sm  font-weight-bold">Burcu Yılmaz</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu  dropdown-menu-right ">
+                            <div class="dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Hoşgeldin!</h6>
+                            </div>
+                            <a href="../profile/profileEdit.html" class="dropdown-item">
+                                <i class="ni ni-single-02"></i>
+                                <span>Profilim</span>
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                                <i class="ni ni-settings-gear-65"></i>
+                                <span>Ayarlarım</span>
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                                <i class="ni ni-send"></i>
+                                <span>Arkadaşlarımı davet et</span>
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                                <i class="ni ni-support-16"></i>
+                                <span>Destek</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#!" class="dropdown-item">
+                                <i class="ni ni-user-run"></i>
+                                <span>Çıkış</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-12 col-7">
+                        <h6 class="h2 text-white d-inline-block mb-0">
+                            <button class="btn btn-success" id="btnTemelBilgiModal">
+                                Temel Bilgi
+                            </button>
+                        </h6>
+
+                        <h6 class="h2 text-white d-inline-block mb-0">
+                            <button style="margin-right:0;" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false" class="btn btn-success nav-link-inner--text">
+                                Anket
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a id="btnDiyet" class="dropdown-item"
+                                   href="#">Diyet Öyküsü</a>
+                                <a id="btnBesinAliskanlik" class="dropdown-item" href="#">Besin Alışkanlıklarınız</a>
+                                <a id="btnGecmis" class="dropdown-item" href="#">Özgeçmiş</a>
+                                <a id="btnGenelAliskanlik" class="dropdown-item" href="#">Alışkanlıklarınız</a>
+
+                                <a id="btnHareket" class="dropdown-item" href="#">Hareket ve Egzersiz Alışkanlıklarınız</a>
+                                <a id="btnKisisel" class="dropdown-item" href="#">Kişisel İlgi Alanlarınız</a>
+                            </div>
+
+                        </h6>
+
+                        <h6 class="h2 text-white d-inline-block mb-0">
+                            <button id="btnAntropometri" class="btn btn-success">
+                                Antropometri
+                            </button>
+                        </h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">
+                            <button id="btnMenu" class="btn btn-success">
+                                Menü/Diyet Planı
+                            </button>
+                        </h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">
+                            <button id="btnEgzersiz" class="btn btn-success">
+                                Egzersiz Programı
+                            </button>
+                        </h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">
+                            <button id="btnFinans" class="btn btn-success">
+                                Finans
+                            </button>
+                        </h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">
+                            <button id="btnNot" class="btn btn-success">
+                                Notlar
+                            </button>
+                        </h6>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header border-0">
+                        <h3 class="mb-0">Danışan Ekle</h3>
+                    </div>
+                    <hr class="my-4" />
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Kişi Bilgileri</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Ad</label>
+                                        <input type="text" id="input-username" class="form-control"
+                                               placeholder="Username" value="lucky.jesse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Soyad</label>
+                                        <input type="text" id="input-username" class="form-control"
+                                               placeholder="Username" value="lucky.jesse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Doğum Tarih</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="ni ni-calendar-grid-58"></i>
+                                                </span>
+                                            </div>
+                                            <input class="form-control datepicker" placeholder="Select date"
+                                                   type="text" value="06/20/2020">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Cinsiyet</label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="customRadioInline1"
+                                                       name="customRadioInline1" class="custom-control-input">
+                                                <label class="custom-control-label"
+                                                       for="customRadioInline1">Erkek</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="customRadioInline2"
+                                                       name="customRadioInline1" class="custom-control-input">
+                                                <label class="custom-control-label"
+                                                       for="customRadioInline2">Kadın</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Eğitim Durumu</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>İlköğretim</option>
+                                            <option>Ortaöğretim</option>
+                                            <option>Önlisans</option>
+                                            <option>Lisans</option>
+                                            <option>Lisanüstü</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Yaş Grubu</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>18-25</option>
+                                            <option>25-30</option>
+                                            <option>30-40</option>
+                                            <option>40-50</option>
+                                            <option>50-60</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Telefon</label>
+                                        <input type="text" id="input-username" class="form-control"
+                                               placeholder="Username" value="lucky.jesse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">E-Posta</label>
+                                        <input type="email" id="input-email" class="form-control"
+                                               placeholder="jesse@example.com">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">TC Kimlik No</label>
+                                        <input type="text" id="input-username" class="form-control"
+                                               placeholder="Username" value="lucky.jesse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-city">Şehir</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>İstanbul</option>
+                                            <option>Ankara</option>
+                                            <option>İzmir</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-country">İlçe</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Kadıköy</option>
+                                            <option>Pendik</option>
+                                            <option>Beşiktaş</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <div class="form-group">
+                                        <label class="form-control-label">Adres</label>
+                                        <textarea rows="4" class="form-control"
+                                                  placeholder="A few words about you ...">Örnek bir adres...</textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4" />
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Diyet Öyküsü</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            En yüksek
+                                            kilo
+                                        </label>
+                                        <input type="text" id="input-enyuksekkilo" class="form-control"
+                                               placeholder="Username" value="lucky.jesse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Diyet
+                                            Deneyimi
+                                        </label>
+                                        <input type="text" id="input-diyetdeneyim" class="form-control"
+                                               placeholder="Username" value="lucky.jesse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Verdiğiniz En Yüksek
+                                            Kilo
+                                        </label>
+                                        <input type="text" id="input-enyuksekkilo" class="form-control"
+                                               placeholder="Username" value="lucky.jesse">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr class="my-4" />
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Besin Alışkanlığı</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Gıda Alerjisi</label>
+                                        <input type="text" id="input-gidaalerjisi" class="form-control"
+                                               placeholder="Username" value="lucky.jesse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Öğün Sayısı</label>
+                                        <input type="text" id="input-ogunsayisi" class="form-control"
+                                               placeholder="Username" value="lucky.jesse">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Öğün Atlar
+                                            Mısınız?
+                                        </label>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="input-anket-anaogun1" name="input-anket-anaogun"
+                                                   class="custom-control-input">
+                                            <label class="custom-control-label"
+                                                   for="input-anket-anaogun1">Evet</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Ana Öğün Atlama
+                                            Sebebi
+                                        </label>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Zamanım yok
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck12">
+                                            <label class="custom-control-label" for="customCheck12">
+                                                Geç kalıyorum
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck13">
+                                            <label class="custom-control-label" for="customCheck13">
+                                                Alışkanlığım yok
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck14">
+                                            <label class="custom-control-label" for="customCheck14">
+                                                Canım istemiyor/iştahsızım
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck15">
+                                            <label class="custom-control-label" for="customCheck15">
+                                                Kurs,spor vb.faaliyetlerim nedeniyle
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck16">
+                                            <label class="custom-control-label" for="customCheck16">
+                                                Hazırlanmadığı için
+                                            </label>
+                                        </div>
+                                        <label class="form-control-label" for="input-username">
+                                            Başka bir neden varsa
+                                            bu
+                                            alana yazabilirsiniz.
+                                        </label>
+                                        <textarea rows="4" class="form-control" placeholder=""></textarea>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Öğün aralarında yemek
+                                            yeme
+                                            alışkanlığınız var mıdır?
+                                            <div class="input-group">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="radio-anket-aliskanlik1"
+                                                           name="radioOgunArasi" class="custom-control-input">
+                                                    <label class="custom-control-label"
+                                                           for="radio-anket-aliskanlik1">Evet</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="radio-anket-aliskanlik2"
+                                                           name="radioOgunArasi" class="custom-control-input">
+                                                    <label class="custom-control-label"
+                                                           for="radio-anket-aliskanlik2">Hayır</label>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Günde ne kadar su
+                                            tüketirsiniz?
+                                        </label>
+                                        <input class="form-control" type="number" value="2" id="">
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Tatlı veya çikolata
+                                            yiyor
+                                            musunuz?
+
+                                            <div class="input-group">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="radio-anket-tatli1" name="radioCikolata"
+                                                           class="custom-control-input">
+                                                    <label class="custom-control-label"
+                                                           for="radio-anket-tatli1">Evet</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="radio-anket-tatli2" name="radioCikolata"
+                                                           class="custom-control-input">
+                                                    <label class="custom-control-label"
+                                                           for="radio-anket-tatli2">Hayır</label>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Tatlı veya çikolata
+                                            yiyorsanız ne sıklıkla yiyorsunuz?
+                                        </label>
+                                        <input class="form-control" type="text" value="2" id="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Ne kadar hızlı yemek
+                                            yiyorsunuz?
+                                        </label>
+                                        <input class="form-control" type="text" value="" id="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Ev dışında toplam
+                                            yemek yeme
+                                            sıklığınız nedir?
+                                        </label>
+
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Hergün</option>
+                                            <option>Haftada 1 kez</option>
+                                            <option>Haftada 2 kez</option>
+                                            <option>Haftada 3 kez</option>
+                                            <option>Haftada 4 kez</option>
+                                            <option>Haftada 5 kez</option>
+                                            <option>Haftada 6 kez</option>
+                                            <option>Ayda 1 kez</option>
+                                            <option>Ayda 2 kez</option>
+                                            <option>Ayda 3 kez</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Ev dışında en sık
+                                            nerede
+                                            yemek yersiniz?
+                                        </label>
+
+                                        <select class="form-control" id="exampleFormControlSelect21">
+                                            <option>İş yeri yemekhanesi</option>
+                                            <option>Lokanta</option>
+                                            <option>Kebapçı</option>
+                                            <option>Büfe</option>
+                                            <option>Fast-Food Restaurant</option>
+                                            <option>Pastane</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Kola gazoz ve vb.
+                                            asitleri
+                                            sıklıkla tüketir misiniz?
+
+                                            <div class="input-group">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="radio-anket-asit1"
+                                                           name="radio-anket-asit" class="custom-control-input">
+                                                    <label class="custom-control-label"
+                                                           for="radio-anket-asit1">Evet</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="radio-anket-asit2"
+                                                           name="radio-anket-asit" class="custom-control-input">
+                                                    <label class="custom-control-label"
+                                                           for="radio-anket-asit2">Hayır</label>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    <hr class="my-4" />
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Öz Geçmiş</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-username">
+                                                Doktor tarafından teşhisi
+                                                konulmuş herhangi bir hastalığınız var mı?
+                                            </label>
+                                            <div class="input-group">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline3311" name="customRadioInline331"
+                                                           class="custom-control-input">
+                                                    <label class="custom-control-label" for="customRadioInline3311">Evet</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline33112" name="customRadioInline331"
+                                                           class="custom-control-input">
+                                                    <label class="custom-control-label"
+                                                           for="customRadioInline33112">Hayır</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-username">
+                                                Cevabınız evet ise teşhis
+                                                edilen hastalığınız hangisi/hangileridir?
+                                            </label>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                <label class="custom-control-label" for="customCheck1">
+                                                    Kalp-Damar hastalıkları
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck12">
+                                                <label class="custom-control-label" for="customCheck12">
+                                                    Şeker hastalığı
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck13">
+                                                <label class="custom-control-label" for="customCheck13">
+                                                    Yüksek tansiyon
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck14">
+                                                <label class="custom-control-label" for="customCheck14">
+                                                    Kanser
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck15">
+                                                <label class="custom-control-label" for="customCheck15">
+                                                    Sindirim sistemi hastalıkları
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck16">
+                                                <label class="custom-control-label" for="customCheck16">
+                                                    Ruhsal sorunlar
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck16">
+                                                <label class="custom-control-label" for="customCheck16">
+                                                    Kas iskelet sistemi problemleri
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck16">
+                                                <label class="custom-control-label" for="customCheck16">
+                                                    Endokrin (hormonal) hastalıklar
+                                                </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck16">
+                                                <label class="custom-control-label" for="customCheck16">
+                                                    Vitamin ve mineral yetersizlikleri(Demir,B12 vitamini yetersizliği vb.)
+                                                </label>
+                                            </div>
+                                            <label class="form-control-label" for="input-username">
+                                                Başka bir hastalığınız varsa
+                                                bu
+                                                alana yazabilirsiniz.
+                                            </label>
+                                            <textarea rows="4" class="form-control" placeholder=""></textarea>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <hr class="my-4" />
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Genel Alışkanlıklar</h6>
+                        <div class="pl-lg-4">
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Sigara kullanıyor
+                                            musunuz?
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="sigara" name="radioSigara"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="sigara">Evet</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="sigara2" name="radioSigara"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="sigara2">Hayır</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Cevabınız evet ise kaç yıldır
+                                            kullanıyorsunuz?
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 10">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Sigara içiyorsanız ne
+                                            sıklıkta ve ortalama haftada kaç adet sigara içiyorsunuz?
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 70">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Sigarayı bıraktıysanız kaç
+                                            yıl önce bıraktınız?
+                                        </label>
+                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 1">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Sigarayı bırakmayı denediniz
+                                            mi?
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="sigaraBirak" name="radioSigaraBirak"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="sigaraBirak">Evet</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="sigaraBirak2" name="radioSigaraBirak"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="sigaraBirak2">Hayır</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Alkol alır mısınız?</label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="alkol" name="radioalkol"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="alkol">Evet</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="alkol2" name="radioalkol"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="alkol2">Hayır</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Ne sıklıkla alkol
+                                            alıyorsunuz?
+                                        </label>
+                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 1">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Antidepresan kullanıyor
+                                            musunuz?
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="depresan" name="radiodepresan"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="depresan">Evet</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="depresan2" name="radiodepresan"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="depresan2">Hayır</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Herhangi bir ilaç
+                                            bağımlılığınız var mı?
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="ilac" name="radioilac" class="custom-control-input">
+                                                <label class="custom-control-label" for="ilac">Evet</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="ilac2" name="radioilac"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="ilac2">Hayır</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr class="my-4" />
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Hareket ve Egzersiz</h6>
+                        <div class="pl-lg-4">
+
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Düzenli olarak fiziksel
+                                            aktivite/egzersiz/spor yapıyor musunuz?
+                                        </label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="aktive" name="radioaktive"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="aktive">Evet</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="aktive2" name="radioaktive"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label" for="aktive2">Hayır</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Cevabınız evet ise fiziksel aktivite yapıyorsanız hangi aktiviteyi/aktiviteleri
+                                            yapıyorsunuz?
+                                        </label>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Yürüyüş
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Bahçe işleri
+                                            </label>
+                                        </div>
+
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Koşu
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Futbol
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Yüzme
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Kondisyon aleti kullanma
+                                            </label>
+                                        </div>
+                                        <label class="form-control-label" for="input-username">
+                                            Başka bir aktiviteniz varsa
+                                            bu
+                                            alana yazabilirsiniz.
+                                        </label>
+                                        <textarea rows="4" class="form-control" placeholder=""></textarea>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">
+                                            Ne sıklıkta fiziksel aktivite/egzersiz/spor
+                                            yapıyorsunuz?
+                                        </label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Hergün</option>
+                                            <option>Haftada 3-4 gün</option>
+                                            <option>Haftada 2-3 gün</option>
+                                            <option>Haftada 1-2 gün</option>
+                                            <option>15 günde bir</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Fiziksel aktivite veya egzersiz yapıyorsanız yapmanızın nedenlerinden size göre
+                                            önemli olanları işaretleyiniz.
+                                        </label>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Gerginliği azaltmak/rahatlamak için
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Sağlıklı olmak için
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Diğer insanlarla tanışmak için
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Eğlence için
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Kendimi iyi hissetmek için
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Kilo vermek veya kilomu korumak için
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Daha iyi konsantre olmamı sağladığı için
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Bilmiyorum
+                                            </label>
+                                        </div>
+
+                                        <label class="form-control-label" for="input-username">
+                                            Başka bir nedeniniz varsa
+                                            bu
+                                            alana yazabilirsiniz.
+                                        </label>
+                                        <textarea rows="4" class="form-control" placeholder=""></textarea>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Fiziksel aktivite veya egzersiz yapmıyorsanız yapmamanızın nedenlerinden size
+                                            göre önemli olanları işaretleyiniz.
+                                        </label>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Zamanım yok
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Nasıl başlayacağımı bilmiyorum
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Spor yapacak enerjiyi kendimde bulamıyorum
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Maddi gücüm yeterli değil
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Sağlık problemlerinden dolayı yapamıyorum
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                İşlerim çok yoğun
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Spor yapabileceğim uygun bir yer yok
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Tv izlemeyi veya kitap okumayı tercih ediyorum
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Daha fazla egzersize ihtiyaç duymuyorum
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">
+                                                Bilmiyorum
+                                            </label>
+                                        </div>
+                                        <label class="form-control-label" for="input-username">
+                                            Başka bir nedeniniz varsa
+                                            bu
+                                            alana yazabilirsiniz.
+                                        </label>
+                                        <textarea rows="4" class="form-control" placeholder=""></textarea>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Günde kaç saaatiniz
+                                            bilgisayar başında geçiyor?
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 6">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Günde kaç saat televizyon
+                                            izlersiniz?
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+                    <hr class="my-4" />
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Kişisel İlgi Alanları</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Şu anki kilonuzu nasıl tanımlarsınız?
+                                        </label>
+                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Kilonuz günlük aktivitelerinizi nasıl etkiliyor?
+                                        </label>
+                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Kilonuz sosyal yaşamınızı nasıl etkiliyor?
+                                        </label>
+                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Neden kilo vermek istiyorsunuz?
+                                        </label>
+                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Kaç kilo vermeyi planlıyorsunuz?
+                                        </label>
+                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Hedeflediğiniz en düşük kilo nedir
+                                        </label>
+                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Sağlığınız hakkında en önemli endişeleriniz nelerdir?
+                                        </label>
+                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Ek bilgi ve notlarınız</label>
+                                        <textarea rows="4" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Finans</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Tarih</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                            </div>
+                                            <input class="form-control datepicker" placeholder="Select date" type="text"
+                                                   value="06/20/2020">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Ücret
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Ödendi
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Yorum</label>
+                                        <textarea rows="4" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Not</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Tarih</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                            </div>
+                                            <input class="form-control datepicker" placeholder="Select date" type="text"
+                                                   value="06/20/2020">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Şikayeti</label>
+                                        <textarea rows="4" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label">Notlar</label>
+                                        <textarea rows="4" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <hr class="my-4">
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Egzersiz</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Aktivite Türü</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Uyumak</option>
+                                            <option>Bilardo</option>
+                                            <option>Temizlik yapma (hafif)</option>
+                                            <option>Yemek pişirme</option>
+                                            <option>Ergometrik egzersiz (50 Vat,az yorucu)</option>
+                                            <option>Sörf yapma</option>
+                                            <option>Çocuk bakımı</option>
+                                            <option>Sörf yapma</option>
+                                            <option>Masa tenisi oynama</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Dakika/Gün</label>
+                                        <input type="text" id="" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <hr class="my-4">
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Antropometri</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">Tarih</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                            </div>
+                                            <input class="form-control datepicker" placeholder="Select date" type="text"
+                                                   value="06/20/2020">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Ağırlık
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Boy
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Bel
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Kalça
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="input-username">
+                                            Yağ
+                                        </label>
+                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <hr class="my-4">
+
+                    <div class="card-body">
+                        <h6 class="heading-small text-muted mb-4">Menü</h6>
+                        <div class="pl-lg-4">
+                            <div class="row">
+                                <div class="col-lg-4">
+
+                                </div>
+                                <div class="col-lg-4">
+
+                                </div>
+                                <div class="col-lg-4">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+
+                                </div>
+                                <div class="col-lg-4">
+
+                                </div>
+                                <div class="col-lg-4">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Dark table -->
+        <!-- Footer -->
+        <footer class="footer pt-0">
+            <div class="row align-items-center justify-content-lg-between">
+                <div class="col-lg-6">
+                    <div class="copyright text-center  text-lg-left  text-muted">
+                        &copy; 2020 <a href="#" class="font-weight-bold ml-1" target="_blank">Aerotive Labs</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" target="_blank">Aerotive Labs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" target="_blank">Hakkımızda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" target="_blank">KVKK</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <div class="modal fade" id="modal-anket-temelBilgi" data-url='@Url.Action("TemelBilgiModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+    <div class="modal fade" id="modal-anket-diyetOykusu" data-url='@Url.Action("DiyetOykusu")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+    <div class="modal fade" id="modal-anket-besinAliskanlik" data-url='@Url.Action("BesinAliskanlikModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+
+    <div class="modal fade" id="modal-anket-gecmis" data-url='@Url.Action("GecmisModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+
+    <div class="modal fade" id="modal-anket-genelAliskanlik" data-url='@Url.Action("GenelAliskanlikModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+
+    <div class="modal fade" id="modal-anket-hareket" data-url='@Url.Action("HareketModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+
+    <div class="modal fade" id="modal-anket-kisisel" data-url='@Url.Action("KisiselModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+    <div class="modal fade" id="modal-anket-antropometri" data-url='@Url.Action("AntropometriModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+    <div class="modal fade" id="modal-anket-menu" data-url='@Url.Action("MenuModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+    <div class="modal fade" id="modal-anket-egzersiz" data-url='@Url.Action("EgzersizModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+    <div class="modal fade" id="modal-anket-finans" data-url='@Url.Action("FinansModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+
+    <div class="modal fade" id="modal-anket-not" data-url='@Url.Action("NotModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+         aria-hidden="true">
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+@section test{
+    <script>
+
+        $('#btnTemelBilgiModal').click(function () {
+            var url = $('#modal-anket-temelBilgi').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-temelBilgi').html(data);
+
+                $('#modal-anket-temelBilgi').modal('show');
+            });
+        });
+        $('#btnDiyetOykusu').click(function () {
+            var url = $('#modal-anket-diyetOykusu').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-diyetOykusu').html(data);
+
+                $('#modal-anket-diyetOykusu').modal('show');
+            });
+        });
+        
+        $('#btnBesinAliskanlik').click(function () {
+            var url = $('#modal-anket-besinAliskanlik').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-besinAliskanlik').html(data);
+
+                $('#modal-anket-besinAliskanlik').modal('show');
+            });
+        });
+        $('#btnGecmis').click(function () {
+            var url = $('#modal-anket-gecmis').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-gecmis').html(data);
+
+                $('#modal-anket-gecmis').modal('show');
+            });
+        });
+        $('#btnGenelAliskanlik').click(function () {
+            var url = $('#modal-anket-genelAliskanlik').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-genelAliskanlik').html(data);
+
+                $('#modal-anket-genelAliskanlik').modal('show');
+            });
+        });
+        $('#btnHareket').click(function () {
+            var url = $('#modal-anket-hareket').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-hareket').html(data);
+
+                $('#modal-anket-hareket').modal('show');
+            });
+        });
+        $('#btnKisisel').click(function () {
+            var url = $('#modal-anket-kisisel').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-kisisel').html(data);
+               
+                $('#modal-anket-kisisel').modal('show');
+            });
+        });
+        $('#btnAntropometri').click(function () {
+            var url = $('#modal-anket-antropometri').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-antropometri').html(data);
+
+                $('#modal-anket-antropometri').modal('show');
+            });
+        });
+        $('#btnMenu').click(function () {
+            var url = $('#modal-anket-menu').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-menu').html(data);
+
+                $('#modal-anket-menu').modal('show');
+            });
+        });
+        $('#btnEgzersiz').click(function () {
+            var url = $('#modal-anket-egzersiz').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-egzersiz').html(data);
+
+                $('#modal-anket-egzersiz').modal('show');
+            });
+        });
+        $('#btnFinans').click(function () {
+            var url = $('#modal-anket-finans').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-finans').html(data);
+
+                $('#modal-anket-finans').modal('show');
+            });
+        });
+        $('#btnNot').click(function () {
+            var url = $('#modal-anket-not').data('url');
+
+            $.get(url, function (data) {
+                $('#modal-anket-not').html(data);
+
+                $('#modal-anket-not').modal('show');
+            });
+        });
+
+
+       
+
+        
+    </script>
+}

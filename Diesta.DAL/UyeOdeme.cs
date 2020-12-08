@@ -1,0 +1,50 @@
+namespace Diesta.DAL
+{
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("UyeOdeme")]
+    public partial class UyeOdeme
+    {
+        [Key]
+        [Column(Order = 0)]
+        [StringLength(255)]
+        public string Id { get; set; }
+
+        [Key]
+        [Column(Order = 1)]
+        public bool IsActive { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        public bool IsDeleted { get; set; }
+
+        [Key]
+        [Column(Order = 3)]
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime? UpdatedAt { get; set; }
+
+        public DateTime? DeletedAt { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
+        [StringLength(255)]
+        public string UyeId { get; set; }
+
+        [Key]
+        [Column(Order = 5)]
+        public DateTime UyeOdemeTarih { get; set; }
+
+        [Key]
+        [Column(Order = 6, TypeName = "money")]
+        public decimal UyeOdemeTutar { get; set; }
+
+        [Key]
+        [Column(Order = 7, TypeName = "text")]
+        public string UyeOdemeAciklama { get; set; }
+    }
+}

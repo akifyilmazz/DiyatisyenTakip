@@ -1,0 +1,2 @@
+C:\Users\mky\source\repos\Diesta\Diesta.Repository\obj\Debug\Diesta.Repository.csprojAssemblyReference.cache
+C:\Users\mky\source\repos\Diesta\Diesta.Repository\obj\Debug\Diesta.Repository.csproj.CoreCompileInputs.cache
