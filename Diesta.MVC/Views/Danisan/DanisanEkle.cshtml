@@ -3,215 +3,8 @@
     ViewBag.Title = "DanisanEkle";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div class="main-content" id="panel">
-    <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Search form -->
-                <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-                    <div class="form-group mb-0">
-                        <div class="input-group input-group-alternative input-group-merge">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-search"></i></span>
-                            </div>
-                            <input class="form-control" placeholder="Ara" type="text">
-                        </div>
-                    </div>
-                    <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main"
-                            aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </form>
-                <!-- Navbar links -->
-                <ul class="navbar-nav align-items-center  ml-md-auto ">
-                    <li class="nav-item d-xl-none">
-                        <!-- Sidenav toggler -->
-                        <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin"
-                             data-target="#sidenav-main">
-                            <div class="sidenav-toggler-inner">
-                                <i class="sidenav-toggler-line"></i>
-                                <i class="sidenav-toggler-line"></i>
-                                <i class="sidenav-toggler-line"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item d-sm-none">
-                        <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
-                            <i class="ni ni-zoom-split-in"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            <i class="ni ni-bell-55"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
-                            <!-- Dropdown header -->
-                            <div class="px-3 py-3">
-                                <h6 class="text-sm text-muted m-0">
-                                    Toplam <strong class="text-primary">13</strong>
-                                    tane bildiriminiz vardır.
-                                </h6>
-                            </div>
-                            <!-- List group -->
-                            <div class="list-group list-group-flush">
-                                <a href="#!" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">Ali Ata</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>2 saat önce</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Randevu bilgilerini gönderdi.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">Hande Subaşı</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>3 saat önce</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Yeni bir referans ekledi.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">Şeyma Özdoğan</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>5 saat önce</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Test mesaj.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">Deren Aslan</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>6 saat önce</small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Yeni bir referans ekledi</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#!" class="list-group-item list-group-item-action">
-                                    <div class="row align-items-center">
-                                        <div class="col-auto">
-                                            <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../assets/img/theme/team-5.jpg"
-                                                 class="avatar rounded-circle">
-                                        </div>
-                                        <div class="col ml--2">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <h4 class="mb-0 text-sm">Ferdi Şimşek</h4>
-                                                </div>
-                                                <div class="text-right text-muted">
-                                                    <small>1 gün önce </small>
-                                                </div>
-                                            </div>
-                                            <p class="text-sm mb-0">Test mesaj.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- View all -->
-                            <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">
-                                Tümünü
-                                Görüntüle
-                            </a>
-                        </div>
-                    </li>
-
-                </ul>
-                <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                            <div class="media align-items-center">
-                                <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
-                                </span>
-                                <div class="media-body  ml-2  d-none d-lg-block">
-                                    <span class="mb-0 text-sm  font-weight-bold">Burcu Yılmaz</span>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu  dropdown-menu-right ">
-                            <div class="dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Hoşgeldin!</h6>
-                            </div>
-                            <a href="../profile/profileEdit.html" class="dropdown-item">
-                                <i class="ni ni-single-02"></i>
-                                <span>Profilim</span>
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                                <i class="ni ni-settings-gear-65"></i>
-                                <span>Ayarlarım</span>
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                                <i class="ni ni-send"></i>
-                                <span>Arkadaşlarımı davet et</span>
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                                <i class="ni ni-support-16"></i>
-                                <span>Destek</span>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#!" class="dropdown-item">
-                                <i class="ni ni-user-run"></i>
-                                <span>Çıkış</span>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+<!--Buttons-->
+<section>
     <div class="header bg-primary pb-6">
         <div class="container-fluid">
             <div class="header-body">
@@ -230,8 +23,8 @@
                             </button>
 
                             <div class="dropdown-menu">
-                                <a id="btnDiyet" class="dropdown-item"
-                                   href="#">Diyet Öyküsü</a>
+                                <a id="btnDiyetOykusuModal" class="dropdown-item"
+                                   href="javascript:void(0)">Diyet Öyküsü</a>
                                 <a id="btnBesinAliskanlik" class="dropdown-item" href="#">Besin Alışkanlıklarınız</a>
                                 <a id="btnGecmis" class="dropdown-item" href="#">Özgeçmiş</a>
                                 <a id="btnGenelAliskanlik" class="dropdown-item" href="#">Alışkanlıklarınız</a>
@@ -274,7 +67,10 @@
             </div>
         </div>
     </div>
-    <!-- Page content -->
+</section>
+<!--end: Buttons-->
+
+<section>
     <div class="container-fluid mt--6">
         <div class="row">
             <div class="col">
@@ -283,189 +79,16 @@
                     <div class="card-header border-0">
                         <h3 class="mb-0">Danışan Ekle</h3>
                     </div>
-                    <hr class="my-4" />
+                    <div id="kisiBilgisi" data-url='@Url.Action("DanisanBilgiTemel","PartialDanisan")'>
 
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Kişi Bilgileri</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Ad</label>
-                                        <input type="text" id="input-username" class="form-control"
-                                               placeholder="Username" value="lucky.jesse">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Soyad</label>
-                                        <input type="text" id="input-username" class="form-control"
-                                               placeholder="Username" value="lucky.jesse">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Doğum Tarih</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <i class="ni ni-calendar-grid-58"></i>
-                                                </span>
-                                            </div>
-                                            <input class="form-control datepicker" placeholder="Select date"
-                                                   type="text" value="06/20/2020">
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Cinsiyet</label>
-                                        <div class="input-group">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline1"
-                                                       name="customRadioInline1" class="custom-control-input">
-                                                <label class="custom-control-label"
-                                                       for="customRadioInline1">Erkek</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline2"
-                                                       name="customRadioInline1" class="custom-control-input">
-                                                <label class="custom-control-label"
-                                                       for="customRadioInline2">Kadın</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Eğitim Durumu</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>İlköğretim</option>
-                                            <option>Ortaöğretim</option>
-                                            <option>Önlisans</option>
-                                            <option>Lisans</option>
-                                            <option>Lisanüstü</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label for="exampleFormControlSelect1">Yaş Grubu</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>18-25</option>
-                                            <option>25-30</option>
-                                            <option>30-40</option>
-                                            <option>40-50</option>
-                                            <option>50-60</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Telefon</label>
-                                        <input type="text" id="input-username" class="form-control"
-                                               placeholder="Username" value="lucky.jesse">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">E-Posta</label>
-                                        <input type="email" id="input-email" class="form-control"
-                                               placeholder="jesse@example.com">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">TC Kimlik No</label>
-                                        <input type="text" id="input-username" class="form-control"
-                                               placeholder="Username" value="lucky.jesse">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-city">Şehir</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>İstanbul</option>
-                                            <option>Ankara</option>
-                                            <option>İzmir</option>
-                                        </select>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-country">İlçe</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>Kadıköy</option>
-                                            <option>Pendik</option>
-                                            <option>Beşiktaş</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-
-                                    <div class="form-group">
-                                        <label class="form-control-label">Adres</label>
-                                        <textarea rows="4" class="form-control"
-                                                  placeholder="A few words about you ...">Örnek bir adres...</textarea>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <hr class="my-4" />
 
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Diyet Öyküsü</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            En yüksek
-                                            kilo
-                                        </label>
-                                        <input type="text" id="input-enyuksekkilo" class="form-control"
-                                               placeholder="Username" value="lucky.jesse">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Diyet
-                                            Deneyimi
-                                        </label>
-                                        <input type="text" id="input-diyetdeneyim" class="form-control"
-                                               placeholder="Username" value="lucky.jesse">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Verdiğiniz En Yüksek
-                                            Kilo
-                                        </label>
-                                        <input type="text" id="input-enyuksekkilo" class="form-control"
-                                               placeholder="Username" value="lucky.jesse">
-                                    </div>
+                    <div id="diyetOykusu" data-url='@Url.Action("DiyetOykusu","PartialDanisan")'>
 
-                                </div>
-
-                            </div>
-
-                        </div>
                     </div>
-
+                   
                     <hr class="my-4" />
 
                     <div class="card-body">
@@ -1404,9 +1027,6 @@
                         </div>
                     </div>
 
-
-
-
                     <hr class="my-4">
 
                     <div class="card-body">
@@ -1439,7 +1059,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <hr class="my-4">
 
@@ -1506,7 +1125,6 @@
 
                     </div>
 
-
                     <hr class="my-4">
 
                     <div class="card-body">
@@ -1569,75 +1187,63 @@
             </div>
         </footer>
     </div>
+</section>
 
 
-    <div class="modal fade" id="modal-anket-temelBilgi" data-url='@Url.Action("TemelBilgiModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+<section>
+
+    <div class="modal fade" id="modal-anket-temelBilgi" data-url='@Url.Action("TemelBilgiModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
-    <div class="modal fade" id="modal-anket-diyetOykusu" data-url='@Url.Action("DiyetOykusu")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+
+    <div class="modal fade" id="modal-anket-diyetOykusu" data-url='@Url.Action("DiyetOykusuModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
+
     <div class="modal fade" id="modal-anket-besinAliskanlik" data-url='@Url.Action("BesinAliskanlikModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
 
     <div class="modal fade" id="modal-anket-gecmis" data-url='@Url.Action("GecmisModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
 
     <div class="modal fade" id="modal-anket-genelAliskanlik" data-url='@Url.Action("GenelAliskanlikModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
 
     <div class="modal fade" id="modal-anket-hareket" data-url='@Url.Action("HareketModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
 
     <div class="modal fade" id="modal-anket-kisisel" data-url='@Url.Action("KisiselModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
+
     <div class="modal fade" id="modal-anket-antropometri" data-url='@Url.Action("AntropometriModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
+
     <div class="modal fade" id="modal-anket-menu" data-url='@Url.Action("MenuModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
+
     <div class="modal fade" id="modal-anket-egzersiz" data-url='@Url.Action("EgzersizModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
+
     <div class="modal fade" id="modal-anket-finans" data-url='@Url.Action("FinansModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
 
     <div class="modal fade" id="modal-anket-not" data-url='@Url.Action("NotModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
-
     </div>
+</section>
 
+@section DanisanEkle{
 
-
-
-
-
-
-</div>
-
-
-
-@section test{
     <script>
-
         $('#btnTemelBilgiModal').click(function () {
             var url = $('#modal-anket-temelBilgi').data('url');
 
@@ -1647,7 +1253,7 @@
                 $('#modal-anket-temelBilgi').modal('show');
             });
         });
-        $('#btnDiyetOykusu').click(function () {
+        $('#btnDiyetOykusuModal').click(function () {
             var url = $('#modal-anket-diyetOykusu').data('url');
 
             $.get(url, function (data) {
@@ -1656,7 +1262,7 @@
                 $('#modal-anket-diyetOykusu').modal('show');
             });
         });
-        
+
         $('#btnBesinAliskanlik').click(function () {
             var url = $('#modal-anket-besinAliskanlik').data('url');
 
@@ -1698,7 +1304,7 @@
 
             $.get(url, function (data) {
                 $('#modal-anket-kisisel').html(data);
-               
+
                 $('#modal-anket-kisisel').modal('show');
             });
         });
@@ -1747,10 +1353,5 @@
                 $('#modal-anket-not').modal('show');
             });
         });
-
-
-       
-
-        
     </script>
 }
