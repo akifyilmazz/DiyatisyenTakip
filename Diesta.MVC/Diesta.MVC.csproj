@@ -6202,6 +6202,8 @@
     <Content Include="Views\PartialDanisan\DanisanBilgiTemel.cshtml" />
     <Content Include="Views\PartialDanisan\DiyetOykusu.cshtml" />
     <Content Include="Views\PartialModal\DiyetOykusuModal.cshtml" />
+    <Content Include="Views\PartialDanisan\BesinAliskanlik.cshtml" />
+    <Content Include="Views\PartialDanisan\Gecmis.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

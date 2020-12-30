@@ -116,73 +116,75 @@
     var r = jQuery.Deferred();
     $('#btnTemelBilgiModalEkle').click(function () {
 
-        if ($("#TemelBilgiModal-ad").val().trim() == "") {
-            toastr.error('Lütfen İsim Giriniz'); return false;
-        }
-        $("#danisanBilgiTemel-Ad").val($("#TemelBilgiModal-ad").val());
 
-        if ($("#TemelBilgiModal-Soyad").val().trim() == "") {
-            toastr.error("Lütfen Soyad Giriniz"); return false;
-        }
-        $("#danisanBilgiTemel-Soyad").val($("#TemelBilgiModal-Soyad").val());
+        var url = $('#kisiBilgisi').data('url');
+        $.get(url, function (data) {
+            $('#kisiBilgisi').html(data);
 
-        if ($("#TemelBilgiModal-DogTar").val().trim() == "") {
-            toastr.error("Lütfen Doğum Tarihi giriniz"); return false;
-        }
-        $("#danisanBilgiTemel-DogTar").val($("#TemelBilgiModal-DogTar").val());
+            if ($("#TemelBilgiModal-ad").val().trim() == "") {
+                toastr.error('Lütfen İsim Giriniz'); return false;
+            }
+            $("#danisanBilgiTemel-Ad").val($("#TemelBilgiModal-ad").val());
 
-        //if ($(".TemelBilgiModal-Cinsiyet:checked").val().trim() == "") {
-        //    toastr.error("Lütfen Cinsiyet Giriniz"); return false;
-        //}
-        //$(".danisanBilgiTemel-Cinsiyet:checked").val((".TemelBilgiModal-Cinsiyet:checked").val());
+            if ($("#TemelBilgiModal-Soyad").val().trim() == "") {
+                toastr.error("Lütfen Soyad Giriniz"); return false;
+            }
+            $("#danisanBilgiTemel-Soyad").val($("#TemelBilgiModal-Soyad").val());
 
+            if ($("#TemelBilgiModal-DogTar").val().trim() == "") {
+                toastr.error("Lütfen Doğum Tarihi giriniz"); return false;
+            }
+            $("#danisanBilgiTemel-DogTar").val($("#TemelBilgiModal-DogTar").val());
 
-        if ($("#TemelBilgiModal-EgitimDur option:selected").val().trim == "") {
-            toastr.error("Lütfen Eğitim Durumunu Seçiniz"); return false;
-        }
-        $("#danisanBilgiTemel-EgitimDurumu option:selected").text($("#TemelBilgiModal-EgitimDur option:selected").text())
-
-        if ($("#TemelBilgiModal-YasGrubu option:selected").val().trim() == "") {
-            toastr.error("Lütfen Yaş Gurubu Seçiniz"); return false;
-        }
-        $("#danisanBilgiTemel-YasGrubu option:selected").text($("#TemelBilgiModal-YasGrubu option:selected").text());
+            //if ($(".TemelBilgiModal-Cinsiyet:checked").val().trim() == "") {
+            //    toastr.error("Lütfen Cinsiyet Giriniz"); return false;
+            //}
+            //$(".danisanBilgiTemel-Cinsiyet:checked").val((".TemelBilgiModal-Cinsiyet:checked").val());
 
 
-        if ($("#TemelBilgiModal-Tel").val().trim == "") {
-            toastr.error("Lütfen Telefon Giriniz"); return false
-        }
-        $("#danisanBilgiTemel-Tel").val($("#TemelBilgiModal-Tel").val());
+            if ($("#TemelBilgiModal-EgitimDur option:selected").val().trim == "") {
+                toastr.error("Lütfen Eğitim Durumunu Seçiniz"); return false;
+            }
+            $("#danisanBilgiTemel-EgitimDurumu option:selected").text($("#TemelBilgiModal-EgitimDur option:selected").text())
 
-        if ($("#TemelBilgiModal-Eposta").val().trim() == "") {
-            toastr.error("Lütfen Eposta Adresi Giriniz"); return false;
-        }
-        $("#danisanBilgiTemel-Email").val($("#TemelBilgiModal-Eposta").val());
+            if ($("#TemelBilgiModal-YasGrubu option:selected").val().trim() == "") {
+                toastr.error("Lütfen Yaş Gurubu Seçiniz"); return false;
+            }
+            $("#danisanBilgiTemel-YasGrubu option:selected").text($("#TemelBilgiModal-YasGrubu option:selected").text());
 
-        if ($("#TemelBilgiModal-TcNo").val().trim() == "") {
-            toastr.error("Lütfen TC Numarası Giriniz"); return false;
-        }
-        $("#danisanBilgiTemel-TcNo").val($("#TemelBilgiModal-TcNo").val());
 
-        if ($("#TemelBilgiModal-Sehir option:selected").val().trim() == "") {
-            toastr.error("Lütfen Şehir Seçiniz"); return false;
-        }
-        $("#danisanBilgiTemel-Sehir option:selected").text($("#TemelBilgiModal-Sehir option:selected").text());
+            if ($("#TemelBilgiModal-Tel").val().trim == "") {
+                toastr.error("Lütfen Telefon Giriniz"); return false
+            }
+            $("#danisanBilgiTemel-Tel").val($("#TemelBilgiModal-Tel").val());
 
-        if ($("#TemelBilgiModal-Ilce option:selected").val().trim() == "") {
-            toastr.error("Lütfen İlçe Seçiniz"); return false;
-        }
-        $("#danisanBilgiTemel-Ilce option:selected").text($("#TemelBilgiModal-Ilce option:selected").text());
+            if ($("#TemelBilgiModal-Eposta").val().trim() == "") {
+                toastr.error("Lütfen Eposta Adresi Giriniz"); return false;
+            }
+            $("#danisanBilgiTemel-Email").val($("#TemelBilgiModal-Eposta").val());
 
-        if ($("#TemelBilgiModal-Adres").val().trim() == "") {
-            toastr.error("Lütfen Adres Giriniz"); return false;
-        }
-        $("#danisanBilgiTemel-Adres").val($("#TemelBilgiModal-Adres").val());
+            if ($("#TemelBilgiModal-TcNo").val().trim() == "") {
+                toastr.error("Lütfen TC Numarası Giriniz"); return false;
+            }
+            $("#danisanBilgiTemel-TcNo").val($("#TemelBilgiModal-TcNo").val());
 
-            var url = $('#kisiBilgisi').data('url');
-            $.get(url, function (data) {
-                $('#kisiBilgisi').html(data);
-                $('#modal-anket-temelBilgi').modal('hide');
-            });
+            if ($("#TemelBilgiModal-Sehir option:selected").val().trim() == "") {
+                toastr.error("Lütfen Şehir Seçiniz"); return false;
+            }
+            $("#danisanBilgiTemel-Sehir option:selected").text($("#TemelBilgiModal-Sehir option:selected").text());
+
+            if ($("#TemelBilgiModal-Ilce option:selected").val().trim() == "") {
+                toastr.error("Lütfen İlçe Seçiniz"); return false;
+            }
+            $("#danisanBilgiTemel-Ilce option:selected").text($("#TemelBilgiModal-Ilce option:selected").text());
+
+            if ($("#TemelBilgiModal-Adres").val().trim() == "") {
+                toastr.error("Lütfen Adres Giriniz"); return false;
+            }
+            $("#danisanBilgiTemel-Adres").val($("#TemelBilgiModal-Adres").val());
+
+            $('#modal-anket-temelBilgi').modal('hide');
+        });
     });
 </script>
 

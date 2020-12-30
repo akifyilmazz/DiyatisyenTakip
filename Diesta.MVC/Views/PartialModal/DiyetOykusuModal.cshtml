@@ -28,7 +28,7 @@
                                 Bu diyet denemeleriniz ile en
                                 fazla kaç kilo verebildiniz?
                             </label>
-                            <input type="text" class="form-control" id="DiyetOykusuModal-VerilenEnyuksekKilo" placeholder=" Kilo Giriniz  *" >
+                            <input type="text" class="form-control" id="DiyetOykusuModal-VerilenEnyuksekKilo" placeholder=" Kilo Giriniz  *">
                         </div>
 
                         <div class="text-right">
@@ -43,24 +43,27 @@
 
 <script>
     $('#DiyetOykusuModalEkle').click(function () {
-        if ($("#DiyetOykusuModal-enyuksekKilo").val().trim() == "") {
-            toastr.error('Lütfen  en yüksek kilonuzu Giriniz'); return false;
-        }
-        $("#DiyetOykusu-enyuksekKilo").val($("#DiyetOykusuModal-enyuksekKilo").val());
-
-        if ($("#DiyetOykusuModal-diyetDeneyim").val().trim() == "") {
-            toastr.error("Lütfen Diyet Deneyiminizi Giriniz"); return false;
-        }
-        $("#DiyetOykusu-diyetdeneyim").val($("#DiyetOykusuModal-diyetDeneyim").val());
-
-        if ($("#DiyetOykusuModal-VerilenEnyuksekKilo").val().trim() == "") {
-            toastr.error("Lütfen Verilen En Yüksek Kiloyu Giriniz giriniz"); return false;
-        }
-        $("#DiyetOykusu-VerilenEnyuksekKilo").val($("#DiyetOykusuModal-VerilenEnyuksekKilo").val());
 
         var url = $('#diyetOykusu').data('url');
         $.get(url, function (data) {
             $('#diyetOykusu').html(data);
+
+            if ($("#DiyetOykusuModal-enyuksekKilo").val().trim() == "") {
+                toastr.error('Lütfen  en yüksek kilonuzu Giriniz'); return false;
+            }
+            $("#DiyetOykusu-enyuksekKilo").val($("#DiyetOykusuModal-enyuksekKilo").val());
+
+            if ($("#DiyetOykusuModal-diyetDeneyim").val().trim() == "") {
+                toastr.error("Lütfen Diyet Deneyiminizi Giriniz"); return false;
+            }
+            $("#DiyetOykusu-diyetdeneyim").val($("#DiyetOykusuModal-diyetDeneyim").val());
+
+            if ($("#DiyetOykusuModal-VerilenEnyuksekKilo").val().trim() == "") {
+                toastr.error("Lütfen Verilen En Yüksek Kiloyu Giriniz giriniz"); return false;
+            }
+            $("#DiyetOykusu-VerilenEnyuksekKilo").val($("#DiyetOykusuModal-VerilenEnyuksekKilo").val());
+
+
             $('#modal-anket-diyetOykusu').modal('hide');
         });
     });

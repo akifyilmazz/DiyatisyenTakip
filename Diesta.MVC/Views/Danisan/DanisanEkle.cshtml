@@ -25,8 +25,8 @@
                             <div class="dropdown-menu">
                                 <a id="btnDiyetOykusuModal" class="dropdown-item"
                                    href="javascript:void(0)">Diyet Öyküsü</a>
-                                <a id="btnBesinAliskanlik" class="dropdown-item" href="#">Besin Alışkanlıklarınız</a>
-                                <a id="btnGecmis" class="dropdown-item" href="#">Özgeçmiş</a>
+                                <a id="btnBesinAliskanlikModal" class="dropdown-item" href="javascript:void(0)">Besin Alışkanlıklarınız</a>
+                                <a id="btnGecmisModal" class="dropdown-item" href="#">Özgeçmiş</a>
                                 <a id="btnGenelAliskanlik" class="dropdown-item" href="#">Alışkanlıklarınız</a>
 
                                 <a id="btnHareket" class="dropdown-item" href="#">Hareket ve Egzersiz Alışkanlıklarınız</a>
@@ -83,370 +83,17 @@
 
                     </div>
 
-                    <hr class="my-4" />
-
                     <div id="diyetOykusu" data-url='@Url.Action("DiyetOykusu","PartialDanisan")'>
 
                     </div>
-                   
-                    <hr class="my-4" />
 
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Besin Alışkanlığı</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Gıda Alerjisi</label>
-                                        <input type="text" id="input-gidaalerjisi" class="form-control"
-                                               placeholder="Username" value="lucky.jesse">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Öğün Sayısı</label>
-                                        <input type="text" id="input-ogunsayisi" class="form-control"
-                                               placeholder="Username" value="lucky.jesse">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Öğün Atlar
-                                            Mısınız?
-                                        </label>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="input-anket-anaogun1" name="input-anket-anaogun"
-                                                   class="custom-control-input">
-                                            <label class="custom-control-label"
-                                                   for="input-anket-anaogun1">Evet</label>
-                                        </div>
+                    <div id="besinAliskanligi" data-url='@Url.Action("BesinAliskanlik","PartialDanisan")'>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4">
-
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Ana Öğün Atlama
-                                            Sebebi
-                                        </label>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                            <label class="custom-control-label" for="customCheck1">
-                                                Zamanım yok
-                                            </label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck12">
-                                            <label class="custom-control-label" for="customCheck12">
-                                                Geç kalıyorum
-                                            </label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck13">
-                                            <label class="custom-control-label" for="customCheck13">
-                                                Alışkanlığım yok
-                                            </label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck14">
-                                            <label class="custom-control-label" for="customCheck14">
-                                                Canım istemiyor/iştahsızım
-                                            </label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck15">
-                                            <label class="custom-control-label" for="customCheck15">
-                                                Kurs,spor vb.faaliyetlerim nedeniyle
-                                            </label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck16">
-                                            <label class="custom-control-label" for="customCheck16">
-                                                Hazırlanmadığı için
-                                            </label>
-                                        </div>
-                                        <label class="form-control-label" for="input-username">
-                                            Başka bir neden varsa
-                                            bu
-                                            alana yazabilirsiniz.
-                                        </label>
-                                        <textarea rows="4" class="form-control" placeholder=""></textarea>
-
-                                    </div>
-
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Öğün aralarında yemek
-                                            yeme
-                                            alışkanlığınız var mıdır?
-                                            <div class="input-group">
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="radio-anket-aliskanlik1"
-                                                           name="radioOgunArasi" class="custom-control-input">
-                                                    <label class="custom-control-label"
-                                                           for="radio-anket-aliskanlik1">Evet</label>
-                                                </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="radio-anket-aliskanlik2"
-                                                           name="radioOgunArasi" class="custom-control-input">
-                                                    <label class="custom-control-label"
-                                                           for="radio-anket-aliskanlik2">Hayır</label>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Günde ne kadar su
-                                            tüketirsiniz?
-                                        </label>
-                                        <input class="form-control" type="number" value="2" id="">
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Tatlı veya çikolata
-                                            yiyor
-                                            musunuz?
-
-                                            <div class="input-group">
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="radio-anket-tatli1" name="radioCikolata"
-                                                           class="custom-control-input">
-                                                    <label class="custom-control-label"
-                                                           for="radio-anket-tatli1">Evet</label>
-                                                </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="radio-anket-tatli2" name="radioCikolata"
-                                                           class="custom-control-input">
-                                                    <label class="custom-control-label"
-                                                           for="radio-anket-tatli2">Hayır</label>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Tatlı veya çikolata
-                                            yiyorsanız ne sıklıkla yiyorsunuz?
-                                        </label>
-                                        <input class="form-control" type="text" value="2" id="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Ne kadar hızlı yemek
-                                            yiyorsunuz?
-                                        </label>
-                                        <input class="form-control" type="text" value="" id="">
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Ev dışında toplam
-                                            yemek yeme
-                                            sıklığınız nedir?
-                                        </label>
-
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>Hergün</option>
-                                            <option>Haftada 1 kez</option>
-                                            <option>Haftada 2 kez</option>
-                                            <option>Haftada 3 kez</option>
-                                            <option>Haftada 4 kez</option>
-                                            <option>Haftada 5 kez</option>
-                                            <option>Haftada 6 kez</option>
-                                            <option>Ayda 1 kez</option>
-                                            <option>Ayda 2 kez</option>
-                                            <option>Ayda 3 kez</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Ev dışında en sık
-                                            nerede
-                                            yemek yersiniz?
-                                        </label>
-
-                                        <select class="form-control" id="exampleFormControlSelect21">
-                                            <option>İş yeri yemekhanesi</option>
-                                            <option>Lokanta</option>
-                                            <option>Kebapçı</option>
-                                            <option>Büfe</option>
-                                            <option>Fast-Food Restaurant</option>
-                                            <option>Pastane</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Kola gazoz ve vb.
-                                            asitleri
-                                            sıklıkla tüketir misiniz?
-
-                                            <div class="input-group">
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="radio-anket-asit1"
-                                                           name="radio-anket-asit" class="custom-control-input">
-                                                    <label class="custom-control-label"
-                                                           for="radio-anket-asit1">Evet</label>
-                                                </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="radio-anket-asit2"
-                                                           name="radio-anket-asit" class="custom-control-input">
-                                                    <label class="custom-control-label"
-                                                           for="radio-anket-asit2">Hayır</label>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
                     </div>
+                    
+                    <div id="ozGecmis" data-url='@Url.Action("Gecmis","PartialDanisan")'>
 
-                    <hr class="my-4" />
-
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Öz Geçmiş</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-username">
-                                                Doktor tarafından teşhisi
-                                                konulmuş herhangi bir hastalığınız var mı?
-                                            </label>
-                                            <div class="input-group">
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline3311" name="customRadioInline331"
-                                                           class="custom-control-input">
-                                                    <label class="custom-control-label" for="customRadioInline3311">Evet</label>
-                                                </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline33112" name="customRadioInline331"
-                                                           class="custom-control-input">
-                                                    <label class="custom-control-label"
-                                                           for="customRadioInline33112">Hayır</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-username">
-                                                Cevabınız evet ise teşhis
-                                                edilen hastalığınız hangisi/hangileridir?
-                                            </label>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                <label class="custom-control-label" for="customCheck1">
-                                                    Kalp-Damar hastalıkları
-                                                </label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck12">
-                                                <label class="custom-control-label" for="customCheck12">
-                                                    Şeker hastalığı
-                                                </label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck13">
-                                                <label class="custom-control-label" for="customCheck13">
-                                                    Yüksek tansiyon
-                                                </label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck14">
-                                                <label class="custom-control-label" for="customCheck14">
-                                                    Kanser
-                                                </label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck15">
-                                                <label class="custom-control-label" for="customCheck15">
-                                                    Sindirim sistemi hastalıkları
-                                                </label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck16">
-                                                <label class="custom-control-label" for="customCheck16">
-                                                    Ruhsal sorunlar
-                                                </label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck16">
-                                                <label class="custom-control-label" for="customCheck16">
-                                                    Kas iskelet sistemi problemleri
-                                                </label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck16">
-                                                <label class="custom-control-label" for="customCheck16">
-                                                    Endokrin (hormonal) hastalıklar
-                                                </label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck16">
-                                                <label class="custom-control-label" for="customCheck16">
-                                                    Vitamin ve mineral yetersizlikleri(Demir,B12 vitamini yetersizliği vb.)
-                                                </label>
-                                            </div>
-                                            <label class="form-control-label" for="input-username">
-                                                Başka bir hastalığınız varsa
-                                                bu
-                                                alana yazabilirsiniz.
-                                            </label>
-                                            <textarea rows="4" class="form-control" placeholder=""></textarea>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-                        </div>
                     </div>
-
-                    <hr class="my-4" />
 
                     <div class="card-body">
                         <h6 class="heading-small text-muted mb-4">Genel Alışkanlıklar</h6>
@@ -1200,11 +847,11 @@
          aria-hidden="true">
     </div>
 
-    <div class="modal fade" id="modal-anket-besinAliskanlik" data-url='@Url.Action("BesinAliskanlikModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+    <div class="modal fade" id="modal-anket-besinAliskanlik" data-url='@Url.Action("BesinAliskanlikModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
     </div>
 
-    <div class="modal fade" id="modal-anket-gecmis" data-url='@Url.Action("GecmisModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+    <div class="modal fade" id="modal-anket-gecmis" data-url='@Url.Action("GecmisModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
     </div>
 
@@ -1263,7 +910,7 @@
             });
         });
 
-        $('#btnBesinAliskanlik').click(function () {
+        $('#btnBesinAliskanlikModal').click(function () {
             var url = $('#modal-anket-besinAliskanlik').data('url');
 
             $.get(url, function (data) {
@@ -1272,7 +919,7 @@
                 $('#modal-anket-besinAliskanlik').modal('show');
             });
         });
-        $('#btnGecmis').click(function () {
+        $('#btnGecmisModal').click(function () {
             var url = $('#modal-anket-gecmis').data('url');
 
             $.get(url, function (data) {

@@ -10,81 +10,91 @@
                     </div>
                     <form role="form">
 
-                        <div class="form-group">
+                        <div class="form-group" id="gecmisModal-resmiHastalik">
                             <label class="form-control-label">
                                 Doktor tarafından teşhisi
                                 konulmuş herhangi bir hastalığınız var mı?
                             </label>
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio"
-                                           class="custom-control-input">
-                                    <label class="custom-control-label">Evet</label>
+                                    <input type="radio" id="input-anket-anaogun1" name="input-anket-anaogun"
+                                           class="custom-control-input" value="Evet">
+                                    <label class="custom-control-label" for="input-anket-anaogun1">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio"
-                                           class="custom-control-input">
-                                    <label class="custom-control-label">Hayır</label>
+                                    <input type="radio" id="input-anket-anaogun2" name="input-anket-anaogun"
+                                           class="custom-control-input" value="Hayır">
+                                    <label class="custom-control-label" for="input-anket-anaogun2">Hayır</label>
                                 </div>
                             </div>
+
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id="gecmisModal-resmiHastalikIcerik">
                             <label class="form-control-label">
                                 Cevabınız evet ise teşhis
                                 edilen hastalığınız hangisi/hangileridir?
                             </label>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" />
-                                <label class="custom-control-label">
+                            <div class="custom-control custom-radio custom-control">
+                                <input type="radio" class="custom-control-input" name="input-anket-anaogun2"
+                                      id="input-anket-anaogun3" value="Kalp-Damar hastalıkları" />
+                                <label class="custom-control-label" for="input-anket-anaogun3">
                                     Kalp-Damar hastalıkları
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" />
-                                <label class="custom-control-label">
+                            <div class="custom-control custom-radio custom-control">
+                                <input type="radio" class="custom-control-input" name="input-anket-anaogun2"
+                                      id="input-anket-anaogun4" value="Şeker hastalığı" />
+                                <label class="custom-control-label" for="input-anket-anaogun4">
                                     Şeker hastalığı
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" />
-                                <label class="custom-control-label">
+                            <div class="custom-control custom-radio custom-control">
+                                <input type="radio" class="custom-control-input" name="input-anket-anaogun2"
+                                      id="input-anket-anaogun5" value="Yüksek tansiyon" />
+                                <label class="custom-control-label" for="input-anket-anaogun5">
                                     Yüksek tansiyon
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" />
-                                <label class="custom-control-label">
+                            <div class="custom-control custom-radio custom-control">
+                                <input type="radio" class="custom-control-input" name="input-anket-anaogun2"
+                                      id="input-anket-anaogun6" value="Kanser" />
+                                <label class="custom-control-label" for="input-anket-anaogun6">
                                     Kanser
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" />
-                                <label class="custom-control-label">
+                            <div class="custom-control custom-radio custom-control">
+                                <input type="radio" class="custom-control-input" name="input-anket-anaogun2"
+                                      id="input-anket-anaogun7" value="Sindirim sistemi hastalıkları" />
+                                <label class="custom-control-label" for="input-anket-anaogun7">
                                     Sindirim sistemi hastalıkları
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" />
-                                <label class="custom-control-label">
+                            <div class="custom-control custom-radio custom-control">
+                                <input type="radio" class="custom-control-input" name="input-anket-anaogun2"
+                                     id="input-anket-anaogu8"  value="Ruhsal sorunlar" />
+                                <label class="custom-control-label" for="input-anket-anaogun8">
                                     Ruhsal sorunlar
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" />
-                                <label class="custom-control-label">
+                            <div class="custom-control custom-radio custom-control">
+                                <input type="radio" class="custom-control-input" name="input-anket-anaogun2"
+                                     id="input-anket-anaogun9"  value="Kas iskelet sistemi problemleri" />
+                                <label class="custom-control-label" for="input-anket-anaogun9">
                                     Kas iskelet sistemi problemleri
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" />
-                                <label class="custom-control-label">
+                            <div class="custom-control custom-radio custom-control">
+                                <input type="radio" class="custom-control-input" name="input-anket-anaogun2"
+                                     id="input-anket-anaogun10"  value="Endokrin (hormonal) hastalıklar" />
+                                <label class="custom-control-label" for="input-anket-anaogun10">
                                     Endokrin (hormonal) hastalıklar
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input">
-                                <label class="custom-control-label">
+                            <div class="custom-control custom-radio custom-control">
+                                <input type="radio" class="custom-control-input" name="input-anket-anaogun2"
+                                     id="input-anket-anaogun11"  value="Vitamin ve mineral yetersizlikleri(Demir,B12 vitamini yetersizliği vb.)">
+                                <label class="custom-control-label" for="input-anket-anaogun11">
                                     Vitamin ve mineral yetersizlikleri(Demir,B12 vitamini yetersizliği vb.)
                                 </label>
                             </div>
@@ -93,21 +103,56 @@
                                 bu
                                 alana yazabilirsiniz.
                             </label>
-                            <textarea rows="4" class="form-control" placeholder=""></textarea>
-
+                            <textarea rows="4" class="form-control" id="gecmisModal-hastalikTextArea" placeholder=""></textarea>
                         </div>
 
-                        <div class="text-center">
-                            <button type="button" class="btn btn-primary my-4">Ekle</button>
+                        <div class="text-right">
+                            <button type="button" id="btnGecmisModalEkle" class="btn btn-primary my-4">Ekle</button>
                         </div>
                     </form>
                 </div>
             </div>
-
-
-
-
         </div>
-
     </div>
 </div>
+
+
+<script>
+    $('#btnGecmisModalEkle').click(function () {
+
+        var promise = new Promise(function (resolve, reject) {
+
+            var url = $('#ozGecmis').data('url');
+            $.get(url, function (data) {
+                $('#ozGecmis').html(data);
+
+                if ($('#gecmisModal-resmiHastalik input[type="radio"]:checked').val() == "Evet") {
+                    if ($('#gecmisModal-resmiHastalikIcerik input[type="radio"]:checked').val() == undefined) {
+                        if ($("#gecmisModal-hastalikTextArea").val() == "") {
+                            toastr.error("Lütfen Lütfen Hastalık Durumunu Giriniz Griniz"); return false;
+                        }
+                        else {
+                            $("#Gecmis-hastalikTextArea").val($("#gecmisModal-hastalikTextArea").val());
+                        }
+                    } else {
+                        $("#Gecmis-resmiHastalikIcerik").val($('#gecmisModal-resmiHastalikIcerik input[type="radio"]:checked').val());
+
+                    }
+                }
+
+                $("#Gecmis-resmiHastalik").val($('#gecmisModal-resmiHastalik input[type="radio"]:checked').val());
+
+                $('#modal-anket-gecmis').modal('hide');
+            });
+
+            resolve();
+        });
+        promise.catch(function (err) {
+            toastr.error(err);
+        })
+        promise.then(function (data) {
+            //ajax post istegi
+        });
+
+    });
+</script>
