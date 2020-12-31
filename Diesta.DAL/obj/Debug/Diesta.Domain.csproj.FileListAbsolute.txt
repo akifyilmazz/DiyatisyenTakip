@@ -4,3 +4,15 @@ C:\Users\mky\source\repos\Diesta\Diesta.DAL\obj\Debug\Diesta.Domain.csprojAssemb
 C:\Users\mky\source\repos\Diesta\Diesta.DAL\obj\Debug\Diesta.Domain.csproj.CoreCompileInputs.cache
 C:\Users\mky\source\repos\Diesta\Diesta.DAL\obj\Debug\Diesta.DAL.dll
 C:\Users\mky\source\repos\Diesta\Diesta.DAL\obj\Debug\Diesta.DAL.pdb
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\bin\Debug\Diesta.DAL.dll.config
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\bin\Debug\Diesta.DAL.dll
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\bin\Debug\Diesta.DAL.pdb
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\obj\Debug\Diesta.Domain.csprojAssemblyReference.cache
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\obj\Debug\Diesta.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\obj\Debug\Diesta.Domain.csproj.CopyComplete
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\obj\Debug\Diesta.DAL.dll
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.DAL\obj\Debug\Diesta.DAL.pdb

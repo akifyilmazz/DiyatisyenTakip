@@ -8,19 +8,19 @@
                         <label>Lütfen alışkanlıklarınızı doldurun.</label>
                     </div>
                     <form role="form">
-                        <div class="form-group">
+                        <div class="form-group" id="GenelAliskanlikModal-SigaraDurumu">
                             <label class="form-control-label" for="input-username">
                                 Sigara kullanıyor
                                 musunuz?
                             </label>
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="sigara" name="radioSigara"
+                                    <input type="radio" id="sigara" name="radioSigara" value="Evet"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="sigara">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="sigara2" name="radioSigara"
+                                    <input type="radio" id="sigara2" name="radioSigara" value="Hayır"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="sigara2">Hayır</label>
                                 </div>
@@ -32,52 +32,53 @@
                                 Cevabınız evet ise kaç yıldır
                                 kullanıyorsunuz?
                             </label>
-                            <input type="number" id="" class="form-control" placeholder="Örneğin: 10">
+                            <input type="text" id="GenelAliskanlikModal-sigaraKacYil" class="form-control" >
                         </div>
+
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">
                                 Sigara içiyorsanız ne
                                 sıklıkta ve ortalama haftada kaç adet sigara içiyorsunuz?
                             </label>
-                            <input type="number" id="" class="form-control" placeholder="Örneğin: 70">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-control-label" for="input-username">
-                                Sigarayı bıraktıysanız kaç
-                                yıl önce bıraktınız?
-                            </label>
-                            <input type="text" id="" class="form-control" placeholder="Örneğin: 1">
+                            <input type="text" id="GenelAliskanlikModal-sigaraKacAdet" class="form-control" >
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id="GenelAliskanlikModal-birakmaDenediMi">
                             <label class="form-control-label" for="input-username">
                                 Sigarayı bırakmayı denediniz
                                 mi?
                             </label>
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="sigaraBirak" name="radioSigaraBirak"
+                                    <input type="radio" id="sigaraBirak" name="radioSigaraBirak" value="Evet"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="sigaraBirak">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="sigaraBirak2" name="radioSigaraBirak"
+                                    <input type="radio" id="sigaraBirak2" name="radioSigaraBirak" value="Hayır"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="sigaraBirak2">Hayır</label>
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-group">
+                            <label class="form-control-label" for="input-username">
+                                Sigarayı bıraktıysanız kaç
+                                yıl önce bıraktınız?
+                            </label>
+                            <input type="text" id="GenelAliskanlikModal-birakmaYili" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="form-group" id="GenelAliskanlikModal-alkolVarMi">
                             <label class="form-control-label" for="input-username">Alkol alır mısınız?</label>
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="alkol" name="radioalkol"
+                                    <input type="radio" id="alkol" name="radioalkol" value="Evet"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="alkol">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="alkol2" name="radioalkol"
+                                    <input type="radio" id="alkol2" name="radioalkol" value="Hayır"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="alkol2">Hayır</label>
                                 </div>
@@ -88,57 +89,145 @@
                                 Ne sıklıkla alkol
                                 alıyorsunuz?
                             </label>
-                            <input type="text" id="" class="form-control" placeholder="Örneğin: 1">
+                            <input type="text" id="GenelAliskanlikModal-alkolSiklik" class="form-control" >
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id="GenelAliskanlikModal-antiDeprasanVarMi">
                             <label class="form-control-label" for="input-username">
                                 Antidepresan kullanıyor
                                 musunuz?
                             </label>
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="depresan" name="radiodepresan"
+                                    <input type="radio" id="depresan" name="radiodepresan" value="Evet"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="depresan">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="depresan2" name="radiodepresan"
+                                    <input type="radio" id="depresan2" name="radiodepresan" value="Hayır"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="depresan2">Hayır</label>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
+
+                        <div class="form-group" id="GenelAliskanlikModal-ilacBagimliligiVarMi">
                             <label class="form-control-label" for="input-username">
                                 Herhangi bir ilaç
                                 bağımlılığınız var mı?
                             </label>
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="ilac" name="radioilac" class="custom-control-input">
+                                    <input type="radio" id="ilac" name="radioilac" class="custom-control-input" value="Evet">
                                     <label class="custom-control-label" for="ilac">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="ilac2" name="radioilac"
+                                    <input type="radio" id="ilac2" name="radioilac" value="Hayır"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="ilac2">Hayır</label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="text-center">
-                            <button type="button" class="btn btn-primary my-4">Ekle</button>
+                        <div class="text-right">
+                            <button type="button" id="btnGenelAliskanlikEkle" class="btn btn-primary my-4">Ekle</button>
                         </div>
                     </form>
                 </div>
             </div>
-
-
-
 
         </div>
 
     </div>
 </div>
 
+<script>
+    $('#btnGenelAliskanlikEkle').click(function () {
+
+
+        var promise = new Promise(function (resolve, reject) {
+
+            /*Validation*/
+            if ($('#GenelAliskanlikModal-SigaraDurumu input[type="radio"]:checked').val() == "Evet") {
+                if ($("#GenelAliskanlikModal-sigaraKacYil").val() == "") {
+                    reject("Lütfen Kaç Yıl Kullandığınızı  Giriniz");
+                }
+                if ($("#GenelAliskanlikModal-sigaraKacAdet").val() == "") {
+                    reject("Lütfen Kaç Adet İçtiğinizi  Giriniz");
+                }
+                if ($('#GenelAliskanlikModal-birakmaDenediMi input[type="radio"]:checked').val() == "Evet") {
+                    if ($("#GenelAliskanlikModal-birakmaYili").val() == "") {
+                        reject("Lütfen Sigarayı bırkma/bırakmama Durumunuzu Giriniz");
+                    }
+                }
+                if ($('#GenelAliskanlikModal-birakmaDenediMi input[type="radio"]:checked').val() == undefined) {
+                    reject("Lütfen Sigarayı Bırakmayı Deneme Durumunuzu Giriniz");
+                }
+            }
+            else if ($('#GenelAliskanlikModal-SigaraDurumu input[type="radio"]:checked').val() == "Hayır") {
+                if ($("#GenelAliskanlikModal-birakmaYili").val() == "") {
+                    reject("Lütfen Sigarayı bırkma/bırakmama Durumunuzu Giiriniz");
+                }
+            }
+            else {
+                reject("Lütfen Sigara Kullanma Durumunuzu Giriniz");
+            }
+
+            if ($('#GenelAliskanlikModal-alkolVarMi input[type="radio"]:checked').val() == "Evet") {
+
+                if ($("#GenelAliskanlikModal-alkolSiklik").val() == "") {
+                    reject("Lütfen Alkol Alma Sıklığınızı Griniz");
+                }
+            } else if ($('#GenelAliskanlikModal-alkolVarMi input[type="radio"]:checked').val() == undefined) {
+                reject("Lütfen Alkol Alma Durumunuzu Griniz");
+            }
+
+            if ($('#GenelAliskanlikModal-antiDeprasanVarMi input[type="radio"]:checked').val() == undefined) {
+                reject("Lütfen Anti Deprasan Alma Durumunuzu Griniz");
+            }
+
+            if ($('#GenelAliskanlikModal-ilacBagimliligiVarMi input[type="radio"]:checked').val() == undefined) {
+                reject("Lütfen İlaç BAğımlılık Durumunuzu Griniz");
+            }
+            /*Validation*/
+
+            resolve();
+        });
+
+        promise.catch(function (err) {
+            toastr.error(err);
+        })
+
+        promise.then(function (data) {
+
+            var url = $('#genelAliskanlik').data('url');
+            $.get(url, function (data) {
+                $('#genelAliskanlik').html(data);
+
+
+                $("#genelAliskanlik-sigaraDurumu").val($('#GenelAliskanlikModal-SigaraDurumu input[type="radio"]:checked').val());
+
+                $("#genelAliskanlik-sigaraKacYil").val($("#GenelAliskanlikModal-sigaraKacYil").val());
+
+                $("#genelAliskanlik-sigaraKacAdet").val($("#GenelAliskanlikModal-sigaraKacAdet").val());
+
+                $("#genelAliskanlik-birakmaDenediMi").val($('#GenelAliskanlikModal-birakmaDenediMi input[type="radio"]:checked').val());
+
+                $("#genelAliskanlik-birakmaYili").val($("#GenelAliskanlikModal-birakmaYili").val());
+
+                $("#genelAliskanlik-alkolVarMi").val($('#GenelAliskanlikModal-alkolVarMi input[type="radio"]:checked').val());
+
+                $("#genelAliskanlik-alkolSiklik").val($("GenelAliskanlikModal-alkolSiklik").val());
+
+                $("#genelAliskanlik-antiDeprasanVarMi").val($('#GenelAliskanlikModal-antiDeprasanVarMi input[type="radio"]:checked').val());
+
+                $("#genelAliskanlik-ilacBagimliligiVarMi").val($('#GenelAliskanlikModal-ilacBagimliligiVarMi input[type="radio"]:checked').val());
+
+
+                $('#modal-anket-genelAliskanlik').modal('hide');
+            });
+
+        });
+
+    });
+</script>

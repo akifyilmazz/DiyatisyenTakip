@@ -30,8 +30,21 @@ namespace Diesta.MVC.Controllers
         {
             return PartialView();
         }
+
         [HttpGet]
         public ActionResult Gecmis()
+        {
+            return PartialView();
+        }
+
+        [HttpGet]
+        public ActionResult GenelAliskanlik()
+        {
+            return PartialView();
+        }
+
+        [HttpGet]
+        public ActionResult Hareket()
         {
             return PartialView();
         }

@@ -4,3 +4,9 @@ C:\Users\mky\source\repos\Diesta\Diesta.Model\obj\Debug\Diesta.Model.csprojAssem
 C:\Users\mky\source\repos\Diesta\Diesta.Model\obj\Debug\Diesta.Model.csproj.CoreCompileInputs.cache
 C:\Users\mky\source\repos\Diesta\Diesta.Model\obj\Debug\Diesta.Model.dll
 C:\Users\mky\source\repos\Diesta\Diesta.Model\obj\Debug\Diesta.Model.pdb
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.Model\bin\Debug\Diesta.Model.dll
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.Model\bin\Debug\Diesta.Model.pdb
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.Model\obj\Debug\Diesta.Model.csprojAssemblyReference.cache
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.Model\obj\Debug\Diesta.Model.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.Model\obj\Debug\Diesta.Model.dll
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.Model\obj\Debug\Diesta.Model.pdb

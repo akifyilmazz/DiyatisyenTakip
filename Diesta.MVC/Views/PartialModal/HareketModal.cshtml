@@ -9,19 +9,19 @@
                     </div>
                     <form role="form">
 
-                        <div class="form-group">
+                        <div class="form-group" id="HareketModal-saporVarMi">
                             <label class="form-control-label" for="input-username">
                                 Düzenli olarak fiziksel
                                 aktivite/egzersiz/spor yapıyor musunuz?
                             </label>
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="aktive" name="radioaktive"
+                                    <input type="radio" id="aktive" name="radioaktive" value="Evet"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="aktive">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="aktive2" name="radioaktive"
+                                    <input type="radio" id="aktive2" name="radioaktive" value="Hayır"
                                            class="custom-control-input">
                                     <label class="custom-control-label" for="aktive2">Hayır</label>
                                 </div>
@@ -29,226 +29,219 @@
                         </div>
 
 
-                        <div class="form-group">
+                        <div class="form-group" id="HareketModal-sporCesidi">
                             <label class="form-control-label" for="input-username">
                                 Cevabınız evet ise fiziksel aktivite yapıyorsanız hangi aktiviteyi/aktiviteleri
                                 yapıyorsunuz?
                             </label>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="nameSporCesidiModal" id="forsporCesidiModal" value="Yürüyüş">
+                                <label class="custom-control-label" for="forsporCesidiModal">
                                     Yürüyüş
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="nameSporCesidiModal" id="modalSporcesidi2" value="Bahçe işleri">
+                                <label class="custom-control-label" for="modalSporcesidi2">
                                     Bahçe işleri
                                 </label>
                             </div>
-
-
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="nameSporCesidiModal" id="modalSporcesidi3" value="Koşu">
+                                <label class="custom-control-label" for="modalSporcesidi3">
                                     Koşu
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="nameSporCesidiModal" id="modalSporcesidi4" value="Futbol">
+                                <label class="custom-control-label" for="modalSporcesidi4">
                                     Futbol
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="nameSporCesidiModal" id="modalSporcesidi5" value="Yüzme">
+                                <label class="custom-control-label" for="modalSporcesidi5">
                                     Yüzme
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="nameSporCesidiModal" id="modalSporcesidi6" value="Kondisyon aleti kullanma">
+                                <label class="custom-control-label" for="modalSporcesidi6">
                                     Kondisyon aleti kullanma
                                 </label>
                             </div>
-                            <label class="form-control-label" for="input-username">
-                                Başka bir aktiviteniz varsa
-                                bu
-                                alana yazabilirsiniz.
+                            <label class="form-control-label">
+                                Başka bir aktiviteniz varsa bu alana yazabilirsiniz.
                             </label>
-                            <textarea rows="4" class="form-control" placeholder=""></textarea>
+                            <textarea rows="4" class="form-control" id="sporCesidi-sporCesidiArea" placeholder=""></textarea>
+
+                        </div>
+
+                        <div class="form-group" id="sporCesidi-sporNedeni">
+                            <label class="form-control-label" for="input-username">
+                                Fiziksel aktivite veya egzersiz yapıyorsanız yapmanızın nedenlerinden size göre
+                                önemli olanları işaretleyiniz.
+                            </label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalsporNedeni" id="modalsporNedeni1" value="Gerginliği azaltmak/rahatlamak için">
+                                <label class="custom-control-label" for="modalsporNedeni1">
+                                    Gerginliği azaltmak/rahatlamak için
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalsporNedeni" id="modalsporNedeni2" value="Sağlıklı olmak için">
+                                <label class="custom-control-label" for="modalsporNedeni2">
+                                    Sağlıklı olmak için
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalsporNedeni" id="modalsporNedeni3" value="Diğer insanlarla tanışmak için">
+                                <label class="custom-control-label" for="modalsporNedeni3">
+                                    Diğer insanlarla tanışmak için
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalsporNedeni" id="modalsporNedeni4" value="Eğlence için">
+                                <label class="custom-control-label" for="modalsporNedeni4">
+                                    Eğlence için
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalsporNedeni" id="modalsporNedeni5" value="Kendimi iyi hissetmek için">
+                                <label class="custom-control-label" for="modalsporNedeni5">
+                                    Kendimi iyi hissetmek için
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalsporNedeni" id="modalsporNedeni6" value="Kilo vermek veya kilomu korumak için">
+                                <label class="custom-control-label" for="modalsporNedeni6">
+                                    Kilo vermek veya kilomu korumak için
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalsporNedeni" id="modalsporNedeni7" value="Daha iyi konsantre olmamı sağladığı için">
+                                <label class="custom-control-label" for="modalsporNedeni7">
+                                    Daha iyi konsantre olmamı sağladığı için
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalsporNedeni" id="modalsporNedeni18" value="Bilmiyorum">
+                                <label class="custom-control-label" for="modalsporNedeni18">
+                                    Bilmiyorum
+                                </label>
+                            </div>
+
+                            <label class="form-control-label" for="input-username">
+                                Başka bir nedeniniz varsa bu alana yazabilirsiniz.
+                            </label>
+                            <textarea rows="4" class="form-control" id="sporCesidi-sporNedeniArea" placeholder=""></textarea>
 
                         </div>
 
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">
-                                Ne sıklıkta fiziksel aktivite/egzersiz/spor
-                                yapıyorsunuz?
+                                Ne sıklıkta fiziksel aktivite/egzersiz/spor yapıyorsunuz?
                             </label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Hergün</option>
-                                <option>Haftada 3-4 gün</option>
-                                <option>Haftada 2-3 gün</option>
-                                <option>Haftada 1-2 gün</option>
-                                <option>15 günde bir</option>
+                            <select class="form-control" id="sporCesidi-sporSiklik">
+                                <option value="0">Seçim Yapın</option>
+                                <option value="1">Hergün</option>
+                                <option value="2">Haftada 3-4 gün</option>
+                                <option value="3">Haftada 2-3 gün</option>
+                                <option value="4">Haftada 1-2 gün</option>
+                                <option value="5">15 günde bir</option>
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label class="form-control-label" for="input-username">
-                                Fiziksel aktivite veya egzersiz yapıyorsanız yapmanızın nedenlerinden size göre
-                                önemli olanları işaretleyiniz.
-                            </label>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
-                                    Gerginliği azaltmak/rahatlamak için
-                                </label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
-                                    Sağlıklı olmak için
-                                </label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
-                                    Diğer insanlarla tanışmak için
-                                </label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
-                                    Eğlence için
-                                </label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
-                                    Kendimi iyi hissetmek için
-                                </label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
-                                    Kilo vermek veya kilomu korumak için
-                                </label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
-                                    Daha iyi konsantre olmamı sağladığı için
-                                </label>
-                            </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
-                                    Bilmiyorum
-                                </label>
-                            </div>
-
-                            <label class="form-control-label" for="input-username">
-                                Başka bir nedeniniz varsa
-                                bu
-                                alana yazabilirsiniz.
-                            </label>
-                            <textarea rows="4" class="form-control" placeholder=""></textarea>
-
-                        </div>
-
-                        <div class="form-group">
+                        <div class="form-group" id="sporCesidi-nedenOnemi">
                             <label class="form-control-label" for="input-username">
                                 Fiziksel aktivite veya egzersiz yapmıyorsanız yapmamanızın nedenlerinden size
                                 göre önemli olanları işaretleyiniz.
                             </label>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi1" value="Zamanım yok">
+                                <label class="custom-control-label" for="modalnedenOnemi1">
                                     Zamanım yok
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi2" value="Nasıl başlayacağımı bilmiyorum">
+                                <label class="custom-control-label" for="modalnedenOnemi2">
                                     Nasıl başlayacağımı bilmiyorum
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi3" value="Spor yapacak enerjiyi kendimde bulamıyorum">
+                                <label class="custom-control-label" for="modalnedenOnemi3">
                                     Spor yapacak enerjiyi kendimde bulamıyorum
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi4" value="Maddi gücüm yeterli değil">
+                                <label class="custom-control-label" for="modalnedenOnemi4">
                                     Maddi gücüm yeterli değil
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi5" value="Sağlık problemlerinden dolayı yapamıyorum">
+                                <label class="custom-control-label" for="modalnedenOnemi5">
                                     Sağlık problemlerinden dolayı yapamıyorum
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi6" value="İşlerim çok yoğun">
+                                <label class="custom-control-label" for="modalnedenOnemi6">
                                     İşlerim çok yoğun
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi7" value="Spor yapabileceğim uygun bir yer yok">
+                                <label class="custom-control-label" for="modalnedenOnemi7">
                                     Spor yapabileceğim uygun bir yer yok
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi8" value="Tv izlemeyi veya kitap okumayı tercih ediyorum">
+                                <label class="custom-control-label" for="modalnedenOnemi8">
                                     Tv izlemeyi veya kitap okumayı tercih ediyorum
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi9" value="Daha fazla egzersize ihtiyaç duymuyorum">
+                                <label class="custom-control-label" for="modalnedenOnemi9">
                                     Daha fazla egzersize ihtiyaç duymuyorum
                                 </label>
                             </div>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" name="modalnedenOnemi" id="modalnedenOnemi10" value="Bilmiyorum">
+                                <label class="custom-control-label" for="modalnedenOnemi10">
                                     Bilmiyorum
                                 </label>
                             </div>
                             <label class="form-control-label" for="input-username">
-                                Başka bir nedeniniz varsa
-                                bu
-                                alana yazabilirsiniz.
+                                Başka bir nedeniniz varsa bu alana yazabilirsiniz.
                             </label>
-                            <textarea rows="4" class="form-control" placeholder=""></textarea>
+                            <textarea rows="4" class="form-control" id="sporCesidi-nedenOnemi" placeholder=""></textarea>
 
                         </div>
+
                         <div class="form-group">
-                            <label class="form-control-label" for="input-username">
+                            <label class="form-control-label">
                                 Günde kaç saaatiniz
                                 bilgisayar başında geçiyor?
                             </label>
-                            <input type="number" id="" class="form-control" placeholder="Örneğin: 6">
+                            <input type="text" id="sporCesidi-kacSaatBilg" class="form-control" placeholder="Örneğin: 6">
                         </div>
+
                         <div class="form-group">
-                            <label class="form-control-label" for="input-username">
+                            <label class="form-control-label">
                                 Günde kaç saat televizyon
                                 izlersiniz?
                             </label>
-                            <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                            <input type="text" id="sporCesidi-kacSaatTv" class="form-control" placeholder="Örneğin: 4">
                         </div>
 
-
-                        <div class="text-center">
-                            <button type="button" class="btn btn-primary my-4">Ekle</button>
+                        <div class="text-right">
+                            <button type="button" id="btnHareketModalEkle" class="btn btn-primary my-4">Ekle</button>
                         </div>
                     </form>
                 </div>
@@ -261,3 +254,93 @@
 
     </div>
 </div>
+
+
+
+<script>
+    $('#btnHareketModalEkle').click(function () {
+
+
+        var promise = new Promise(function (resolve, reject) {
+
+            /*Validation*/
+            if ($('#HareketModal-saporVarMi input[type="radio"]:checked').val() == "Evet") {
+                if ($('#HareketModal-sporCesidi input[type="radio"]:checked ').val() == undefined) {
+                    if ($("#sporCesidi-sporCesidiArea").val() == "") {
+                        reject("Lütfen Yaptığınız Sporun Çeşitini Giriniz");
+                    }
+                }
+
+                if ($('#sporCesidi-sporNedeni input[type="radio"]:checked ').val() == undefined) {
+                    if ($("#sporCesidi-sporNedeniArea").val() == "") {
+                        reject("Lütfen Yaptığınız Sporun Nedenini Giriniz");
+                    }
+                }
+
+                if ($('#sporCesidi-sporSiklik option:selected').val() == "0") {
+                    reject("Lütfen Spor Yapma Sıklığınızı Durumunuzu Giriniz");
+                }
+
+            }
+            else if ($('#HareketModal-saporVarMi input[type="radio"]:checked').val() == "Hayır") {
+                if ($('#sporCesidi-nedenOnemi input[type="radio"]:checked ').val() == undefined) {
+                    if ($("#sporCesidi-sporNedeniArea").val() == "") {
+                        reject("Lütfen  Spor Yapmamanın Nedenin En Önemlisini Giriniz");
+                    }
+                }
+            }
+            else if ($('#HareketModal-saporVarMi input[type="radio"]:checked').val() == undefined) {
+                reject("Lütfen Spor Yapma  Durumunu Giriniz");
+            }
+
+            if ($("#sporCesidi-kacSaatBilg").val() == "") {
+                reject("Lütfen Kaç Saat Bilgisayar Başında olduğunuzu Giriniz");
+            }
+
+            if ($("#sporCesidi-kacSaatTv").val() == "") {
+                reject("Lütfen Kaç Saat Televizyon Başında olduğunuzu Giriniz");
+            }
+
+            /*Validation*/
+
+            resolve();
+        });
+
+        promise.catch(function (err) {
+            toastr.error(err);
+        })
+
+        promise.then(function (data) {
+
+            var url = $('#hareket').data('url');
+            $.get(url, function (data) {
+                $('#hareket').html(data);
+
+
+                //$("#genelAliskanlik-sigaraDurumu").val($('#GenelAliskanlikModal-SigaraDurumu input[type="radio"]:checked').val());
+
+                //$("#genelAliskanlik-sigaraKacYil").val($("#GenelAliskanlikModal-sigaraKacYil").val());
+
+                //$("#genelAliskanlik-sigaraKacAdet").val($("#GenelAliskanlikModal-sigaraKacAdet").val());
+
+                //$("#genelAliskanlik-birakmaDenediMi").val($('#GenelAliskanlikModal-birakmaDenediMi input[type="radio"]:checked').val());
+
+                //$("#genelAliskanlik-birakmaYili").val($("#GenelAliskanlikModal-birakmaYili").val());
+
+                //$("#genelAliskanlik-alkolVarMi").val($('#GenelAliskanlikModal-alkolVarMi input[type="radio"]:checked').val());
+
+                //$("#genelAliskanlik-alkolSiklik").val($("GenelAliskanlikModal-alkolSiklik").val());
+
+                //$("#genelAliskanlik-antiDeprasanVarMi").val($('#GenelAliskanlikModal-antiDeprasanVarMi input[type="radio"]:checked').val());
+
+                //$("#genelAliskanlik-ilacBagimliligiVarMi").val($('#GenelAliskanlikModal-ilacBagimliligiVarMi input[type="radio"]:checked').val());
+
+                ////Burası Yazilacak
+
+                $('#modal-anket-hareket').modal('hide');
+            });
+
+        });
+
+    });
+</script>

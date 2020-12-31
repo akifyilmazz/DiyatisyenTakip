@@ -1,2 +1,4 @@
 C:\Users\mky\source\repos\Diesta\Diesta.Service\obj\Debug\Diesta.Service.csprojAssemblyReference.cache
 C:\Users\mky\source\repos\Diesta\Diesta.Service\obj\Debug\Diesta.Service.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.Service\obj\Debug\Diesta.Service.csprojAssemblyReference.cache
+C:\Users\Mehmet Akif YILMAZ\Desktop\diesta\Diesta\Diesta.Service\obj\Debug\Diesta.Service.csproj.CoreCompileInputs.cache
