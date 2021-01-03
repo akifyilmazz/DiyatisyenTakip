@@ -14,20 +14,19 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                 </div>
-                                <input class="form-control datepicker" placeholder="Select date" type="text"
-                                       value="06/20/2020">
+                                <input class="form-control datepicker" id="NotModal-Tarih" type="date">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="form-control-label">Şikayeti</label>
-                            <textarea rows="4" class="form-control"></textarea>
+                            <textarea rows="4" id="NotModal-Sikayet" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                             <label class="form-control-label">Notlar</label>
-                            <textarea rows="4" class="form-control"></textarea>
+                            <textarea rows="4" id="NotModal-Notlar" class="form-control"></textarea>
                         </div>
-                        <div class="text-center">
-                            <button type="button" class="btn btn-primary my-4">Ekle</button>
+                        <div class="text-right">
+                            <button type="button" id="btnNotModalEkle" class="btn btn-primary my-4">Ekle</button>
                         </div>
                     </form>
                 </div>
@@ -35,3 +34,52 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('#btnNotModalEkle').click(function () {
+
+        var promise = new Promise(function (resolve, reject) {
+
+            /*Validation*/
+
+            $("#NotModal-Sikayet").val().trim() == "" ?
+                $("#NotModal-Notlar").val().trim() != "" ?
+                    $("#NotModal-Tarih").val() == "" ? reject("Lütfen Tarih Girin") : ""
+                    : "" : ""
+
+            $("#NotModal-Tarih").val().trim() == "" ?
+                $("#NotModal-Sikayet").val().trim() == "" ?
+                    $("#NotModal-Notlar").val().trim() == "" ?
+                        reject("Boş Not Ekleyemezsin")
+                        : "" :"":""
+
+
+
+            /*Validation*/
+
+            resolve();
+        });
+
+        promise.catch(function (err) {
+            toastr.error(err);
+        })
+
+        promise.then(function (data) {
+
+            var url = $('#Not').data('url');
+            $.get(url, function (data) {
+                $('#Not').html(data);
+
+                $("#Not-Tarih").val($("#NotModal-Tarih").val());
+
+                $("#Not-Sikayet").val($("#NotModal-Sikayet").val());
+
+                $("#Not-Notlar").val($("#NotModal-Notlar").val());
+
+                $('#modal-anket-not').modal('hide');
+            });
+
+        });
+
+    });
+</script>

@@ -11,36 +11,74 @@
 
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">Aktivite Türü</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Uyumak</option>
-                                <option>Bilardo</option>
-                                <option>Temizlik yapma (hafif)</option>
-                                <option>Yemek pişirme</option>
-                                <option>Ergometrik egzersiz (50 Vat,az yorucu)</option>
-                                <option>Sörf yapma</option>
-                                <option>Çocuk bakımı</option>
-                                <option>Sörf yapma</option>
-                                <option>Masa tenisi oynama</option>
+                            <select class="form-control" id="EgzersizModal-AktiviteTur">
+                                <option value="0">Seçim Yapın</option>
+                                <option value="1">Uyumak</option>
+                                <option value="2">Bilardo</option>
+                                <option value="3">Temizlik yapma (hafif)</option>
+                                <option value="4">Yemek pişirme</option>
+                                <option value="5">Ergometrik egzersiz (50 Vat,az yorucu)</option>
+                                <option value="6">Sörf yapma</option>
+                                <option value="7">Çocuk bakımı</option>
+                                <option value="8">Sörf yapma</option>
+                                <option value="9">Masa tenisi oynama</option>
 
                             </select>
                         </div>
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">Dakika/Gün</label>
-                            <input type="text" id="" class="form-control">
+                            <input type="text" id="EgzersizModal-dakkaGun" class="form-control">
                         </div>
 
                         <div class="text-center">
-                            <button type="button" class="btn btn-primary my-4">Ekle</button>
+                            <button type="button" id="btnEgzersizEkle" class="btn btn-primary my-4">Ekle</button>
                         </div>
                     </form>
                 </div>
             </div>
-
-
-
-
         </div>
-
     </div>
 </div>
 
+
+
+
+<script>
+    $('#btnEgzersizEkle').click(function () {
+
+
+        var promise = new Promise(function (resolve, reject) {
+
+            /*Validation*/
+        
+            $("#EgzersizModal-AktiviteTur option:selected").val() == "0" ? reject("Lütfeen Aktivite Türü Seçin"): ""
+
+            $("#EgzersizModal-dakkaGun").val().trim() == "" ? reject("Lütfeen Dakika/Gün Seçin"): ""
+
+
+            /*Validation*/
+
+            resolve();
+        });
+
+        promise.catch(function (err) {
+            toastr.error(err);
+        })
+
+        promise.then(function (data) {
+
+            var url = $('#Egzersiz').data('url');
+            $.get(url, function (data) {
+                $('#Egzersiz').html(data);
+
+                $("#Egzersiz-AktiviteTur").val($('#EgzersizModal-AktiviteTur option:selected').text());
+
+                $("#Egzersiz-dakkaGun").val($("#EgzersizModal-dakkaGun").val());
+
+                $('#modal-anket-egzersiz').modal('hide');
+            });
+
+        });
+
+    });
+</script>

@@ -4,6 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <!--Buttons-->
+@section HeaderCss{
+
+    <link href="~/Content/css/Danisan/DanisanEkle/DanisanEkle.css" rel="stylesheet" />
+
+}
+
 <section>
     <div class="header bg-primary pb-6">
         <div class="container-fluid">
@@ -26,37 +32,37 @@
                                 <a id="btnDiyetOykusuModal" class="dropdown-item"
                                    href="javascript:void(0)">Diyet Öyküsü</a>
                                 <a id="btnBesinAliskanlikModal" class="dropdown-item" href="javascript:void(0)">Besin Alışkanlıklarınız</a>
-                                <a id="btnGecmisModal" class="dropdown-item"  href="javascript:void(0)">Özgeçmiş</a>
+                                <a id="btnGecmisModal" class="dropdown-item" href="javascript:void(0)">Özgeçmiş</a>
                                 <a id="btnGenelAliskanlikModal" class="dropdown-item" href="javascript:void(0)">Alışkanlıklarınız</a>
 
                                 <a id="btnHareketModal" class="dropdown-item" href="javascript:void(0)">Hareket ve Egzersiz Alışkanlıklarınız</a>
-                                <a id="btnKisisel" class="dropdown-item" href="javascript:void(0)">Kişisel İlgi Alanlarınız</a>
+                                <a id="btnKisiselModal" class="dropdown-item" href="javascript:void(0)">Kişisel İlgi Alanlarınız</a>
                             </div>
 
                         </h6>
 
                         <h6 class="h2 text-white d-inline-block mb-0">
-                            <button id="btnAntropometri" class="btn btn-success">
+                            <button id="btnAntropometriModal" class="btn btn-success">
                                 Antropometri
                             </button>
                         </h6>
                         <h6 class="h2 text-white d-inline-block mb-0">
-                            <button id="btnMenu" class="btn btn-success">
+                            <button id="btnMenuModal" class="btn btn-success">
                                 Menü/Diyet Planı
                             </button>
                         </h6>
                         <h6 class="h2 text-white d-inline-block mb-0">
-                            <button id="btnEgzersiz" class="btn btn-success">
+                            <button id="btnEgzersizModal" class="btn btn-success">
                                 Egzersiz Programı
                             </button>
                         </h6>
                         <h6 class="h2 text-white d-inline-block mb-0">
-                            <button id="btnFinans" class="btn btn-success">
+                            <button id="btnFinansModal" class="btn btn-success">
                                 Finans
                             </button>
                         </h6>
                         <h6 class="h2 text-white d-inline-block mb-0">
-                            <button id="btnNot" class="btn btn-success">
+                            <button id="btnNotModal" class="btn btn-success">
                                 Notlar
                             </button>
                         </h6>
@@ -74,11 +80,12 @@
     <div class="container-fluid mt--6">
         <div class="row">
             <div class="col">
-                <div class="card">
+                <div class="card" style="min-height: 350px;">
                     <!-- Card header -->
                     <div class="card-header border-0">
                         <h3 class="mb-0">Danışan Ekle</h3>
                     </div>
+
                     <div id="kisiBilgisi" data-url='@Url.Action("DanisanBilgiTemel","PartialDanisan")'>
 
                     </div>
@@ -90,343 +97,72 @@
                     <div id="besinAliskanligi" data-url='@Url.Action("BesinAliskanlik","PartialDanisan")'>
 
                     </div>
-                    
+
                     <div id="ozGecmis" data-url='@Url.Action("Gecmis","PartialDanisan")'>
 
                     </div>
-                    
+
                     <div id="genelAliskanlik" data-url='@Url.Action("GenelAliskanlik","PartialDanisan")'>
 
                     </div>
-                    
+
                     <div id="hareket" data-url='@Url.Action("Hareket","PartialDanisan")'>
 
                     </div>
 
-
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Kişisel İlgi Alanları</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Şu anki kilonuzu nasıl tanımlarsınız?
-                                        </label>
-                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Kilonuz günlük aktivitelerinizi nasıl etkiliyor?
-                                        </label>
-                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Kilonuz sosyal yaşamınızı nasıl etkiliyor?
-                                        </label>
-                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Neden kilo vermek istiyorsunuz?
-                                        </label>
-                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Kaç kilo vermeyi planlıyorsunuz?
-                                        </label>
-                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Hedeflediğiniz en düşük kilo nedir
-                                        </label>
-                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Sağlığınız hakkında en önemli endişeleriniz nelerdir?
-                                        </label>
-                                        <input type="text" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label">Ek bilgi ve notlarınız</label>
-                                        <textarea rows="4" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <hr class="my-4" />
-
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Finans</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Tarih</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-                                            </div>
-                                            <input class="form-control datepicker" placeholder="Select date" type="text"
-                                                   value="06/20/2020">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Ücret
-                                        </label>
-                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Ödendi
-                                        </label>
-                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label">Yorum</label>
-                                        <textarea rows="4" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <hr class="my-4">
-
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Not</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Tarih</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-                                            </div>
-                                            <input class="form-control datepicker" placeholder="Select date" type="text"
-                                                   value="06/20/2020">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label">Şikayeti</label>
-                                        <textarea rows="4" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label">Notlar</label>
-                                        <textarea rows="4" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="my-4">
-
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Egzersiz</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Aktivite Türü</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>Uyumak</option>
-                                            <option>Bilardo</option>
-                                            <option>Temizlik yapma (hafif)</option>
-                                            <option>Yemek pişirme</option>
-                                            <option>Ergometrik egzersiz (50 Vat,az yorucu)</option>
-                                            <option>Sörf yapma</option>
-                                            <option>Çocuk bakımı</option>
-                                            <option>Sörf yapma</option>
-                                            <option>Masa tenisi oynama</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Dakika/Gün</label>
-                                        <input type="text" id="" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="my-4">
-
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Antropometri</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">Tarih</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-                                            </div>
-                                            <input class="form-control datepicker" placeholder="Select date" type="text"
-                                                   value="06/20/2020">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Ağırlık
-                                        </label>
-                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Boy
-                                        </label>
-                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Bel
-                                        </label>
-                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Kalça
-                                        </label>
-                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="input-username">
-                                            Yağ
-                                        </label>
-                                        <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="Kisisel" data-url='@Url.Action("Kisisel","PartialDanisan")'>
 
                     </div>
 
-                    <hr class="my-4">
-
-                    <div class="card-body">
-                        <h6 class="heading-small text-muted mb-4">Menü</h6>
-                        <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-4">
-
-                                </div>
-                                <div class="col-lg-4">
-
-                                </div>
-                                <div class="col-lg-4">
-
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-4">
-
-                                </div>
-                                <div class="col-lg-4">
-
-                                </div>
-                                <div class="col-lg-4">
-
-                                </div>
-                            </div>
-                        </div>
+                    <div id="Antropometri" data-url='@Url.Action("Antropometri","PartialDanisan")'>
 
                     </div>
+
+                    <div id="Egzersiz" data-url='@Url.Action("Egzersiz","PartialDanisan")'>
+
+                    </div>
+
+                    <div id="Finans" data-url='@Url.Action("Finans","PartialDanisan")'>
+
+                    </div>
+
+                    <div id="Not" data-url='@Url.Action("Not","PartialDanisan")'>
+
+                    </div>
+
+                    @*<div class="card-body">
+                            <h6 class="heading-small text-muted mb-4">Menü</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-4">
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>*@
 
                 </div>
             </div>
         </div>
-        <!-- Dark table -->
-        <!-- Footer -->
-        <footer class="footer pt-0">
-            <div class="row align-items-center justify-content-lg-between">
-                <div class="col-lg-6">
-                    <div class="copyright text-center  text-lg-left  text-muted">
-                        &copy; 2020 <a href="#" class="font-weight-bold ml-1" target="_blank">Aerotive Labs</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank">Aerotive Labs</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank">Hakkımızda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank">KVKK</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+
     </div>
 </section>
 
@@ -457,27 +193,27 @@
          aria-hidden="true">
     </div>
 
-    <div class="modal fade" id="modal-anket-kisisel" data-url='@Url.Action("KisiselModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+    <div class="modal fade" id="modal-anket-kisisel" data-url='@Url.Action("KisiselModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
     </div>
 
-    <div class="modal fade" id="modal-anket-antropometri" data-url='@Url.Action("AntropometriModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+    <div class="modal fade" id="modal-anket-antropometri" data-url='@Url.Action("AntropometriModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
     </div>
 
-    <div class="modal fade" id="modal-anket-menu" data-url='@Url.Action("MenuModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+    <div class="modal fade" id="modal-anket-menu" data-url='@Url.Action("MenuModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
     </div>
 
-    <div class="modal fade" id="modal-anket-egzersiz" data-url='@Url.Action("EgzersizModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+    <div class="modal fade" id="modal-anket-egzersiz" data-url='@Url.Action("EgzersizModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
     </div>
 
-    <div class="modal fade" id="modal-anket-finans" data-url='@Url.Action("FinansModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+    <div class="modal fade" id="modal-anket-finans" data-url='@Url.Action("FinansModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
     </div>
 
-    <div class="modal fade" id="modal-anket-not" data-url='@Url.Action("NotModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
+    <div class="modal fade" id="modal-anket-not" data-url='@Url.Action("NotModal","PartialModal")' tabindex="-1" role="dialog" aria-labelledby="modal-form"
          aria-hidden="true">
     </div>
 </section>
@@ -488,14 +224,25 @@
         $('#btnTemelBilgiModal').click(function () {
             var url = $('#modal-anket-temelBilgi').data('url');
 
+            if ($("#kisiBilgisi > .card-body").length != 0) {
+                toastr.error(" 2. Bir Temel Bilgi Eklenemez !");
+                return false;
+            }
+
             $.get(url, function (data) {
                 $('#modal-anket-temelBilgi').html(data);
 
                 $('#modal-anket-temelBilgi').modal('show');
             });
         });
+
         $('#btnDiyetOykusuModal').click(function () {
             var url = $('#modal-anket-diyetOykusu').data('url');
+
+            if ($("#diyetOykusu > .card-body").length != 0) {
+                toastr.error(" 2. Bir Diyet Öyküsü Eklenemez !");
+                return false;
+            }
 
             $.get(url, function (data) {
                 $('#modal-anket-diyetOykusu').html(data);
@@ -507,14 +254,25 @@
         $('#btnBesinAliskanlikModal').click(function () {
             var url = $('#modal-anket-besinAliskanlik').data('url');
 
+            if ($("#besinAliskanligi > .card-body").length != 0) {
+                toastr.error(" 2. Bir Besin Alışkanlığı Eklenemez !");
+                return false;
+            }
+
             $.get(url, function (data) {
                 $('#modal-anket-besinAliskanlik').html(data);
 
                 $('#modal-anket-besinAliskanlik').modal('show');
             });
         });
+
         $('#btnGecmisModal').click(function () {
             var url = $('#modal-anket-gecmis').data('url');
+
+            if ($("#ozGecmis > .card-body").length != 0) {
+                toastr.error(" 2. Bir Öz Geçmiş Eklenemez !");
+                return false;
+            }
 
             $.get(url, function (data) {
                 $('#modal-anket-gecmis').html(data);
@@ -522,8 +280,14 @@
                 $('#modal-anket-gecmis').modal('show');
             });
         });
+
         $('#btnGenelAliskanlikModal').click(function () {
             var url = $('#modal-anket-genelAliskanlik').data('url');
+
+            if ($("#genelAliskanlik > .card-body").length != 0) {
+                toastr.error(" 2. Bir Genel Alışkanlık Eklenemez !");
+                return false;
+            }
 
             $.get(url, function (data) {
                 $('#modal-anket-genelAliskanlik').html(data);
@@ -531,8 +295,14 @@
                 $('#modal-anket-genelAliskanlik').modal('show');
             });
         });
+
         $('#btnHareketModal').click(function () {
             var url = $('#modal-anket-hareket').data('url');
+
+            if ($("#hareket > .card-body").length != 0) {
+                toastr.error(" 2. Bir Hareket Ve Egzersiz Alışkanlığı Eklenemez !");
+                return false;
+            }
 
             $.get(url, function (data) {
                 $('#modal-anket-hareket').html(data);
@@ -540,8 +310,14 @@
                 $('#modal-anket-hareket').modal('show');
             });
         });
-        $('#btnKisisel').click(function () {
+
+        $('#btnKisiselModal').click(function () {
             var url = $('#modal-anket-kisisel').data('url');
+
+            if ($("#Kisisel > .card-body").length != 0) {
+                toastr.error(" 2. Bir Kişisel İlgi Alanı Eklenemez !");
+                return false;
+            }
 
             $.get(url, function (data) {
                 $('#modal-anket-kisisel').html(data);
@@ -549,8 +325,14 @@
                 $('#modal-anket-kisisel').modal('show');
             });
         });
-        $('#btnAntropometri').click(function () {
+
+        $('#btnAntropometriModal').click(function () {
             var url = $('#modal-anket-antropometri').data('url');
+
+            if ($("#Antropometri > .card-body").length != 0) {
+                toastr.error(" 2. Bir Antropometri Eklenemez !");
+                return false;
+            }
 
             $.get(url, function (data) {
                 $('#modal-anket-antropometri').html(data);
@@ -558,8 +340,14 @@
                 $('#modal-anket-antropometri').modal('show');
             });
         });
-        $('#btnMenu').click(function () {
+
+        $('#btnMenuModal').click(function () {
             var url = $('#modal-anket-menu').data('url');
+
+            //if ($("#kisiBilgisi > .card-body").length != 0) {
+            //    toastr.error(" 2. Bir Teme Bilgi Eklenemez !");
+            //    return false;
+            //}
 
             $.get(url, function (data) {
                 $('#modal-anket-menu').html(data);
@@ -567,8 +355,14 @@
                 $('#modal-anket-menu').modal('show');
             });
         });
-        $('#btnEgzersiz').click(function () {
+
+        $('#btnEgzersizModal').click(function () {
             var url = $('#modal-anket-egzersiz').data('url');
+
+            if ($("#Egzersiz > .card-body").length != 0) {
+                toastr.error(" 2. Bir Egzersiz Programı Eklenemez !");
+                return false;
+            }
 
             $.get(url, function (data) {
                 $('#modal-anket-egzersiz').html(data);
@@ -576,8 +370,14 @@
                 $('#modal-anket-egzersiz').modal('show');
             });
         });
-        $('#btnFinans').click(function () {
+
+        $('#btnFinansModal').click(function () {
             var url = $('#modal-anket-finans').data('url');
+
+            if ($("#Finans > .card-body").length != 0) {
+                toastr.error(" 2. Bir Finans Eklenemez !");
+                return false;
+            }
 
             $.get(url, function (data) {
                 $('#modal-anket-finans').html(data);
@@ -585,7 +385,14 @@
                 $('#modal-anket-finans').modal('show');
             });
         });
-        $('#btnNot').click(function () {
+
+        $('#btnNotModal').click(function () {
+
+            if ($("#Not > .card-body").length != 0) {
+                toastr.error(" 2. Bir Not Eklenemez !");
+                return false;
+            }
+
             var url = $('#modal-anket-not').data('url');
 
             $.get(url, function (data) {
@@ -594,5 +401,9 @@
                 $('#modal-anket-not').modal('show');
             });
         });
+    </script>
+
+    <script>
+      
     </script>
 }

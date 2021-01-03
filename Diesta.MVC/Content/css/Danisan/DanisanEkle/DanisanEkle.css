@@ -1,0 +1,8 @@
+﻿.fa-edit:before {
+    vertical-align: text-bottom;
+}
+
+.ni-fat-remove::before {
+    font-size: 2rem;
+    vertical-align: text-bottom;
+}

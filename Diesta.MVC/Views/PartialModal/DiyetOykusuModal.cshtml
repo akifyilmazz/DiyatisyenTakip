@@ -14,8 +14,9 @@
                                 Bugüne kadar çıktığınız en
                                 yüksek kilo nedir?
                             </label>
-                            <input type="text" class="form-control" id="DiyetOykusuModal-enyuksekKilo" placeholder="Kilo Giriniz  *">
+                            <input type="number" class="form-control" id="DiyetOykusuModal-enyuksekKilo" placeholder="Kilo Giriniz  *">
                         </div>
+
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">
                                 Profesyonel veya amatör diyet
@@ -23,6 +24,7 @@
                             </label>
                             <input type="text" id="DiyetOykusuModal-diyetDeneyim" class="form-control" placeholder="Diyet Deneyimi Giriniz  *">
                         </div>
+
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">
                                 Bu diyet denemeleriniz ile en
@@ -34,6 +36,7 @@
                         <div class="text-right">
                             <button type="button" id="DiyetOykusuModalEkle" class="btn btn-primary my-4">Ekle</button>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -41,30 +44,46 @@
     </div>
 </div>
 
+
+
+
+
+
 <script>
     $('#DiyetOykusuModalEkle').click(function () {
 
-        var url = $('#diyetOykusu').data('url');
-        $.get(url, function (data) {
-            $('#diyetOykusu').html(data);
 
-            if ($("#DiyetOykusuModal-enyuksekKilo").val().trim() == "") {
-                toastr.error('Lütfen  en yüksek kilonuzu Giriniz'); return false;
-            }
-            $("#DiyetOykusu-enyuksekKilo").val($("#DiyetOykusuModal-enyuksekKilo").val());
+        var promise = new Promise(function (resolve, reject) {
 
-            if ($("#DiyetOykusuModal-diyetDeneyim").val().trim() == "") {
-                toastr.error("Lütfen Diyet Deneyiminizi Giriniz"); return false;
-            }
-            $("#DiyetOykusu-diyetdeneyim").val($("#DiyetOykusuModal-diyetDeneyim").val());
+            $("#DiyetOykusuModal-enyuksekKilo").val().trim() == "" ? reject("Lütfen En Yüksek Kilonuzu Giriniz") : ""
 
-            if ($("#DiyetOykusuModal-VerilenEnyuksekKilo").val().trim() == "") {
-                toastr.error("Lütfen Verilen En Yüksek Kiloyu Giriniz giriniz"); return false;
-            }
-            $("#DiyetOykusu-VerilenEnyuksekKilo").val($("#DiyetOykusuModal-VerilenEnyuksekKilo").val());
+            $("#DiyetOykusuModal-diyetDeneyim").val().trim() == "" ? reject("Lütfen Diyenit Deneyiminizi Giriniz") : ""
 
+            $("#DiyetOykusuModal-VerilenEnyuksekKilo").val().trim() == "" ? reject("Lütfen Verilen En Yüksek Kiloyu giriniz") : ""
 
-            $('#modal-anket-diyetOykusu').modal('hide');
+            resolve();
         });
+
+        promise.catch(function (err) {
+            toastr.error(err);
+        })
+
+        promise.then(function (data) {
+
+            var url = $('#diyetOykusu').data('url');
+            $.get(url, function (data) {
+                $('#diyetOykusu').html(data);
+
+                $("#DiyetOykusu-enyuksekKilo").val($('#DiyetOykusuModal-enyuksekKilo').val());
+
+                $("#DiyetOykusu-diyetDeneyim").val($("#DiyetOykusuModal-diyetDeneyim").val());
+
+                $("#DiyetOykusu-VerilenEnyuksekKilo").val($("#DiyetOykusuModal-VerilenEnyuksekKilo").val());
+
+                $('#modal-anket-diyetOykusu').modal('hide');
+            });
+
+        });
+
     });
 </script>

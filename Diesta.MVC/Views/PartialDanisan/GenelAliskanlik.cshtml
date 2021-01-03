@@ -1,7 +1,19 @@
 ﻿<div class="card-body">
-    <h6 class="heading-small text-muted mb-4">Genel Alışkanlıklar</h6>
-    <div class="pl-lg-4">
+    <div class="row">
+        <div class="col-lg-9">
+            <h6 class="heading-small text-muted mb-4">Genel Alışkanlıklar</h6>
+        </div>
+        <div class="col-md-3 text-right">
+            <a class="btn btn-sm btn-icon-only text-light" id="removeGenelAliskanlık" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="ni ni-fat-remove fa-lg"></i>
+            </a>
+            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-edit fa-lg"></i>
+            </a>
+        </div>
+    </div>
 
+    <div class="pl-lg-4">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
@@ -9,7 +21,7 @@
                         Sigara kullanıyor
                         musunuz?
                     </label>
-                    <input type="text" id="genelAliskanlik-sigaraDurumu" class="form-control" placeholder="">
+                    <input type="text" id="genelAliskanlik-sigaraDurumu" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -18,7 +30,7 @@
                         Cevabınız evet ise kaç yıldır
                         kullanıyorsunuz?
                     </label>
-                    <input type="text" id="genelAliskanlik-sigaraKacYil" class="form-control" placeholder="">
+                    <input type="text" id="genelAliskanlik-sigaraKacYil" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -27,7 +39,7 @@
                         Sigara içiyorsanız ne
                         sıklıkta ve ortalama haftada kaç adet sigara içiyorsunuz?
                     </label>
-                    <input type="text" id="genelAliskanlik-sigaraKacAdet" class="form-control" placeholder="">
+                    <input type="text" id="genelAliskanlik-sigaraKacAdet" class="form-control" readonly>
                 </div>
             </div>
         </div>
@@ -38,7 +50,7 @@
                         Sigarayı bırakmayı denediniz
                         mi?
                     </label>
-                    <input type="text" id="genelAliskanlik-birakmaDenediMi" class="form-control" placeholder="">
+                    <input type="text" id="genelAliskanlik-birakmaDenediMi" class="form-control" readonly>
 
                 </div>
             </div>
@@ -48,13 +60,13 @@
                         Sigarayı bıraktıysanız kaç
                         yıl önce bıraktınız?
                     </label>
-                    <input type="text" id="genelAliskanlik-birakmaYili" class="form-control" placeholder="">
+                    <input type="text" id="genelAliskanlik-birakmaYili" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">Alkol alır mısınız?</label>
-                    <input type="text" id="genelAliskanlik-alkolVarMi" class="form-control" placeholder="">
+                    <input type="text" id="genelAliskanlik-alkolVarMi" class="form-control" readonly>
                 </div>
             </div>
         </div>
@@ -65,7 +77,7 @@
                         Ne sıklıkla alkol
                         alıyorsunuz?
                     </label>
-                    <input type="text" class="form-control"  id="genelAliskanlik-alkolSiklik" placeholder="">
+                    <input type="text" class="form-control" id="genelAliskanlik-alkolSiklik" readonly>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -74,7 +86,7 @@
                         Antidepresan kullanıyor
                         musunuz?
                     </label>
-                    <input type="text" class="form-control" id="genelAliskanlik-antiDeprasanVarMi" placeholder="">
+                    <input type="text" class="form-control" id="genelAliskanlik-antiDeprasanVarMi" readonly>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -83,7 +95,7 @@
                         Herhangi bir ilaç
                         bağımlılığınız var mı?
                     </label>
-                    <input type="text" class="form-control" id="genelAliskanlik-ilacBagimliligiVarMi" placeholder="">
+                    <input type="text" class="form-control" id="genelAliskanlik-ilacBagimliligiVarMi" readonly>
                 </div>
             </div>
         </div>
@@ -92,3 +104,11 @@
 </div>
 
 <hr class="my-4" />
+
+
+
+<script>
+    $('#removeGenelAliskanlık').click(function (event) {
+        $(this).parents(".card-body").remove();
+    });
+</script>

@@ -73,7 +73,7 @@
                             <label class="form-control-label">
                                 Başka bir aktiviteniz varsa bu alana yazabilirsiniz.
                             </label>
-                            <textarea rows="4" class="form-control" id="sporCesidi-sporCesidiArea" placeholder=""></textarea>
+                            <textarea rows="4" class="form-control" id="sporCesidi-sporCesidiArea"></textarea>
 
                         </div>
 
@@ -134,7 +134,7 @@
                             <label class="form-control-label" for="input-username">
                                 Başka bir nedeniniz varsa bu alana yazabilirsiniz.
                             </label>
-                            <textarea rows="4" class="form-control" id="sporCesidi-sporNedeniArea" placeholder=""></textarea>
+                            <textarea rows="4" class="form-control" id="HareketModal-sporNedeniArea"></textarea>
 
                         </div>
 
@@ -142,7 +142,7 @@
                             <label for="exampleFormControlSelect1">
                                 Ne sıklıkta fiziksel aktivite/egzersiz/spor yapıyorsunuz?
                             </label>
-                            <select class="form-control" id="sporCesidi-sporSiklik">
+                            <select class="form-control" id="HareketModal-sporSiklik">
                                 <option value="0">Seçim Yapın</option>
                                 <option value="1">Hergün</option>
                                 <option value="2">Haftada 3-4 gün</option>
@@ -152,7 +152,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group" id="sporCesidi-nedenOnemi">
+                        <div class="form-group" id="HareketModal-nedenOnemi">
                             <label class="form-control-label" for="input-username">
                                 Fiziksel aktivite veya egzersiz yapmıyorsanız yapmamanızın nedenlerinden size
                                 göre önemli olanları işaretleyiniz.
@@ -220,7 +220,7 @@
                             <label class="form-control-label" for="input-username">
                                 Başka bir nedeniniz varsa bu alana yazabilirsiniz.
                             </label>
-                            <textarea rows="4" class="form-control" id="sporCesidi-nedenOnemi" placeholder=""></textarea>
+                            <textarea rows="4" class="form-control" id="HareketModal-nedenOnemiArea"></textarea>
 
                         </div>
 
@@ -229,7 +229,7 @@
                                 Günde kaç saaatiniz
                                 bilgisayar başında geçiyor?
                             </label>
-                            <input type="text" id="sporCesidi-kacSaatBilg" class="form-control" placeholder="Örneğin: 6">
+                            <input type="text" id="HareketModal-kacSaatBilg" class="form-control">
                         </div>
 
                         <div class="form-group">
@@ -237,7 +237,7 @@
                                 Günde kaç saat televizyon
                                 izlersiniz?
                             </label>
-                            <input type="text" id="sporCesidi-kacSaatTv" class="form-control" placeholder="Örneğin: 4">
+                            <input type="text" id="HareketModal-kacSaatTv" class="form-control">
                         </div>
 
                         <div class="text-right">
@@ -316,26 +316,20 @@
             $.get(url, function (data) {
                 $('#hareket').html(data);
 
+                $("#Hareket-saporVarMi").val($('#HareketModal-saporVarMi input[type="radio"]:checked').val()); 
 
-                //$("#genelAliskanlik-sigaraDurumu").val($('#GenelAliskanlikModal-SigaraDurumu input[type="radio"]:checked').val());
+                $("#Hareket-sporCesidi").val($('#HareketModal-sporCesidi input[type="radio"]:checked').val() != undefined ? $('#HareketModal-sporCesidi input[type="radio"]:checked').val() : $('#HareketModal-sporCesidiArea').val());
 
-                //$("#genelAliskanlik-sigaraKacYil").val($("#GenelAliskanlikModal-sigaraKacYil").val());
+                $("#Hareket-sporNedeni").val($('#HareketModal-sporNedeni input[type="radio"]:checked').val() != undefined ? $('#HareketModal-sporNedeni input[type="radio"]:checked').val() : $('#HareketModal-sporNedeniArea').val());
 
-                //$("#genelAliskanlik-sigaraKacAdet").val($("#GenelAliskanlikModal-sigaraKacAdet").val());
+                $("#Hareket-sporSiklik").val($('#HareketModal-sporSiklik option:selected').val());
 
-                //$("#genelAliskanlik-birakmaDenediMi").val($('#GenelAliskanlikModal-birakmaDenediMi input[type="radio"]:checked').val());
+                $("#Hareket-nedenOnemi").val($('#HareketModal-nedenOnemi input[type="radio"]:checked').val() != undefined ? $('#HareketModal-nedenOnemi input[type="radio"]:checked').val() : $('#HareketModal-nedenOnemiArea').val());
 
-                //$("#genelAliskanlik-birakmaYili").val($("#GenelAliskanlikModal-birakmaYili").val());
+                $("#Hareket-kacSaatBilg").val($("#HareketModal-kacSaatBilg").val());
 
-                //$("#genelAliskanlik-alkolVarMi").val($('#GenelAliskanlikModal-alkolVarMi input[type="radio"]:checked').val());
+                $("#Hareket-kacSaatTv").val($("#HareketModal-kacSaatTv").val());
 
-                //$("#genelAliskanlik-alkolSiklik").val($("GenelAliskanlikModal-alkolSiklik").val());
-
-                //$("#genelAliskanlik-antiDeprasanVarMi").val($('#GenelAliskanlikModal-antiDeprasanVarMi input[type="radio"]:checked').val());
-
-                //$("#genelAliskanlik-ilacBagimliligiVarMi").val($('#GenelAliskanlikModal-ilacBagimliligiVarMi input[type="radio"]:checked').val());
-
-                ////Burası Yazilacak
 
                 $('#modal-anket-hareket').modal('hide');
             });

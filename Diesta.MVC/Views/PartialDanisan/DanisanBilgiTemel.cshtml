@@ -1,17 +1,4 @@
-﻿
-<style>
-    .fa-edit:before {
-        vertical-align: text-bottom;
-    }
-
-    .ni-fat-remove::before {
-        font-size: 2rem;
-        vertical-align: text-bottom;
-    }
-</style>
-
-
-<hr class="my-4" />
+﻿<hr class="my-4" />
 
 <div class="card-body">
     <div class="row">
@@ -19,10 +6,10 @@
             <h6 class="heading-small text-muted mb-4">Kişi Bilgileri</h6>
         </div>
         <div class="col-md-3 text-right">
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="removeDanisanTemelBilgi" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-fat-remove fa-lg"></i>
             </a>
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="editDanisanTemelBilgi" href="javascript:void(0)" " role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-edit fa-lg"></i>
             </a>
         </div>
@@ -33,15 +20,15 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">Ad</label>
-                    <input type="text" id="danisanBilgiTemel-Ad" class="form-control"
-                           placeholder="Ad Giriniz  *" value="">
+                    <input type="text" id="danisanBilgiTemel-Ad" autocomplete="off" class="form-control"
+                           placeholder="Ad Giriniz  *" value="" readonly>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">Soyad</label>
                     <input type="text" id="danisanBilgiTemel-Soyad" class="form-control"
-                           placeholder="Soyad Giriniz  *" value="">
+                           placeholder="Soyad Giriniz  *" value="" readonly>
                 </div>
             </div>
             <div class="col-lg-3">
@@ -53,8 +40,8 @@
                                 <i class="ni ni-calendar-grid-58"></i>
                             </span>
                         </div>
-                        <input class="form-control datepicker" id="danisanBilgiTemel-DogTar" placeholder="Select date"
-                               type="text" value="06/20/2020">
+                        <input class="form-control" id="danisanBilgiTemel-DogTar"
+                               type="text" readonly>
                     </div>
                 </div>
 
@@ -62,21 +49,7 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">Cinsiyet</label>
-                    <div class="input-group">
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1"
-                                   name="customRadioInline1" class="custom-control-input danisanBilgiTemel-Cinsiyet">
-                            <label class="custom-control-label"
-                                   for="customRadioInline1">Erkek</label>
-                        </div>
-                        <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline2"
-                                   name="customRadioInline1" class="custom-control-input danisanBilgiTemel-Cinsiyet">
-                            <label class="custom-control-label"
-                                   for="customRadioInline2">Kadın</label>
-                        </div>
-                    </div>
-
+                    <input type="text" id="danisanBilgiTemel-Cinsiyet" class="form-control" readonly>
                 </div>
             </div>
         </div>
@@ -84,39 +57,25 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Eğitim Durumu</label>
-                    <select class="form-control" id="danisanBilgiTemel-EgitimDurumu">
-                        <option>İlköğretim</option>
-                        <option>Ortaöğretim</option>
-                        <option>Önlisans</option>
-                        <option>Lisans</option>
-                        <option>Lisanüstü</option>
-                    </select>
+                    <input type="text" id="danisanBilgiTemel-EgitimDurumu" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Yaş Grubu</label>
-                    <select class="form-control" id="danisanBilgiTemel-YasGrubu">
-                        <option>18-25</option>
-                        <option>25-30</option>
-                        <option>30-40</option>
-                        <option>40-50</option>
-                        <option>50-60</option>
-                    </select>
+                    <input type="text" id="danisanBilgiTemel-YasGrubu" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">Telefon</label>
-                    <input type="text" id="danisanBilgiTemel-Tel" class="form-control"
-                           placeholder="Username" value="">
+                    <input type="text" id="danisanBilgiTemel-Tel" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">E-Posta</label>
-                    <input type="email" id="danisanBilgiTemel-Email" class="form-control"
-                           placeholder="E-Posta Giriniz  *">
+                    <input type="email" id="danisanBilgiTemel-Email" class="form-control" readonly>
                 </div>
             </div>
         </div>
@@ -124,29 +83,19 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">TC Kimlik No</label>
-                    <input type="text" id="danisanBilgiTemel-TcNo" class="form-control"
-                           placeholder="TC Kimlik No Giriniz  *" value="">
+                    <input type="text" id="danisanBilgiTemel-TcNo" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-city">Şehir</label>
-                    <select class="form-control" id="danisanBilgiTemel-Sehir">
-                        <option>İstanbul</option>
-                        <option>Ankara</option>
-                        <option>İzmir</option>
-                    </select>
-
+                    <input type="text" id="danisanBilgiTemel-Sehir" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-country">İlçe</label>
-                    <select class="form-control" id="danisanBilgiTemel-Ilce">
-                        <option>Kadıköy</option>
-                        <option>Pendik</option>
-                        <option>Beşiktaş</option>
-                    </select>
+                    <input type="text" id="danisanBilgiTemel-Ilce" class="form-control" readonly>
                 </div>
             </div>
         </div>
@@ -155,8 +104,7 @@
 
                 <div class="form-group">
                     <label class="form-control-label">Adres</label>
-                    <textarea rows="4" id="danisanBilgiTemel-Adres" class="form-control"
-                              placeholder="Adres Giriniz  *">Adres Giriniz  *</textarea>
+                    <textarea rows="4" id="danisanBilgiTemel-Adres" class="form-control" readonly></textarea>
                 </div>
 
             </div>
@@ -165,3 +113,45 @@
 </div>
 
 <hr class="my-4" />
+
+<script>
+    $('#removeDanisanTemelBilgi').click(function (event) {
+        $(this).parents(".card-body").remove();
+    });
+
+
+    $('#editDanisanTemelBilgi').click(function () {
+        var url = $('#modal-anket-temelBilgi').data('url');
+        $.get(url, function (data) {
+            $('#modal-anket-temelBilgi').html(data);
+
+            $("#TemelBilgiModal-Ad").val($('#danisanBilgiTemel-Ad').val());
+
+            $("#TemelBilgiModal-Soyad").val($("#danisanBilgiTemel-Soyad").val());
+
+            $("#TemelBilgiModal-DogTar").val($("#danisanBilgiTemel-DogTar").val());
+
+            $("#danisanBilgiTemel-Cinsiyet").val() == "Erkek" ?
+                $("#temelBilgiErkekModal").prop("checked", true) : $("#temelBilgiKadinModal").prop("checked", true)
+
+            $("#TemelBilgiModal-EgitimDur option[value=0]").text($("#danisanBilgiTemel-EgitimDurumu").val());
+
+            $("#TemelBilgiModal-YasGrubu option[value=0]").text($("#danisanBilgiTemel-YasGrubu").val());
+
+
+            $("#TemelBilgiModal-Tel").val($("#danisanBilgiTemel-Tel").val());
+
+            $("#TemelBilgiModal-Email").val($('#danisanBilgiTemel-Eposta').val());
+
+            $("#TemelBilgiModal-TcNo").val($('#danisanBilgiTemel-TcNo').val());
+
+            $("#TemelBilgiModal-Sehir option[value=0]").text($("#danisanBilgiTemel-Sehir").val());
+
+            $("#TemelBilgiModal-Ilce option[value=0]").text($("#danisanBilgiTemel-Ilce").val());
+
+            $("#TemelBilgiModal-Adres").val($('#danisanBilgiTemel-Adres').val());
+
+            $('#modal-anket-temelBilgi').modal('show');
+        });
+    });
+</script>

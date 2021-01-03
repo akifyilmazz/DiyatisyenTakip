@@ -13,7 +13,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-control-label">Ad</label>
-                            <input type="text" id="TemelBilgiModal-ad" class="form-control" placeholder="Ad Giriniz  *">
+                            <input type="text" id="TemelBilgiModal-ad" autocomplete="off" class="form-control" placeholder="Ad Giriniz  *">
                         </div>
                         <div class="form-group">
                             <label class="form-control-label">Soyad</label>
@@ -25,19 +25,19 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                 </div>
-                                <input class="form-control datepicker" id="TemelBilgiModal-DogTar" placeholder="Doğum Tarihi Giriniz  *" type="datetime-local" value="06/20/2020">
+                                <input class="form-control" id="TemelBilgiModal-DogTar" type="date">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group TemelBilgiModal-Cinsiyet">
                             <label class="form-control-label">Cinsiyet</label>
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="input-temelBilgiCErkek" name="temelBilgiCinsiyet" class="custom-control-input TemelBilgiModal-Cinsiyet">
-                                    <label class="custom-control-label" for="temelBilgiCinsiyet">Erkek</label>
+                                    <input type="radio" id="temelBilgiErkekModal" name="temelBilgiCinsiyet" value="Erkek" class="custom-control-input">
+                                    <label class="custom-control-label" for="temelBilgiErkekModal">Erkek</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="input-temelBilgiCKadın" name="temelBilgiCinsiyet" class="custom-control-input TemelBilgiModal-Cinsiyet">
-                                    <label class="custom-control-label" for="temelBilgiCinsiyet">Kadın</label>
+                                    <input type="radio" id="temelBilgiKadinModal" name="temelBilgiCinsiyet" value="Kadın" class="custom-control-input">
+                                    <label class="custom-control-label" for="temelBilgiKadinModal">Kadın</label>
                                 </div>
 
                             </div>
@@ -45,7 +45,7 @@
                         <div class="form-group">
                             <label class="form-control-label">Eğitim Durumu</label>
                             <select class="form-control" id="TemelBilgiModal-EgitimDur">
-                                <option value="">Eğitim Durumu Seç</option>
+                                <option value="0">Eğitim Durumu Seç</option>
                                 <option value="1">İlköğretim</option>
                                 <option value="2">Ortaöğretim</option>
                                 <option value="3">Önlisans</option>
@@ -56,7 +56,7 @@
                         <div class="form-group">
                             <label class="form-control-label">Yaş Grubu</label>
                             <select class="form-control" id="TemelBilgiModal-YasGrubu">
-                                <option value="">Yaş Gurubu Seç</option>
+                                <option value="0">Yaş Gurubu Seç</option>
                                 <option value="1">18-25</option>
                                 <option value="2">25-30</option>
                                 <option value="3">30-40</option>
@@ -80,7 +80,7 @@
                         <div class="form-group">
                             <label class="form-control-label">Şehir</label>
                             <select class="form-control" id="TemelBilgiModal-Sehir">
-                                <option value="">Şehir Seç</option>
+                                <option value="0">Şehir Seç</option>
                                 <option value="1">İstanbul</option>
                                 <option value="2">Ankara</option>
                                 <option value="3">İzmir</option>
@@ -90,7 +90,7 @@
                         <div class="form-group">
                             <label class="form-control-label">İlçe</label>
                             <select class="form-control" id="TemelBilgiModal-Ilce">
-                                <option value="">İlçe Seç</option>
+                                <option value="0">İlçe Seç</option>
                                 <option value="1">Kadıköy</option>
                                 <option value="2">Pendik</option>
                                 <option value="3">Beşiktaş</option>
@@ -113,86 +113,84 @@
 </div>
 
 <script>
-    var r = jQuery.Deferred();
+    $(function () {
+        Inputmask.extendDefaults({
+            'autoUnmask': true
+        });
+        $("#TemelBilgiModal-Tel").inputmask("0 (999) 999 99 99");
+        $("#TemelBilgiModal-TcNo").inputmask("99999999999");
+    })
+</script>
+<script>
     $('#btnTemelBilgiModalEkle').click(function () {
 
+        
+        var promise = new Promise(function (resolve, reject) {
 
-        var url = $('#kisiBilgisi').data('url');
-        $.get(url, function (data) {
-            $('#kisiBilgisi').html(data);
+            $("#TemelBilgiModal-ad").val().trim() == "" ? reject("Lütfen İsim Giriniz") : ""
 
-            if ($("#TemelBilgiModal-ad").val().trim() == "") {
-                toastr.error('Lütfen İsim Giriniz'); return false;
-            }
-            $("#danisanBilgiTemel-Ad").val($("#TemelBilgiModal-ad").val());
+            $("#TemelBilgiModal-Soyad").val().trim() == "" ? reject("Lütfen Soyad Giriniz") : ""
 
-            if ($("#TemelBilgiModal-Soyad").val().trim() == "") {
-                toastr.error("Lütfen Soyad Giriniz"); return false;
-            }
-            $("#danisanBilgiTemel-Soyad").val($("#TemelBilgiModal-Soyad").val());
+            $("#TemelBilgiModal-DogTar").val() == "" ? reject("Lütfen Doğum Tarihi giriniz") : ""
 
-            if ($("#TemelBilgiModal-DogTar").val().trim() == "") {
-                toastr.error("Lütfen Doğum Tarihi giriniz"); return false;
-            }
-            $("#danisanBilgiTemel-DogTar").val($("#TemelBilgiModal-DogTar").val());
+            $("#TemelBilgiModal-EgitimDur option:selected").val() == "0" ? reject("Lütfen Eğitim Durumunu giriniz") : ""
 
-            //if ($(".TemelBilgiModal-Cinsiyet:checked").val().trim() == "") {
-            //    toastr.error("Lütfen Cinsiyet Giriniz"); return false;
-            //}
-            //$(".danisanBilgiTemel-Cinsiyet:checked").val((".TemelBilgiModal-Cinsiyet:checked").val());
+            $("#TemelBilgiModal-YasGrubu option:selected").val() == "0" ? reject("Lütfen Yaş Grubunu giriniz") : ""
 
+            $("#TemelBilgiModal-Tel").val().trim() == "" ? reject("Lütfen Telefonu giriniz") : ""
 
-            if ($("#TemelBilgiModal-EgitimDur option:selected").val().trim == "") {
-                toastr.error("Lütfen Eğitim Durumunu Seçiniz"); return false;
-            }
-            $("#danisanBilgiTemel-EgitimDurumu option:selected").text($("#TemelBilgiModal-EgitimDur option:selected").text())
+            $("#TemelBilgiModal-Eposta").val().trim() == "" ? reject("Lütfen Eposta giriniz") : ""
 
-            if ($("#TemelBilgiModal-YasGrubu option:selected").val().trim() == "") {
-                toastr.error("Lütfen Yaş Gurubu Seçiniz"); return false;
-            }
-            $("#danisanBilgiTemel-YasGrubu option:selected").text($("#TemelBilgiModal-YasGrubu option:selected").text());
+            $("#TemelBilgiModal-TcNo").val().trim() == "" ? reject("Lütfen TcNo giriniz") : ""
 
+            $("#TemelBilgiModal-Sehir option:selected").val() == "0" ? reject("Lütfen Şehir giriniz") : ""
 
-            if ($("#TemelBilgiModal-Tel").val().trim == "") {
-                toastr.error("Lütfen Telefon Giriniz"); return false
-            }
-            $("#danisanBilgiTemel-Tel").val($("#TemelBilgiModal-Tel").val());
+            $("#TemelBilgiModal-Ilce option:selected").val() == "0" ? reject("Lütfen İlce giriniz") : ""
 
-            if ($("#TemelBilgiModal-Eposta").val().trim() == "") {
-                toastr.error("Lütfen Eposta Adresi Giriniz"); return false;
-            }
-            $("#danisanBilgiTemel-Email").val($("#TemelBilgiModal-Eposta").val());
+            $("#TemelBilgiModal-Adres").val().trim().trim() == "0" ? reject("Lütfen Adres Giriniz") : ""
 
-            if ($("#TemelBilgiModal-TcNo").val().trim() == "") {
-                toastr.error("Lütfen TC Numarası Giriniz"); return false;
-            }
-            $("#danisanBilgiTemel-TcNo").val($("#TemelBilgiModal-TcNo").val());
-
-            if ($("#TemelBilgiModal-Sehir option:selected").val().trim() == "") {
-                toastr.error("Lütfen Şehir Seçiniz"); return false;
-            }
-            $("#danisanBilgiTemel-Sehir option:selected").text($("#TemelBilgiModal-Sehir option:selected").text());
-
-            if ($("#TemelBilgiModal-Ilce option:selected").val().trim() == "") {
-                toastr.error("Lütfen İlçe Seçiniz"); return false;
-            }
-            $("#danisanBilgiTemel-Ilce option:selected").text($("#TemelBilgiModal-Ilce option:selected").text());
-
-            if ($("#TemelBilgiModal-Adres").val().trim() == "") {
-                toastr.error("Lütfen Adres Giriniz"); return false;
-            }
-            $("#danisanBilgiTemel-Adres").val($("#TemelBilgiModal-Adres").val());
-
-            $('#modal-anket-temelBilgi').modal('hide');
+            resolve();
         });
+
+        promise.catch(function (err) {
+            toastr.error(err);
+        })
+
+        promise.then(function (data) {
+
+            var url = $('#kisiBilgisi').data('url');
+            $.get(url, function (data) {
+                $('#kisiBilgisi').html(data);
+
+                $("#danisanBilgiTemel-Ad").val($('#TemelBilgiModal-ad').val());
+
+                $("#danisanBilgiTemel-Soyad").val($("#TemelBilgiModal-Soyad").val());
+
+                $("#TemelBilgiModal-DogTar").val($("#TemelBilgiModal-DogTar").val());
+
+                $("#danisanBilgiTemel-Cinsiyet").val($('.TemelBilgiModal-Cinsiyet input[type="radio"]:checked').val());
+
+                $("#danisanBilgiTemel-EgitimDurumu").val($("#TemelBilgiModal-EgitimDur option:selected").text());
+
+                $("#danisanBilgiTemel-YasGrubu").val($('#TemelBilgiModal-YasGrubu option:selected').val());
+
+                $("#danisanBilgiTemel-Tel").val($("#TemelBilgiModal-Tel").val());
+
+                $("#danisanBilgiTemel-Email").val($('#TemelBilgiModal-Eposta').val());
+
+                $("#danisanBilgiTemel-TcNo").val($('#TemelBilgiModal-TcNo').val());
+
+                $("#danisanBilgiTemel-Sehir").val($('#TemelBilgiModal-Sehir option:selected').val());
+
+                $("#danisanBilgiTemel-Ilce").val($('#TemelBilgiModal-Ilce option:selected').val());
+
+                $("#danisanBilgiTemel-Adres").val($('#TemelBilgiModal-Adres').val());
+
+
+                $('#modal-anket-temelBilgi').modal('hide');
+            });
+
+        });
+
     });
 </script>
-
-
-
-
-
-
-
-
-

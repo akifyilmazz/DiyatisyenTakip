@@ -1,0 +1,68 @@
+﻿<div class="card-body">
+    <div class="row">
+        <div class="col-md-9">
+            <h6 class="heading-small text-muted mb-4">Finans</h6>
+        </div>
+        <div class="col-md-3 text-right">
+            <a class="btn btn-sm btn-icon-only text-light" id="removeFinans" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="ni ni-fat-remove fa-lg"></i>
+            </a>
+            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-edit fa-lg"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="pl-lg-4">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">Tarih</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                        </div>
+                        <input type="number" id="Finans-Tarhi" class="form-control" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">
+                        Ücret
+                    </label>
+                    <input type="number" id="Finans-ucret" class="form-control" readonly>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">
+                        Ödendi
+                    </label>
+                    <input type="number" id="Finans-odendi" class="form-control">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="form-control-label">Yorum</label>
+                    <textarea rows="4" id="Finans-yorum" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<hr class="my-4">
+
+
+
+<script>
+    $('#removeFinans').click(function (event) {
+        $(this).parents(".card-body").remove();
+    });
+</script>

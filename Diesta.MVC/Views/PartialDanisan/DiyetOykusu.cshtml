@@ -1,15 +1,4 @@
-﻿<style>
-    .fa-edit:before {
-        vertical-align: text-bottom;
-    }
-
-    .ni-fat-remove::before {
-        font-size: 2rem;
-        vertical-align: text-bottom;
-    }
-</style>
-
-<hr class="my-4" />
+﻿<hr class="my-4" />
 
 <div class="card-body">
     <div class="row">
@@ -17,10 +6,10 @@
             <h6 class="heading-small text-muted mb-4">Diyet Öyküsü</h6>
         </div>
         <div class="col-md-3 text-right">
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="removeDiyetOykusu" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-fat-remove fa-lg"></i>
             </a>
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="editDiyetOykusu" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-edit fa-lg"></i>
             </a>
         </div>
@@ -30,19 +19,19 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">En yüksek kilo</label>
-                    <input type="text" id="DiyetOykusu-enyuksekKilo" class="form-control" placeholder="En Yüksek Kilo   *" value="">
+                    <input type="text" id="DiyetOykusu-enyuksekKilo" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">Diyet Deneyimi</label>
-                    <input type="text" id="DiyetOykusu-diyetdeneyim" class="form-control" placeholder="Diyet Deneyimi  *" value="">
+                    <input type="text" id="DiyetOykusu-diyetDeneyim" class="form-control"readonly >
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
                     <label class="form-control-label" for="input-username">Verdiğiniz En Yüksek Kilo</label>
-                    <input type="text" id="DiyetOykusu-VerilenEnyuksekKilo" class="form-control" placeholder="Verdiğiniz En Yüksek Kilo  *" value="">
+                    <input type="text" id="DiyetOykusu-VerilenEnyuksekKilo" class="form-control" readonly>
                 </div>
 
             </div>
@@ -53,3 +42,29 @@
 </div>
 
 <hr class="my-4" />
+
+
+<script>
+    $('#removeDiyetOykusu').click(function (event) {
+        $(this).parents(".card-body").remove();
+    });
+
+
+    $('#editDiyetOykusu').click(function (event) {
+
+        var url = $('#modal-anket-diyetOykusu').data('url');
+
+        $.get(url, function (data) {
+            $('#modal-anket-diyetOykusu').html(data);
+
+            $("#DiyetOykusuModal-enyuksekKilo").val($("#DiyetOykusu-enyuksekKilo").val());
+
+            $("#DiyetOykusuModal-diyetDeneyim").val($("#DiyetOykusu-diyetDeneyim").val());
+
+            $("#DiyetOykusuModal-VerilenEnyuksekKilo").val($("#DiyetOykusu-VerilenEnyuksekKilo").val());
+
+            $('#modal-anket-diyetOykusu').modal('show');
+        });
+
+    });
+</script>

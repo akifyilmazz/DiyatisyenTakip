@@ -14,74 +14,74 @@
                                 Varsa gıda alerjinizi
                                 yazınız.
                             </label>
-                            <input type="text" id="BesinAliskanlikModal-GidaAlerjisi" class="form-control" placeholder="Örneğin: Bulgur">
+                            <input type="text" id="BesinAliskanlikModal-GidaAlerjisi" class="form-control">
                         </div>
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">
                                 Günde kaç öğün
                                 yersiniz?
                             </label>
-                            <input class="form-control" type="number" value="23" id="BesinAliskanlikModal-ogunSayisi">
+                            <input class="form-control" type="text" value="23" id="BesinAliskanlikModal-ogunSayisi">
                         </div>
-                        <div class="form-group" id="modal-ogunAtlarMisin">
+                        <div class="form-group" id="BesinAliskanlikModal-ogunAtlarMisin">
                             <label class="form-control-label" for="input-username">
                                 Ana öğün atlar
                                 mısınız?
                             </label>
                             <div class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" id="input-anket-anaogun1" name="input-anket-anaogun"
-                                       class="custom-control-input BesinAliskanlikModal-ogunAtlarMisin" value="Evet">
+                                       class="custom-control-input" value="Evet">
                                 <label class="custom-control-label" for="input-anket-anaogun1">Evet</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" id="input-anket-anaogun2" name="input-anket-anaogun"
-                                       class="custom-control-input BesinAliskanlikModal-ogunAtlarMisin" value="Bazen">
+                                       class="custom-control-input" value="Bazen">
                                 <label class="custom-control-label" for="input-anket-anaogun2">Bazen</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
                                 <input type="radio" id="input-anket-anaogun3" name="input-anket-anaogun"
-                                       class="custom-control-input BesinAliskanlikModal-ogunAtlarMisin" value="Hayır">
+                                       class="custom-control-input" value="Hayır">
                                 <label class="custom-control-label" for="input-anket-anaogun3">Hayır</label>
                             </div>
                         </div>
-                        <div class="form-group" id="modal-AtlamaSebebi">
+                        <div class="form-group" id="BesinAliskanlikModal-AtlamaSebebi">
                             <label class="form-control-label" for="input-username">
                                 Ana öğün atlıyorsanız atlama
                                 nedenlerinizden size göre önemli olanları işaretleyiniz.
                             </label>
                             <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input BesinAliskanlikModal-AtlamaSebebi" 
+                                <input type="radio" class="custom-control-input"
                                        id="customCheck1" value="Zamanım Yok">
                                 <label class="custom-control-label" for="customCheck1">
                                     Zamanım yok
                                 </label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input BesinAliskanlikModal-AtlamaSebebi" id="customCheck12" value="Geç kalıyorum">
+                                <input type="radio" class="custom-control-input" id="customCheck12" value="Geç kalıyorum">
                                 <label class="custom-control-label" for="customCheck12">
                                     Geç kalıyorum
                                 </label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input BesinAliskanlikModal-AtlamaSebebi" id="customCheck13" value="Alışkanlığım yok">
+                                <input type="radio" class="custom-control-input" id="customCheck13" value="Alışkanlığım yok">
                                 <label class="custom-control-label" for="customCheck13">
                                     Alışkanlığım yok
                                 </label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input BesinAliskanlikModal-AtlamaSebebi" id="customCheck14" value="Canım istemiyor/iştahsızım">
+                                <input type="radio" class="custom-control-input" id="customCheck14" value="Canım istemiyor/iştahsızım">
                                 <label class="custom-control-label" for="customCheck14">
                                     Canım istemiyor/iştahsızım
                                 </label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input BesinAliskanlikModal-AtlamaSebebi" id="customCheck15" value="Kurs,spor vb.faaliyetlerim nedeniyle">
+                                <input type="radio" class="custom-control-input" id="customCheck15" value="Kurs,spor vb.faaliyetlerim nedeniyle">
                                 <label class="custom-control-label" for="customCheck15">
                                     Kurs,spor vb.faaliyetlerim nedeniyle
                                 </label>
                             </div>
                             <div class="custom-control custom-radio">
-                                <input type="radio" class="custom-control-input BesinAliskanlikModal-AtlamaSebebi" id="customCheck16" value="Hazırlanmadığı için">
+                                <input type="radio" class="custom-control-input" id="customCheck16" value="Hazırlanmadığı için">
                                 <label class="custom-control-label" for="customCheck16">
                                     Hazırlanmadığı için
                                 </label>
@@ -90,23 +90,23 @@
                                 Başka bir neden varsa bu
                                 alana yazabilirsiniz.
                             </label>
-                            <textarea rows="4" id="BesinAliskanlikModal-textArea" class="form-control" placeholder=""></textarea>
+                            <textarea rows="4" id="BesinAliskanlikModal-AtlamaSebebitextArea" class="form-control" placeholder=""></textarea>
 
                         </div>
-                        <div class="form-group" id="modal-ogunArasi">
+                        <div class="form-group" id="BesinAliskanlikModal-ogunArasi">
                             <label class="form-control-label" for="input-username"></label>
                             Öğün aralarında yemek yeme
                             alışkanlığınız var mıdır?
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="radio-anket-aliskanlik1" name="radioOgunArasi"
-                                           class="custom-control-input BesinAliskanlikModal-ogunArasi" value="Evet">
+                                           class="custom-control-input" value="Evet">
                                     <label class="custom-control-label"
                                            for="radio-anket-aliskanlik1">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="radio-anket-aliskanlik2" name="radioOgunArasi"
-                                           class="custom-control-input BesinAliskanlikModal-ogunArasi" value="Hayır">
+                                           class="custom-control-input" value="Hayır">
                                     <label class="custom-control-label"
                                            for="radio-anket-aliskanlik2">Hayır</label>
                                 </div>
@@ -117,22 +117,22 @@
                                 Günde ne kadar su
                                 tüketirsiniz?
                             </label>
-                            <input class="form-control" type="number" value="2" id="BesinAliskanlikModal-suTuketim">
+                            <input class="form-control" type="text" value="2" id="BesinAliskanlikModal-suTuketim">
                         </div>
-                        <div class="form-group" id="modal-tatliYemek">
+                        <div class="form-group" id="BesinAliskanlikModal-tatliYemek">
                             <label class="form-control-label" for="input-username"></label>
                             Tatlı veya çikolata yiyor
                             musunuz?
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="radio-anket-tatli1" name="radioCikolata"
-                                           class="custom-control-input BesinAliskanlikModal-tatliYemek" value="Evet">
+                                           class="custom-control-input " value="Evet">
                                     <label class="custom-control-label"
                                            for="radio-anket-tatli1">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="radio-anket-tatli2" name="radioCikolata"
-                                           class="custom-control-input BesinAliskanlikModal-tatliYemek" value="Hayır">
+                                           class="custom-control-input" value="Hayır">
                                     <label class="custom-control-label"
                                            for="radio-anket-tatli2">Hayır</label>
                                 </div>
@@ -189,7 +189,7 @@
 
                             </select>
                         </div>
-                        <div class="form-group" id="icecekSiklikModal">
+                        <div class="form-group" id="BesinAliskanlikModal-icecekSiklik">
                             <label class="form-control-label" for="input-username"></label>
                             Kola gazoz ve vb. asitleri
                             sıklıkla tüketir misiniz?
@@ -197,12 +197,12 @@
                             <div class="input-group">
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="radio-anket-asit1" name="radio-anket-asit"
-                                           class="custom-control-input BesinAliskanlikModal-icecekSiklik" value="Evet">
+                                           class="custom-control-input" value="Evet">
                                     <label class="custom-control-label" for="radio-anket-asit1">Evet</label>
                                 </div>
                                 <div class="custom-control custom-radio custom-control-inline">
                                     <input type="radio" id="radio-anket-asit2" name="radio-anket-asit"
-                                           class="custom-control-input BesinAliskanlikModal-icecekSiklik" value="Hayır">
+                                           class="custom-control-input" value="Hayır">
                                     <label class="custom-control-label"
                                            for="radio-anket-asit2">Hayır</label>
                                 </div>
@@ -219,101 +219,95 @@
     </div>
 </div>
 
+
+
+
+
+
+
 <script>
-    var r = jQuery.Deferred();
     $('#btnBesinAliskanlikModalEkle').click(function () {
+
 
         var promise = new Promise(function (resolve, reject) {
 
-            var url = $('#besinAliskanligi').data('url');
-            $.get(url, function (data) {
-                $('#kisiBilgisi').html(data);
-                debugger;
-                $("#BesinAliskanlik-GidaAlerjisi").val($("#BesinAliskanlikModal-GidaAlerjisi").val());
+            $("#BesinAliskanlikModal-GidaAlerjisi").val().trim() == "" ? reject("Lütfen Gıda Alerjisi Durumunuzu Giriniz") : ""
 
-                if ($("#BesinAliskanlikModal-ogunSayisi").val().trim() == "") {
-                    toastr.error("Lütfen Lütfen Öğün Sayınızı Girniz Griniz"); return false;
-                }
-                $("#BesinAliskanlik-ogunSayisi").val($("#BesinAliskanlikModal-ogunSayisi").val());
+            $("#BesinAliskanlikModal-ogunSayisi").val().trim() == "" ? reject("Lütfen Öğün Sayınızı Giriniz") : ""
+
+            $("#BesinAliskanlikModal-ogunAtlarMisin input[type='radio']:checked").val() == "" ? reject("Lütfen Öğün Atlama Durumunuzu giriniz") : ""
 
 
-                if ($("#modal-ogunAtlarMisin input[type='radio']:checked").val() == undefined) {
-                    toastr.error("Lütfen Öğün Atlama Durumunuzu Griniz"); return false;
-                }
-                $("#BesinAliskanlik-ogunAtlarMisin").val($("#modal-ogunAtlarMisin input[type='radio']:checked").val());
+            $("#BesinAliskanlikModal-ogunAtlarMisin input[type='radio']:checked").val() == "Evet" ?
+                ($("#BesinAliskanlikModal-AtlamaSebebi input[type='radio']:checked").val() == undefined ?
+                    ($("#BesinAliskanlikModal-AtlamaSebebitextArea").val().trim() == "" ?
+                        reject("Lütfen Öğün Atlama Sebebi Giriniz") : "") : "") :
+                $("#BesinAliskanlikModal-ogunAtlarMisin input[type='radio']:checked").val() == undefined ?
+                    reject("Lütfen Öğün Atlama/Atlamama Durumunu Giriniz") : ""
 
+            $("#BesinAliskanlikModal-ogunArasi input[type='radio']:checked").val() == "" ? reject("Lütfen Öğün Sayınızı Giriniz") : ""
 
-                //if ($('.BesinAliskanlikModal-AtlamaSebebi input[type="radio":checked]').val() == undefined) {
-                //    if ($("#BesinAliskanlikModal-textArea").val().trim == "") {
-                //        toastr.error("Lütfen Öğün Atlama Sebebinizi Giriniz"); return false;
-                //    }
-                //    $("#inputBesinAliskanlik-AtlamaSebebi").val($("#BesinAliskanlikModal-textArea").val());
-                //}
-                //else {
-                //    $("#modal-AtlamaSebebi input[type='radio']:checked").val($("#modal-AtlamaSebebi input[type='radio']:checked").val());
-                //}
+            $("#BesinAliskanlikModal-suTuketim").val().trim() == "" ? reject("Lütfen Öğün Sayınızı Giriniz") : ""
 
-                if ($("#modal-ogunArasi input[type='radio']:checked").val() == undefined) {
-                    toastr.error("Lütfen Öğün Arası Yeme Alışkanlığınızı Giriniz"); return false;
-                }
-                $("#inputBesinAliskanlik-ogunArasi").val($("#modal-ogunArasi input[type='radio']:checked").val());
+            $("#BesinAliskanlikModal-tatliYemek input[type='radio']:checked").val() == "Evet" ?
+                $("#BesinAliskanlikModal-tatliSiklik").val().trim() == "" ?
+                    reject("Lütfen Tatlı Yeme Sıklığını giriniz") : "" :
+                $("#BesinAliskanlikModal-tatliYemek input[type='radio']:checked").val() == undefined ?
+                    reject("Lütfen Tatlı Yeme Durumunuzu Giriniz") : ""
 
-                if ($("#BesinAliskanlikModal-suTuketim").val().trim == "") {
-                    toastr.error("Lütfen Su Tüketim Miktarınızı Giriniz"); return false;
-                }
-                $("#inputBesinAliskanlik-suTuketim").val($("#BesinAliskanlikModal-suTuketim").val());
+            $("#BesinAliskanlikModal-YemekHizi").val() == "" ? reject("Lütfen Yemek Yeme Hızınızı Giriniz") : ""
 
-                if ($("#modal-tatliYemek input[type='radio']:checked").val() == undefined) {
-                    toastr.error("Lütfen Tatlı Yeme Durumunuzu Giriniz"); return false;
-                }
-                $("#inputBesinAliskanlik-tatliYemek").val($("#modal-tatliYemek input[type='radio']:checked").val());
+            $("#BesinAliskanlikModal-yemeSikligi option:selected").val() == "0" ? reject("Lütfen Dışarıda Yemek Yeme Sıklığınızı Giriniz") : ""
 
-                if ($("#BesinAliskanlikModal-tatliSiklik").val().trim() == "") {
-                    toastr.error("Lütfen Tatlı Yeme Sıklığınızı Seçiniz"); return false;
-                }
-                $("#inputBesinAliskanlik-tatliSiklik").val($("#BesinAliskanlikModal-tatliSiklik").val())
+            $("#BesinAliskanlikModal-NerdeYersin option:selected").val() == "0" ? reject("Lütfen Dışarıda En Sık Nerde Yediğinizi Giriniz") : ""
 
-                if ($("#BesinAliskanlikModal-YemekHizi").val().trim() == "") {
-                    toastr.error("Lütfen Yemek Yeme Hızınızı Giriniz"); return false;
-                }
-                $("#inputBesinAliskanlik-YemekHizi").val($("#BesinAliskanlikModal-YemekHizi").val())
+            $("#BesinAliskanlikModal-icecekSiklik input[type='radio']:checked").val() == undefined ? reject("Lütfen Asitli İçecek İçme Sıklığınızı Giriniz") : ""
 
-
-                if ($("#BesinAliskanlikModal-yemeSikligi option:selected").val() == "0") {
-                    toastr.error("Lütfen Dışarda Yemek Yeme Sıklığınızı Giriniz"); return false;
-                }
-                $("#inputBesinAliskanlik-yemeSikligi").val($("#BesinAliskanlikModal-yemeSikligi option:selected").text());
-
-                if ($("#BesinAliskanlikModal-NerdeYersin option:selected").val() == "0") {
-                    toastr.error("Lütfen Dışarda En Sık Nerde Yediğinizi Giriniz"); return false;
-                }
-                $("#inputBesinAliskanlik-NerdeYersin").val($("#BesinAliskanlikModal-NerdeYersin option:selected").text());
-
-                if ($("#icecekSiklikModal input[type='radio']:checked").val() == undefined) {
-                    toastr.error("Lütfen İçecek İçme Sıklığınızı Giriniz"); return false;
-                }
-                $("#inputBesinAliskanlik-icecekSiklik").val($("#icecekSiklikModal input[type='radio']:checked").val());
-
-                $('#modal-anket-besinAliskanlik').modal('hide');
-            });
 
             resolve();
         });
+
         promise.catch(function (err) {
             toastr.error(err);
         })
+
         promise.then(function (data) {
-            //ajax post istegi
+
+            var url = $('#besinAliskanligi').data('url');
+            $.get(url, function (data) {
+                $('#besinAliskanligi').html(data);
+
+                $("#inputBesinAliskanlik-GidaAlerjisi").val($('#BesinAliskanlikModal-GidaAlerjisi').val());
+
+                $("#inputBesinAliskanlik-ogunSayisi").val($('#BesinAliskanlikModal-ogunSayisi').val());
+
+                $("#inputBesinAliskanlik-ogunAtlarMisin").val($('#BesinAliskanlikModal-ogunAtlarMisin input[type="radio"]:checked').val());
+
+                $("#inputBesinAliskanlik-AtlamaSebebi").val($('#BesinAliskanlikModal-AtlamaSebebi input[type="radio"]:checked').val() == undefined ? $('#BesinAliskanlikModal-AtlamaSebebitextArea').val() : $('#BesinAliskanlikModal-AtlamaSebebi input[type="radio"]:checked').val());
+
+                $("#inputBesinAliskanlik-ogunArasi").val($("#BesinAliskanlikModal-ogunArasi input[type='radio']:checked").val());
+
+                $("#inputBesinAliskanlik-suTuketim").val($('#BesinAliskanlikModal-suTuketim').val());
+
+                $("#inputBesinAliskanlik-tatliYemek").val($('#BesinAliskanlikModal-tatliYemek input[type="radio"]:checked').val());
+
+                $("#inputBesinAliskanlik-tatliSiklik").val($('#BesinAliskanlikModal-tatliSiklik').val());
+
+                $("#inputBesinAliskanlik-YemekHizi").val($('#BesinAliskanlikModal-YemekHizi').val());
+
+                $("#inputBesinAliskanlik-yemeSikligi").val($('#BesinAliskanlikModal-yemeSikligi option:selected').text());
+
+                $("#inputBesinAliskanlik-NerdeYersin").val($('#BesinAliskanlikModal-NerdeYersin option:selected').text());
+
+                $("#inputBesinAliskanlik-icecekSiklik").val($('#BesinAliskanlikModal-icecekSiklik input[type="radio"]:checked').val());
+
+
+                $('#modal-anket-besinAliskanlik').modal('hide');
+
+                
+            });
+
         });
 
     });
 </script>
-
-
-
-
-
-
-
-
-

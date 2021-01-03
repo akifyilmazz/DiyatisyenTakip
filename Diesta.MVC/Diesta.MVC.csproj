@@ -120,12 +120,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Class\GirisModel.cs" />
+    <Compile Include="Class\Hesapla.cs" />
     <Compile Include="Controllers\DanisanController.cs" />
+    <Compile Include="Controllers\FinansController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PartialDanisanController.cs" />
     <Compile Include="Controllers\PartialModalController.cs" />
     <Compile Include="Controllers\ProfilController.cs" />
+    <Compile Include="Controllers\RandevuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2662,8 +2666,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\argon.css" />
     <Content Include="Content\css\argon.min.css" />
+    <Content Include="Content\css\Danisan\DanisanEkle\DanisanEkle.css" />
     <Content Include="Content\css\Home\Index.css" />
+    <Content Include="Content\css\Login\Login.css" />
     <Content Include="Content\css\Shared\_Layout\_Layout.css" />
+    <Content Include="Content\css\_Layout\_Layout.css" />
     <Content Include="Content\img\brand\blue.png" />
     <Content Include="Content\img\brand\favicon.png" />
     <Content Include="Content\img\brand\white.png" />
@@ -6158,6 +6165,11 @@
     <Content Include="Content\vendor\nucleo\fonts\nucleo-icons.woff2" />
     <Content Include="Content\vendor\prismjs\components.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
+    <Content Include="Scripts\inputmask\inputmask.js" />
+    <Content Include="Scripts\inputmask\inputmask.min.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -6206,6 +6218,13 @@
     <Content Include="Views\PartialDanisan\Gecmis.cshtml" />
     <Content Include="Views\PartialDanisan\GenelAliskanlik.cshtml" />
     <Content Include="Views\PartialDanisan\Hareket.cshtml" />
+    <Content Include="Views\PartialDanisan\Kisisel.cshtml" />
+    <Content Include="Views\PartialDanisan\Antropometri.cshtml" />
+    <Content Include="Views\PartialDanisan\Finans.cshtml" />
+    <Content Include="Views\PartialDanisan\Not.cshtml" />
+    <Content Include="Views\PartialDanisan\Egzersiz.cshtml" />
+    <Content Include="Views\Randevu\RandevuList.cshtml" />
+    <Content Include="Views\Finans\FinansList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

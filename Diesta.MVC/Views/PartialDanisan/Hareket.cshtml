@@ -1,24 +1,36 @@
 ﻿<div class="card-body">
-    <h6 class="heading-small text-muted mb-4">Hareket ve Egzersiz</h6>
-    <div class="pl-lg-4">
+    <div class="row">
+        <div class="col-md-9">
+            <h6 class="heading-small text-muted mb-4">Hareket ve Egzersiz</h6>
+        </div>
+        <div class="col-md-3 text-right">
+            <a class="btn btn-sm btn-icon-only text-light" id="removeHareket" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="ni ni-fat-remove fa-lg"></i>
+            </a>
+            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-edit fa-lg"></i>
+            </a>
+        </div>
+    </div>
 
+    <div class="pl-lg-4">
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
-                    <label class="form-control-label" >
+                    <label class="form-control-label">
                         Düzenli olarak fiziksel
                         aktivite/egzersiz/spor yapıyor musunuz?
                     </label>
-                    <input type="text" id="Hareket-saporVarMi" class="form-control">
+                    <input type="text" id="Hareket-saporVarMi" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="form-group">
-                    <label class="form-control-label" >
+                    <label class="form-control-label">
                         Cevabınız evet ise fiziksel aktivite yapıyorsanız hangi aktiviteyi/aktiviteleri
                         yapıyorsunuz?
                     </label>
-                    <input type="text" id="Hareket-sporCesidi" class="form-control">
+                    <input type="text" id="Hareket-sporCesidi" class="form-control" readonly readonly>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -27,7 +39,7 @@
                         Ne sıklıkta fiziksel aktivite/egzersiz/spor
                         yapıyorsunuz?
                     </label>
-                    <input type="text" id="Hareket-sporSiklik" class="form-control">
+                    <input type="text" id="Hareket-sporSiklik" class="form-control" readonly>
                 </div>
             </div>
         </div>
@@ -35,29 +47,29 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="form-group">
-                    <label class="form-control-label" >
+                    <label class="form-control-label">
                         Fiziksel aktivite veya egzersiz yapıyorsanız yapmanızın nedenlerinden size göre
                         önemli olanları :
                     </label>
-                    <input type="text" id="Hareket-sporNedeni" class="form-control">
+                    <input type="text" id="Hareket-sporNedeni" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="form-group">
-                    <label class="form-control-label" >
+                    <label class="form-control-label">
                         Fiziksel aktivite veya egzersiz yapmıyorsanız yapmamanızın nedenlerinden size
                         göre önemli olanlanı :
                     </label>
-                    <input type="text" id="Hareket-nedenOnemi" class="form-control">
+                    <input type="text" id="Hareket-nedenOnemi" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="form-group">
-                    <label class="form-control-label" >
+                    <label class="form-control-label">
                         Günde kaç saaatiniz
                         bilgisayar başında geçiyor?
                     </label>
-                    <input type="text" id="Hareket-kacSaatBilg" class="form-control" placeholder="">
+                    <input type="text" id="Hareket-kacSaatBilg" class="form-control" readonly>
                 </div>
             </div>
         </div>
@@ -65,11 +77,11 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="form-group">
-                    <label class="form-control-label" >
+                    <label class="form-control-label">
                         Günde kaç saat televizyon
                         izlersiniz?
                     </label>
-                    <input type="text" id="Hareket-kacSaatTv" class="form-control" placeholder="Örneğin: 4">
+                    <input type="text" id="Hareket-kacSaatTv" class="form-control" readonly>
                 </div>
             </div>
         </div>
@@ -78,3 +90,9 @@
 
 <hr class="my-4" />
 
+
+<script>
+    $('#removeHareket').click(function (event) {
+        $(this).parents(".card-body").remove();
+    });
+</script>

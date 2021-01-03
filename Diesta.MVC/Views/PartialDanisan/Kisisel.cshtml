@@ -1,0 +1,97 @@
+﻿<div class="card-body">
+    <div class="row">
+        <div class="col-md-9">
+            <h6 class="heading-small text-muted mb-4">Kişisel İlgi Alanları</h6>
+        </div>
+        <div class="col-md-3 text-right">
+            <a class="btn btn-sm btn-icon-only text-light" id="removeKisisel" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="ni ni-fat-remove fa-lg"></i>
+            </a>
+            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-edit fa-lg"></i>
+            </a>
+        </div>
+    </div>
+    <div class="pl-lg-4">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">
+                        Şu anki kilonuzu nasıl tanımlarsınız?
+                    </label>
+                    <input type="text" id="Kisisel-SuankKiloTanimla" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">
+                        Kilonuz günlük aktivitelerinizi nasıl etkiliyor?
+                    </label>
+                    <input type="text" id="Kisisel-kiloAktiviteEtkileme" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">
+                        Kilonuz sosyal yaşamınızı nasıl etkiliyor?
+                    </label>
+                    <input type="text" id="Kisisel-kiloSosyyalHayatEtki" class="form-control" readonly>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">
+                        Neden kilo vermek istiyorsunuz?
+                    </label>
+                    <input type="text" id="Kisisel-nedenKiloVermek" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">
+                        Kaç kilo vermeyi planlıyorsunuz?
+                    </label>
+                    <input type="text" id="Kisisel-kacKiloVermek" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">
+                        Hedeflediğiniz en düşük kilo nedir
+                    </label>
+                    <input type="text" id="Kisisel-hedefKilo" class="form-control" readonly>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="form-control-label" for="input-username">
+                        Sağlığınız hakkında en önemli endişeleriniz nelerdir?
+                    </label>
+                    <input type="text" id="Kisisel-saglıkEndisesi" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label class="form-control-label">Ek bilgi ve notlarınız</label>
+                    <textarea rows="4" id="Kisisel-EkBilgi" class="form-control" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-4" />
+
+
+<script>
+    $('#removeKisisel').click(function (event) {
+        $(this).parents(".card-body").remove();
+    });
+</script>

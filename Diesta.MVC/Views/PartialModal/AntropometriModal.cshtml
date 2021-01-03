@@ -14,62 +14,133 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                 </div>
-                                <input class="form-control datepicker" placeholder="Select date" type="text"
-                                       value="06/20/2020">
+                                <input class="form-control datepicker" id="AntropometriModal-Tarih" type="date">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">
                                 Ağırlık
                             </label>
-                            <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                            <input type="number" id="AntropometriModal-Agırlık" class="form-control" >
                         </div>
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">
                                 Boy
                             </label>
-                            <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-control-label" for="input-username">
-                                BMI
-                            </label>
-                            <label class="form-control-label" for="input-username">
-                                28.2
-                            </label>
+                            <input type="number" id="AntropometriModal-Boy" class="form-control" >
                         </div>
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">
                                 Bel
                             </label>
-                            <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                            <input type="number" class="form-control" id="AntropometriModal-Bel">
                         </div>
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">
                                 Kalça
                             </label>
-                            <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                            <input type="number" id="AntropometriModal-Kalca" class="form-control">
                         </div>
                         <div class="form-group">
                             <label class="form-control-label" for="input-username">
                                 Yağ
                             </label>
-                            <input type="number" id="" class="form-control" placeholder="Örneğin: 4">
+                            <input type="number" id="AntropometriModal-Yag" class="form-control">
                         </div>
 
-                        <div class="text-center">
-                            <button type="button" class="btn btn-primary my-4">Ekle</button>
+                        <div class="text-right">
+                            <button type="button" id="btnAntropometriModalEkle" class="btn btn-primary my-4">Ekle</button>
                         </div>
                     </form>
                 </div>
             </div>
-
-
-
-
         </div>
-
     </div>
 </div>
 
+
+
+
+<script>
+    $('#btnAntropometriModalEkle').click(function () {
+
+
+        var promise = new Promise(function (resolve, reject) {
+
+            /*Validation*/
+
+            $("#AntropometriModal-Tarih").val().trim() == "" ? reject("Lütfen Tarih Giriniz") : ""
+
+            $("#AntropometriModal-Agırlık").val().trim() == "" ? reject("Lütfen Ağırlığınızı Giriniz") : ""
+
+            $("#AntropometriModal-Boy").val().trim() == "" ? reject("Lütfen Boyunuzu Giriniz") : ""
+
+            $("#AntropometriModal-Bel").val().trim() == "" ? reject("Lütfen Bel Bedeninizi Giriniz") : ""
+
+            $("#AntropometriModal-Kalca").val().trim() == "" ? reject("Lütfen Kalça Bedeninizi Giriniz") : ""
+
+            $("#AntropometriModal-Yag").val().trim() == "" ? reject("Lütfen Yağ Bedeninizi Giriniz") : ""
+
+            /*Validation*/
+
+            resolve();
+        });
+
+        promise.catch(function (err) {
+            toastr.error(err);
+        })
+
+        promise.then(function (data) {
+            
+            var url = $('#Antropometri').data('url');
+            $.get(url, function (data) {
+                $('#Antropometri').html(data);
+
+                $("#Antropometri-Tarih").val($("#AntropometriModal-Tarih").val());
+
+                $("#Antropometri-Agırlık").val($("#AntropometriModal-Agırlık").val());
+
+                $("#Antropometri-Boy").val($("#AntropometriModal-Boy").val());
+
+                $("#Antropometri-Bel").val($("#AntropometriModal-Bel").val());
+
+                $("#Antropometri-Kalca").val($("#AntropometriModal-Kalca").val());
+
+                $("#Antropometri-Yag").val($("#AntropometriModal-Yag").val());
+
+                BMIhesapla();
+
+                $('#modal-anket-antropometri').modal('hide');
+            });
+
+        });
+
+    });
+</script>
+<script>
+    function BMIhesapla() {
+
+        BMIgonder = {
+            boy: $("#AntropometriModal-Boy").val(),
+            kilo: $("#AntropometriModal-Agırlık").val(),
+        };
+
+        $.ajax({
+            url: '/PartialDanisan/BMIHesapla/',
+            type: 'POST',
+            data: BMIgonder,
+            dataType: 'json',
+            beforeSend: function () {
+              
+            },
+            success: function (data) {
+                
+                $("#Antropometri-BMI").val(data.index); 
+            },
+            error: function (hata, ajaxOptions, thrownError) {
+                console.log("BMI Error")
+            }
+        });
+
+    }
+</script>
