@@ -8,7 +8,7 @@
             <a class="btn btn-sm btn-icon-only text-light" id="removeBesinAliskanlik" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-fat-remove fa-lg"></i>
             </a>
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="editBesinAliskanlik" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-edit fa-lg"></i>
             </a>
         </div>
@@ -144,4 +144,56 @@
     $('#removeBesinAliskanlik').click(function (event) {
         $(this).parents(".card-body").remove();
     });
+
+
+    $('#editBesinAliskanlik').click(function () {
+        var url = $('#modal-anket-besinAliskanlik').data('url');
+
+        $.get(url, function (data) {
+
+            $('#modal-anket-besinAliskanlik').html(data);
+
+            $("#BesinAliskanlikModal-GidaAlerjisi").val($('#inputBesinAliskanlik-GidaAlerjisi').val());
+
+            $("#BesinAliskanlikModal-ogunSayisi").val($("#inputBesinAliskanlik-ogunSayisi").val());
+
+            
+            $("#inputBesinAliskanlik-ogunAtlarMisin").val() == "Evet" ?
+                $("#modalRadioOgunAtlaEvet").prop("checked", true) : $("#inputBesinAliskanlik-ogunAtlarMisin").val() == "Bazen" ?
+                    $("#modalRadioOgunAtlaBazen").prop("checked", true) : $("#inputBesinAliskanlik-ogunAtlarMisin").val() == "Hayır" ?
+                         $("#modalRadioTatliTuketimHayir").prop("checked", true) :""
+
+            $("#BesinAliskanlikModal-AtlamaSebebi option[value=0]").text($('#inputBesinAliskanlik-AtlamaSebebi').val());
+
+            $("#inputBesinAliskanlik-AtlamaSebebi").val() == "Zamanım Yok" ?
+                $("#modalRadioZamanYok").prop("checked", true) : $("#inputBesinAliskanlik-AtlamaSebebi").val() == "Geç kalıyorum" ?
+                    $("#modalRadioGecKaliyorum").prop("checked", true) : $("#inputBesinAliskanlik-AtlamaSebebi").val() == "Alışkanlığım yok" ?
+                        $("#modalRadioAliskanlikYok").prop("checked", true) : $("#inputBesinAliskanlik-AtlamaSebebi").val() == "Canım istemiyor/iştahsızım" ?
+                            $("#modalRadioIstemiyor").prop("checked", true) : $("#inputBesinAliskanlik-AtlamaSebebi").val() == "Kurs,spor vb.faaliyetlerim nedeniyle" ?
+                                $("#modalRadioSporDan").prop("checked", true) : $("#inputBesinAliskanlik-AtlamaSebebi").val() == "Hazırlanmadığı için" ?
+                                    $("#modalRadioHazirlanmiyor").prop("checked", true) : $("#AtlamaSebebi-AtlamaSebebitextArea").val($("#inputBesinAliskanlik-ogunAtlarMisin").val())
+
+            $("#inputBesinAliskanlik-ogunArasi").val() == "Evet" ?
+                $("#modalRadioOgunArasiEvet").prop("checked", true) : $("#modalRadioOgunArasiHayır").prop("checked", true)
+
+            $("#inputBesinAliskanlik-tatliYemek").val() == "Evet" ?
+                $("#modalRadioTatliTuketimEvet").prop("checked", true) : $("#modalRadioTatliTuketimHayir").prop("checked", true)
+
+            $("#BesinAliskanlikModal-tatliSiklik").val($("#inputBesinAliskanlik-tatliSiklik").val());
+
+            $("#BesinAliskanlikModal-YemekHizi").val($("#inputBesinAliskanlik-YemekHizi").val());
+
+            $("#BesinAliskanlikModal-yemeSikligi option[value=0]").text($('#inputBesinAliskanlik-yemeSikligi').val());
+
+            $("#BesinAliskanlikModal-NerdeYersin option[value=0]").text($("#inputBesinAliskanlik-NerdeYersin").val());
+
+            $("#inputBesinAliskanlik-icecekSiklik").val() == "Evet" ?
+                $("#modalRadioIcecekEvet").prop("checked", true) : $("#modalRadioIcecekHayir").prop("checked", true)
+
+
+            $('#modal-anket-besinAliskanlik').modal('show');
+
+        });
+    });
 </script>
+

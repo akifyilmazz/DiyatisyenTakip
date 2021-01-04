@@ -111,4 +111,28 @@
     $('#removeGenelAliskanlık').click(function (event) {
         $(this).parents(".card-body").remove();
     });
+
+
+    $('#btnGenelAliskanlikModal').click(function () {
+        var url = $('#modal-anket-genelAliskanlik').data('url');
+
+        $.get(url, function (data) {
+            $('#modal-anket-genelAliskanlik').html(data);
+
+
+
+
+            $('#Gecmis-resmiHastalik').val() == "Evet" ? $("#modalResmiHastalikEvet").prop("checked", true) : $("#modalResmiHastalikHayir").prop("checked", true)
+
+            $("#Gecmis-resmiHastalikIcerik").val() == "Kalp-Damar hastalıkları" ?
+                $("#modalHastalikKalp").prop("checked", true) : $("#Gecmis-resmiHastalikIcerik").val() == "Şeker hastalığı" ?
+                    $("#modalHastalikSeker").prop("checked", true) : $("#Gecmis-resmiHastalikIcerik").val() == "Yüksek tansiyon" ?
+                        $("#modalHastalikTansiyon").prop("checked", true) : $("#Gecmis-resmiHastalikIcerik").val() == "Kanser" ?
+                            $("#modalHastalikKanser").prop("checked", true) : $("#Gecmis-resmiHastalikIcerik").val() == "Sindirim sistemi hastalıkları" ?
+
+
+
+            $('#modal-anket-genelAliskanlik').modal('show');
+        });
+    });
 </script>
