@@ -7,7 +7,7 @@
             <a class="btn btn-sm btn-icon-only text-light" id="removeAntropometri" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-fat-remove fa-lg"></i>
             </a>
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="editAntropometri" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-edit fa-lg"></i>
             </a>
         </div>
@@ -22,8 +22,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                         </div>
-                        <input class="form-control datepicker" id="Antropometri-Tarih" type="text"
-                               value="06/20/2020">
+                        <input class="form-control datepicker" id="Antropometri-Tarih" type="text" readonly>
                     </div>
                 </div>
             </div>
@@ -89,5 +88,30 @@
 <script>
     $('#removeAntropometri').click(function (event) {
         $(this).parents(".card-body").remove();
+    });
+
+
+    $('#editAntropometri').click(function () {
+        var url = $('#modal-anket-antropometri').data('url');
+
+
+        $.get(url, function (data) {
+            $('#modal-anket-antropometri').html(data);
+
+            $("#AntropometriModal-Tarih").val($("#Antropometri-Tarih").val());
+
+            $("#AntropometriModal-Agırlık").val($("#Antropometri-Agırlık").val());
+
+            $("#AntropometriModal-Boy").val($("#Antropometri-Boy").val());
+
+            $("#AntropometriModal-Bel").val($("#Antropometri-Bel").val());
+
+            $("#AntropometriModal-Kalca").val($("#Antropometri-Kalca").val());
+
+            $("#AntropometriModal-Yag").val($("#Antropometri-Yag").val());
+
+
+            $('#modal-anket-antropometri').modal('show');
+        });
     });
 </script>

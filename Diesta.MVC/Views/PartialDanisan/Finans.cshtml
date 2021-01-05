@@ -7,7 +7,7 @@
             <a class="btn btn-sm btn-icon-only text-light" id="removeFinans" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-fat-remove fa-lg"></i>
             </a>
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="editFinans" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-edit fa-lg"></i>
             </a>
         </div>
@@ -22,7 +22,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                         </div>
-                        <input type="number" id="Finans-Tarhi" class="form-control" readonly>
+                        <input type="tel" id="Finans-Tarhi" class="form-control" readonly>
                     </div>
                 </div>
             </div>
@@ -64,5 +64,24 @@
 <script>
     $('#removeFinans').click(function (event) {
         $(this).parents(".card-body").remove();
+    });
+
+    $('#editFinans').click(function () {
+        var url = $('#modal-anket-finans').data('url');
+
+        $.get(url, function (data) {
+            $('#modal-anket-finans').html(data);
+
+            $("#FinansModal-tarih").val($('#Finans-Tarhi').val());
+
+            $("#FinansModal-ucret").val($("#Finans-ucret").val());
+
+            $("#FinansModal-odendi").val($("#Finans-odendi").val());
+
+            $("#FinansModal-yorum").val($("#Finans-yorum").val());
+
+            $('#modal-anket-finans').modal('show');
+
+        });
     });
 </script>

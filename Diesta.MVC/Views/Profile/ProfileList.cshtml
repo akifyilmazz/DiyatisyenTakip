@@ -1,0 +1,189 @@
+﻿@{
+    ViewBag.Title = "ProfileList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}@section HeaderCss{
+    <style>
+        .card {
+            margin-bottom: 0px !important;
+        }
+    </style>
+}
+<section>
+    <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-6 col-7">
+                        <h6 class="h2 text-white d-inline-block mb-0">
+                            <a href="#!" class="btn btn-neutral">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        Profili Düzenle
+                                    </font>
+                                </font>
+                            </a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container-fluid mt--6">
+        <div class="row">
+            <div class="col-xl-4 order-xl-2">
+                <div class="card card-profile">
+                    <img src="../assets/img/theme/img-1-1000x600.jpg" alt="Görüntü yer tutucusu" class="card-img-top">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 order-lg-2">
+                            <div class="card-profile-image">
+                                <a href="#">
+                                    <img src="../assets/img/theme/team-4.jpg" class="rounded-circle">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                        <br />
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-profile-stats d-flex justify-content-center">
+                                    <div>
+                                        <span class="heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">22</font></font></span>
+                                        <span class="description"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Randevularım</font></font></span>
+                                    </div>
+                                    <div>
+                                        <span class="heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></span>
+                                        <span class="description"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Danışanlarım</font></font></span>
+                                    </div>
+                                    <div>
+                                        <span class="heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2500<span>₺</span></font></font></span>
+                                        <span class="description"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Finanslarım</font></font></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="h3">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        Jessica Jones
+                                    </font>
+                            </h5>
+                            <br />
+                            <div class="h5 mt-4">
+                                <i class="ni business_briefcase-24 mr-2"></i><font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        konuralp mahallesi 152. sokak 5 no Apt. Merkez/DÜZCE
+                                    </font>
+                                </font>
+                            </div>
+                            <div>
+                                <i class="ni education_hat mr-2"></i><font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        Bilgisayar Bilimleri Üniversitesi
+                                    </font>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 order-xl-1">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Profili Düzenle </font></font></h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <a href="#!" class="btn btn-sm btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kaydet</font></font></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <h6 class="heading-small text-muted mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kullanıcı bilgisi</font></font></h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-username"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kullanıcı adı</font></font></label>
+                                            <input type="text" id="input-username" class="form-control" placeholder="Kullanıcı adı" >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-email"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-Posta</font></font></label>
+                                            <input type="email" id="input-email" class="form-control" placeholder="Mail Girin">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-first-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İsim</font></font></label>
+                                            <input type="text" id="input-first-name" class="form-control" placeholder="İsim Gir" >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-last-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soyadı</font></font></label>
+                                            <input type="text" id="input-last-name" class="form-control" placeholder="Soyad Girin" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <!-- Address -->
+                            <h6 class="heading-small text-muted mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İletişim bilgileri</font></font></h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-address"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adres</font></font></label>
+                                            <input id="input-address" class="form-control" placeholder="Ev Adresi" value="" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-city"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kent</font></font></label>
+                                            <input type="text" id="input-city" class="form-control" placeholder="Kent" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-country"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ülke</font></font></label>
+                                            <input type="text" id="input-country" class="form-control" placeholder="Ülke" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-country"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Posta kodu</font></font></label>
+                                            <input type="number" id="input-postal-code" class="form-control" placeholder="Posta kodu">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        @*<footer class="footer pt-0">
+                <div class="row align-items-center justify-content-lg-between">
+                </div>
+            </footer>*@
+    </div>
+</section>
+
+
+
+

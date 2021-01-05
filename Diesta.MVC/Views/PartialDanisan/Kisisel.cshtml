@@ -7,7 +7,7 @@
             <a class="btn btn-sm btn-icon-only text-light" id="removeKisisel" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-fat-remove fa-lg"></i>
             </a>
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="editKisisel" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-edit fa-lg"></i>
             </a>
         </div>
@@ -93,5 +93,34 @@
 <script>
     $('#removeKisisel').click(function (event) {
         $(this).parents(".card-body").remove();
+    });
+
+    $('#editKisisel').click(function () {
+        var url = $('#modal-anket-kisisel').data('url');
+
+        $.get(url, function (data) {
+            $('#modal-anket-kisisel').html(data);
+
+
+            $("#KisiselModal-SuankKiloTanimla").val($("#Kisisel-SuankKiloTanimla").val());
+
+            $("#KisiselModal-kiloAktiviteEtkileme").val($("#Kisisel-kiloAktiviteEtkileme").val());
+
+            $("#KisiselModal-kiloSosyyalHayatEtki").val($("#Kisisel-kiloSosyyalHayatEtki").val());
+
+            $("#KisiselModal-nedenKiloVermek").val($("#Kisisel-nedenKiloVermek").val());
+
+            $("#KisiselModal-kacKiloVermek").val($("#Kisisel-kacKiloVermek").val());
+
+            $("#KisiselModal-hedefKilo").val($("#Kisisel-hedefKilo").val());
+
+            $("#KisiselModal-hedefKilo").val($("#Kisisel-hedefKilo").val());
+
+            $("#KisiselModal-saglıkEndisesi").val($("#Kisisel-saglıkEndisesi").val());
+
+            $("#KisiselModal-EkBilgi").val($("#Kisisel-EkBilgi").val());
+
+            $('#modal-anket-kisisel').modal('show');
+        });
     });
 </script>

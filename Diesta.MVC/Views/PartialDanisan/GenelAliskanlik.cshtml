@@ -4,10 +4,10 @@
             <h6 class="heading-small text-muted mb-4">Genel Alışkanlıklar</h6>
         </div>
         <div class="col-md-3 text-right">
-            <a class="btn btn-sm btn-icon-only text-light" id="removeGenelAliskanlık" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="removeGenelAliskanlik" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-fat-remove fa-lg"></i>
             </a>
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="editGenelAliskanlik" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-edit fa-lg"></i>
             </a>
         </div>
@@ -108,27 +108,40 @@
 
 
 <script>
-    $('#removeGenelAliskanlık').click(function (event) {
+    $('#removeGenelAliskanliık').click(function (event) {
         $(this).parents(".card-body").remove();
     });
 
-
-    $('#btnGenelAliskanlikModal').click(function () {
+    $('#editGenelAliskanlik').click(function () {
         var url = $('#modal-anket-genelAliskanlik').data('url');
 
         $.get(url, function (data) {
             $('#modal-anket-genelAliskanlik').html(data);
 
 
+            $("#genelAliskanlik-sigaraDurumu").val() == "Evet" ?
+                $("#modalSigaraEvet").prop("checked", true) : $("#modalSigaraHayir").prop("checked", true)
 
 
-            $('#Gecmis-resmiHastalik').val() == "Evet" ? $("#modalResmiHastalikEvet").prop("checked", true) : $("#modalResmiHastalikHayir").prop("checked", true)
+            $('#GenelAliskanlikModal-sigaraKacYil').val($("#genelAliskanlik-sigaraKacYil").val());
 
-            $("#Gecmis-resmiHastalikIcerik").val() == "Kalp-Damar hastalıkları" ?
-                $("#modalHastalikKalp").prop("checked", true) : $("#Gecmis-resmiHastalikIcerik").val() == "Şeker hastalığı" ?
-                    $("#modalHastalikSeker").prop("checked", true) : $("#Gecmis-resmiHastalikIcerik").val() == "Yüksek tansiyon" ?
-                        $("#modalHastalikTansiyon").prop("checked", true) : $("#Gecmis-resmiHastalikIcerik").val() == "Kanser" ?
-                            $("#modalHastalikKanser").prop("checked", true) : $("#Gecmis-resmiHastalikIcerik").val() == "Sindirim sistemi hastalıkları" ?
+            $('#GenelAliskanlikModal-sigaraKacAdet').val($("#genelAliskanlik-sigaraKacAdet").val());
+
+            $("#genelAliskanlik-birakmaDenediMi").val() == "Evet" ?
+                $("#modalSigaraBirakmaGirisimEvet").prop("checked", true) : $("#modalSigaraBirakmaGirisimHayir").prop("checked", true)
+
+            $('#GenelAliskanlikModal-birakmaYili').val($("#genelAliskanlik-birakmaYili").val());
+
+            $("#genelAliskanlik-alkolVarMi").val() == "Evet" ?
+                $("#modalAlkolEvet").prop("checked", true) : $("#modalAlkolHayir").prop("checked", true)
+
+            $('#GenelAliskanlikModal-alkolSiklik').val($("#genelAliskanlik-alkolSiklik").val());
+
+            $("#genelAliskanlik-antiDeprasanVarMi").val() == "Evet" ?
+                $("#modalAntiDeprasanEvet").prop("checked", true) : $("#modalAntiDeprasanHayir").prop("checked", true)
+
+            $("#genelAliskanlik-ilacBagimliligiVarMi").val() == "Evet" ?
+                $("#modalIlacEvet").prop("checked", true) : $("#modalIlacHayir").prop("checked", true)
 
 
 

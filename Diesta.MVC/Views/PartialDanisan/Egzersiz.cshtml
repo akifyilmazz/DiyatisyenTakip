@@ -7,7 +7,7 @@
             <a class="btn btn-sm btn-icon-only text-light" id="removeEgzersiz" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-fat-remove fa-lg"></i>
             </a>
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="editEgzersiz" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-edit fa-lg"></i>
             </a>
         </div>
@@ -37,5 +37,20 @@
 <script>
     $('#removeEgzersiz').click(function (event) {
         $(this).parents(".card-body").remove();
+    });
+
+
+    $('#editEgzersiz').click(function () {
+        var url = $('#modal-anket-egzersiz').data('url');
+
+        $.get(url, function (data) {
+            $('#modal-anket-egzersiz').html(data);
+
+            $("#EgzersizModal-AktiviteTur option[value=0]").text($('#Egzersiz-AktiviteTur').val());
+
+            $("#EgzersizModal-dakkaGun").val($("#Egzersiz-dakkaGun").val());
+
+            $('#modal-anket-egzersiz').modal('show');
+        });
     });
 </script>

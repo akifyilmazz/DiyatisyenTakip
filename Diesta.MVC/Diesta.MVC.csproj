@@ -129,6 +129,7 @@
     <Compile Include="Controllers\PartialDanisanController.cs" />
     <Compile Include="Controllers\PartialModalController.cs" />
     <Compile Include="Controllers\ProfilController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RandevuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -6225,6 +6226,7 @@
     <Content Include="Views\PartialDanisan\Egzersiz.cshtml" />
     <Content Include="Views\Randevu\RandevuList.cshtml" />
     <Content Include="Views\Finans\FinansList.cshtml" />
+    <Content Include="Views\Profile\ProfileList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

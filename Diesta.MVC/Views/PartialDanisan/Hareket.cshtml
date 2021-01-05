@@ -7,7 +7,7 @@
             <a class="btn btn-sm btn-icon-only text-light" id="removeHareket" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-fat-remove fa-lg"></i>
             </a>
-            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-sm btn-icon-only text-light" id="editHareket" href="javascript:void(0)" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-edit fa-lg"></i>
             </a>
         </div>
@@ -60,7 +60,7 @@
                         Fiziksel aktivite veya egzersiz yapmıyorsanız yapmamanızın nedenlerinden size
                         göre önemli olanlanı :
                     </label>
-                    <input type="text" id="Hareket-nedenOnemi" class="form-control" readonly>
+                    <input type="text" id="Hareket-sporYapmamaNedeni" class="form-control" readonly>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -94,5 +94,61 @@
 <script>
     $('#removeHareket').click(function (event) {
         $(this).parents(".card-body").remove();
+    });
+
+    $('#editHareket').click(function () {
+        var url = $('#modal-anket-hareket').data('url');
+
+        $.get(url, function (data) {
+            $('#modal-anket-hareket').html(data);
+
+
+            $("#Hareket-saporVarMi").val() == "Evet" ?
+                $("#modalAktiviteEvet").prop("checked", true) : $("#modalAktiviteHayir").prop("checked", true)
+
+
+            $("#Hareket-sporCesidi").val() == "Yürüyüş" ?
+                $("#sporCesidiModalYurus").prop("checked", true) : $("#Hareket-sporCesidi").val() == "Bahçe işleri" ?
+                    $("#sporCesidiModalBahceIsleri").prop("checked", true) : $("#Hareket-sporCesidi").val() == "Koşu" ?
+                        $("#sporCesidiModalKosu").prop("checked", true) : $("#Hareket-sporCesidi").val() == "Futbol" ?
+                            $("#sporCesidiModalFutbol").prop("checked", true) : $("#Hareket-sporCesidi").val() == "Yüzme" ?
+                                $("#sporCesidiModalYuzme").prop("checked", true) : $("#Hareket-sporCesidi").val() == "Kondisyon aleti kullanma" ?
+                                    $("#sporCesidiModalKondisyon").prop("checked", true) : $("#Hareket-sporCesidi").val($("#sporCesidi-sporCesidiArea").val())
+
+
+            $("#HareketModal-sporSiklik option[value=0]").text($('#Hareket-sporSiklik').val());
+
+
+            $("#Hareket-sporNedeni").val() == "Gerginliği azaltmak/rahatlamak için" ?
+                $("#sporRahatlamak").prop("checked", true) : $("#Hareket-sporNedeni").val() == "Sağlıklı olmak için" ?
+                    $("#sporSAglik").prop("checked", true) : $("#Hareket-sporNedeni").val() == "Diğer insanlarla tanışmak için" ?
+                        $("#sporSosyallesmek").prop("checked", true) : $("#Hareket-sporNedeni").val() == "Diğer insanlarla tanışmak için" ?
+                            $("#sporEglence").prop("checked", true) : $("#Hareket-sporNedeni").val() == "Eğlence için" ?
+                                $("#sporEglence").prop("checked", true) : $("#Hareket-sporNedeni").val() == "Kendimi iyi hissetmek için" ?
+                                    $("#sporMutluluk").prop("checked", true) : $("#Hareket-sporNedeni").val() == "Kilo vermek veya kilomu korumak için" ?
+                                        $("#sporKilo").prop("checked", true) : $("#Hareket-sporNedeni").val() == "Daha iyi konsantre olmamı sağladığı için" ?
+                                            $("#sporKonsantre").prop("checked", true) : $("#Hareket-sporNedeni").val() == "Bilmiyorum" ?
+                                                $("#noneSporBilmiyorum1").prop("checked", true) : $("#HareketModal-sporNedeniArea").val($("#Hareket-sporNedeni").val())
+
+
+            $("#Hareket-nedenYapmamaOnemi").val() == "Zamanım yok" ?
+                $("#noneSporZamanYok").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "Nasıl başlayacağımı bilmiyorum" ?
+                    $("#noneSporBilmiyorum").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "Spor yapacak enerjiyi kendimde bulamıyorum" ?
+                        $("#noneSporEnerjiYok").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "Maddi gücüm yeterli değil" ?
+                            $("#noneSporMaddiYetersizlik").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "Sağlık problemlerinden dolayı yapamıyorum" ?
+                                $("#noneSporSaglikProblemi").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "İşlerim çok yoğun" ?
+                                    $("#noneSporYogunluk").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "Spor yapabileceğim uygun bir yer yok" ?
+                                        $("#noneSporYerYok").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "Tv izlemeyi veya kitap okumayı tercih ediyorum" ?
+                                            $("#noneSporDigerAktvite").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "Daha fazla egzersize ihtiyaç duymuyorum" ?
+                                                $("#noneSporSporYeter").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "Daha fazla egzersize ihtiyaç duymuyorum" ?
+                                                    $("#noneSporSporYeter").prop("checked", true) : $("#Hareket-nedenYapmamaOnemi").val() == "Bilmiyorum" ?
+                                                        $("#noneSporBilmiyorum2").prop("checked", true) : $("#HareketModal-nedenYapmamaOnemiArea").val($("#Hareket-nedenYapmamaOnemi").val())
+
+            $("#HareketModal-kacSaatBilg").val($("#Hareket-kacSaatBilg").val());
+
+            $("#HareketModal-kacSaatTv").val($("#Hareket-kacSaatTv").val());
+
+            $('#modal-anket-hareket').modal('show');
+        });
     });
 </script>

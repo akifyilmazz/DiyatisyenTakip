@@ -44,14 +44,48 @@
 </div>
 
 
-
 <script>
     $('#FinansModalEkle').click(function () {
-        var url = $('#Finans').data('url');
-        $.get(url, function (data) {
-            $('#Finans').html(data);
-            $('#modal-anket-finans').modal('hide');
+
+
+        var promise = new Promise(function (resolve, reject) {
+
+            /*Validation*/
+
+            $("#FinansModal-tarih").val() == "" ? reject("Lütfen Tarih Giriniz") : ""
+            $("#FinansModal-ucret").val().trim() == "" ? reject("Lütfen Ücret Girin") : ""
+            $("#FinansModal-odendi").val().trim() == "" ? reject("Lütfen Ödenme Bilgisini Girin") : ""
+            $("#FinansModal-yorum").val().trim() == "" ? reject("Lütfen Yorum Girin") : ""
+
+            /*Validation*/
+
+            resolve();
         });
+
+        promise.catch(function (err) {
+            toastr.error(err);
+        })
+
+        promise.then(function (data) {
+
+            $('#FinansModalEkle').click(function () {
+                var url = $('#Finans').data('url');
+                $.get(url, function (data) {
+                    $('#Finans').html(data);
+
+                    $("#Finans-Tarhi").val($("#FinansModal-tarih").val());
+
+                    $("#Finans-ucret").val($("#FinansModal-ucret").val());
+
+                    $("#Finans-odendi").val($("#FinansModal-odendi").val());
+
+                    $("#Finans-yorum").val($("#FinansModal-yorum").val());
+
+                    $('#modal-anket-finans').modal('hide');
+                });
+            });
+
+        });
+
     });
 </script>
-
