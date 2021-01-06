@@ -6,6 +6,14 @@
         .card {
             margin-bottom: 0px !important;
         }
+
+        .gizle {
+            display: none;
+        }
+        .container-fluid.mt--6 .row .col-xl-8.order-xl-1 {
+            max-width: 100%;
+            flex: 1 0 66.66667%;
+        }
     </style>
 }
 <section>
@@ -15,10 +23,31 @@
                 <div class="row align-items-center py-4">
                     <div class="col-lg-6 col-7">
                         <h6 class="h2 text-white d-inline-block mb-0">
-                            <a href="#!" class="btn btn-neutral">
+                            <a href="javascript:void(0)" id="kullaniciBilgisiBtn" class="btn btn-neutral">
                                 <font style="vertical-align: inherit;">
                                     <font style="vertical-align: inherit;">
-                                        Profili Düzenle
+                                        Kullanıcı Bilgisi
+                                    </font>
+                                </font>
+                            </a>
+                            <a href="javascript:void(0)" id="iletisimBilgileriBtn" class="btn btn-neutral">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        İletişim Bilgileri
+                                    </font>
+                                </font>
+                            </a>
+                            <a href="javascript:void(0)" id="sireketBilgiBtn" class="btn btn-neutral">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        Şirket Bilgileri
+                                    </font>
+                                </font>
+                            </a>
+                            <a href="javascript:void(0)" id="ayarlarBtn" class="btn btn-neutral">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        Ayarlar
                                     </font>
                                 </font>
                             </a>
@@ -31,11 +60,14 @@
 </section>
 
 <section>
+
     <div class="container-fluid mt--6">
         <div class="row">
+
+
             <div class="col-xl-4 order-xl-2">
                 <div class="card card-profile">
-                    <img src="../assets/img/theme/img-1-1000x600.jpg" alt="Görüntü yer tutucusu" class="card-img-top">
+                    <img src="../assets/img/theme/img-1-1000x600.jpg" alt="Image placeholder" class="card-img-top">
                     <div class="row justify-content-center">
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
@@ -46,144 +78,419 @@
                         </div>
                     </div>
                     <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                        <br />
+                        <div class="d-flex justify-content-between">
+                        </div>
                     </div>
                     <div class="card-body pt-0">
                         <div class="row">
                             <div class="col">
                                 <div class="card-profile-stats d-flex justify-content-center">
                                     <div>
-                                        <span class="heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">22</font></font></span>
-                                        <span class="description"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Randevularım</font></font></span>
+                                        <span class="heading">22</span>
+                                        <span class="description">Danışan Sayısı</span>
                                     </div>
                                     <div>
-                                        <span class="heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></span>
-                                        <span class="description"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Danışanlarım</font></font></span>
+                                        <span class="heading">10</span>
+                                        <span class="description">Finans Miktarı</span>
                                     </div>
                                     <div>
-                                        <span class="heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2500<span>₺</span></font></font></span>
-                                        <span class="description"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Finanslarım</font></font></span>
+                                        <span class="heading">89</span>
+                                        <span class="description">Randevu Sayısı</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-center">
                             <h5 class="h3">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">
-                                        Jessica Jones
-                                    </font>
+                                Mehmet Akif Yılmaz<span class="font-weight-light"></span>
                             </h5>
-                            <br />
+                            <div class="h5 font-weight-300">
+                                <i class="ni location_pin mr-2"></i>Danışman İsmi
+                            </div>
                             <div class="h5 mt-4">
-                                <i class="ni business_briefcase-24 mr-2"></i><font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">
-                                        konuralp mahallesi 152. sokak 5 no Apt. Merkez/DÜZCE
-                                    </font>
-                                </font>
+                                <i class="ni business_briefcase-24 mr-2"></i>
                             </div>
                             <div>
-                                <i class="ni education_hat mr-2"></i><font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">
-                                        Bilgisayar Bilimleri Üniversitesi
-                                    </font>
-                                </font>
+                                <i class="ni education_hat mr-2"></i>Adres dsadsadsadsadsadsa
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-8 order-xl-1">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="row align-items-center">
-                            <div class="col-8">
-                                <h3 class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Profili Düzenle </font></font></h3>
+                <div class="row">
+                    <div id="kullaniciBilgisi" class="col-xl-8 order-xl-1 bilgiler">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h3 class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kullanıcı Bilgileri </font></font></h3>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <a href="javascript:void(0)" id="kullaniciBilgisiKaydet" class="btn btn-sm btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kaydet</font></font></a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-4 text-right">
-                                <a href="#!" class="btn btn-sm btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kaydet</font></font></a>
+                            <div class="card-body">
+                                <form>
+                                    <div class="pl-lg-4">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-username"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Danışmanınız</font></font></label>
+                                                    <input type="text" id="kullaniciBilgisiDanisan" class="form-control" placeholder="Dınışman İsmi">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-email"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İsim</font></font></label>
+                                                    <input type="email" id="kullaniciBilgisiAd" class="form-control" placeholder="Ad Giriniz">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-first-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soyad</font></font></label>
+                                                    <input type="text" id="kullaniciBilgisiSoyad" class="form-control" placeholder="Soyad Gir">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-last-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doğum Tarihi</font></font></label>
+                                                    <input type="date" id="kullaniciBilgisiDogumTar" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group kullaniciBilgisi-Cinsiyet">
+                                                    <label class="form-control-label">Cinsiyet</label>
+                                                    <div class="input-group">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="kullaniciBilgisiErkek" name="kullaniciBilgisi" value="Erkek" class="custom-control-input">
+                                                            <label class="custom-control-label" for="kullaniciBilgisiErkek">Erkek</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="kullaniciBilgisiKadin" name="kullaniciBilgisi" value="Kadın" class="custom-control-input">
+                                                            <label class="custom-control-label" for="kullaniciBilgisiKadin">Kadın</label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-4">
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <form>
-                            <h6 class="heading-small text-muted mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kullanıcı bilgisi</font></font></h6>
-                            <div class="pl-lg-4">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-username"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kullanıcı adı</font></font></label>
-                                            <input type="text" id="input-username" class="form-control" placeholder="Kullanıcı adı" >
-                                        </div>
+
+                    <div id="iletisimBilgileri" class="col-xl-8 order-xl-1 bilgiler gizle">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h3 class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İletişim Bilgileri</font></font></h3>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-email"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-Posta</font></font></label>
-                                            <input type="email" id="input-email" class="form-control" placeholder="Mail Girin">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-first-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İsim</font></font></label>
-                                            <input type="text" id="input-first-name" class="form-control" placeholder="İsim Gir" >
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-last-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soyadı</font></font></label>
-                                            <input type="text" id="input-last-name" class="form-control" placeholder="Soyad Girin" >
-                                        </div>
+                                    <div class="col-4 text-right">
+                                        <a id="iletisimBilgisiKaydet" href="javascript:void(0)" class="btn btn-sm btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kaydet</font></font></a>
                                     </div>
                                 </div>
                             </div>
-                            <hr class="my-4">
-                            <!-- Address -->
-                            <h6 class="heading-small text-muted mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İletişim bilgileri</font></font></h6>
-                            <div class="pl-lg-4">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-address"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adres</font></font></label>
-                                            <input id="input-address" class="form-control" placeholder="Ev Adresi" value="" type="text">
+                            <div class="card-body">
+                                <form>
+                                    <!-- Address -->
+                                    <div class="pl-lg-4">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-city"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kent</font></font></label>
+                                                    <input type="text" id="iletisimBilgisiIl" class="form-control" placeholder="Kent" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-country"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ülke</font></font></label>
+                                                    <input type="text" id="iletisimBilgisiUlke" class="form-control" placeholder="Ülke" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-country"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Posta kodu</font></font></label>
+                                                    <input type="number" id="iletisimBilgisiPostaKodu" class="form-control" placeholder="Posta kodu">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-address"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adres</font></font></label>
+                                                    <input id="iletisimBilgisiAdres" class="form-control" placeholder="Ev Adresi" value="" type="text">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-city"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kent</font></font></label>
-                                            <input type="text" id="input-city" class="form-control" placeholder="Kent" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-country"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ülke</font></font></label>
-                                            <input type="text" id="input-country" class="form-control" placeholder="Ülke" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-country"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Posta kodu</font></font></label>
-                                            <input type="number" id="input-postal-code" class="form-control" placeholder="Posta kodu">
-                                        </div>
-                                    </div>
-                                </div>
+                                    <hr class="my-4">
+                                </form>
                             </div>
-                        </form>
+                        </div>
                     </div>
+
+                    <div id="sireketBilgi" class="col-xl-8 order-xl-1 bilgiler gizle">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h3 class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şirket Bilgisi</font></font></h3>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <a id="sirketBilgisiKaydet" href="javascript:void(0)" class="btn btn-sm btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kaydet</font></font></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <!-- Address -->
+                                    <div class="pl-lg-4">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-address"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şirket Ünvanı</font></font></label>
+                                                    <input id="sireketBilgiSirketUnvani" class="form-control" placeholder="Şirket Ünvanı Gir" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-city"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vergi Dairesi</font></font></label>
+                                                    <input type="text" id="sireketBilgiVergiDairesi" class="form-control" placeholder="Vergi Dairesi Gir" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-city"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vergi Numarası</font></font></label>
+                                                    <input type="number" id="sireketBilgiVergiNo" class="form-control" placeholder="Vergi Numarası Gir" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-city"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">il</font></font></label>
+                                                    <input type="text" id="sireketBilgiIl" class="form-control" placeholder="İl Gir" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-country"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İlçe</font></font></label>
+                                                    <input type="text" id="sireketBilgiIlce" class="form-control" placeholder="İlçe Gir" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-country"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Posta kodu</font></font></label>
+                                                    <input type="number" id="sireketBilgiPostaKodu" class="form-control" placeholder="Posta kodu">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <label class="form-control-label">Adres</label>
+                                                    <textarea id="sireketBilgiAdres" rows="4" class="form-control" placeholder="Adres Girin  *"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-4">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ayarlar" class="col-xl-8 order-xl-1 bilgiler gizle">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h3 class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şifre Değiştir</font></font></h3>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <a id="ayarlarKayedet" href="javascript:void(0)" class="btn btn-sm btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kaydet</font></font></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <!-- Address -->
+                                    <div class="pl-lg-4">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-address"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eski Şifre</font></font></label>
+                                                    <input id="sifreDegistirEski" class="form-control" placeholder="Eski Şifre" value="" type="password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="input-address"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yeni Şifre</font></font></label>
+                                                    <input id="sifreDegistirYeni" class="form-control" placeholder="Yeni Şifre" value="" type="password">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <hr class="my-4">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- Footer -->
+                @*<footer class="footer pt-0">
+                    <div class="row align-items-center justify-content-lg-between">
+                    </div>
+                </footer>*@
+            </div>
+
+
             </div>
         </div>
-        <!-- Footer -->
-        @*<footer class="footer pt-0">
-                <div class="row align-items-center justify-content-lg-between">
-                </div>
-            </footer>*@
-    </div>
+            
 </section>
 
+@section Scripts {
+
+    @*Formlar Arası Geciş*@
+    <script>
+        $("#kullaniciBilgisiBtn").click(function () {
+
+            $(".bilgiler").hasClass("gizle") ? $(".bilgiler").addClass("gizle") : ""
+            $("#kullaniciBilgisi").hasClass("gizle") ? $("#kullaniciBilgisi").removeClass("gizle") : ""
+
+        });
+        $("#iletisimBilgileriBtn").click(function () {
+
+            $(".bilgiler").hasClass("gizle") ? $(".bilgiler").addClass("gizle") : ""
+            $("#iletisimBilgileri").hasClass("gizle") ? $("#iletisimBilgileri").removeClass("gizle") : ""
+
+        });
+        $("#sireketBilgiBtn").click(function () {
+
+            $(".bilgiler").hasClass("gizle") ? $(".bilgiler").addClass("gizle") : ""
+            $("#sireketBilgi").hasClass("gizle") ? $("#sireketBilgi").removeClass("gizle") : ""
+
+        });
+        $("#ayarlarBtn").click(function () {
+
+            $(".bilgiler").hasClass("gizle") ? $(".bilgiler").addClass("gizle") : ""
+            $("#ayarlar").hasClass("gizle") ? $("#ayarlar").removeClass("gizle") : ""
+
+        });
+    </script>
+    @*end: Formlar Arası Geciş*@
+
+    @*Validation Kontrolleri*@
+    <script>
+        $('#kullaniciBilgisiKaydet').click(function () {
+            var promise = new Promise(function (resolve, reject) {
+                /*Validation*/
+
+                $("#kullaniciBilgisiDanisan").val().trim() == "" ? reject("Lütfen Danışan İsmi Giriniz") : ""
+
+                $("#kullaniciBilgisiAd").val().trim() == "" ? reject("Lütfen İsmi Giriniz") : ""
+
+                $("#kullaniciBilgisiSoyad").val().trim() == "" ? reject("Lütfen Soyad Giriniz") : ""
+
+                $("#kullaniciBilgisiDogumTar").val().trim() == "" ? reject("Lütfen Doğum Tarihi Giriniz") : ""
+
+                $("#kullaniciBilgisi-Cinsiyet input[type='radio']:checked").val() == "" ? reject("Lütfen Cinsiyet giriniz") : ""
+
+                /*Validation*/
+                resolve();
+            });
+            promise.catch(function (err) {
+                toastr.error(err);
+            })
+            promise.then(function (data) {
+                toastr.success("Kaydedildi");
+                //ajax
+            });
+        });
+
+        $('#iletisimBilgisiKaydet').click(function () {
+            var promise = new Promise(function (resolve, reject) {
+
+                $("#iletisimBilgisiIl").val().trim() == "" ? reject("Lütfen İl Giriniz") : ""
+
+                $("#iletisimBilgisiUlke").val().trim() == "" ? reject("Lütfen Ulke Giriniz") : ""
+
+                $("#iletisimBilgisiPostaKodu").val().trim() == "" ? reject("Lütfen Posta Kodu Giriniz") : ""
+
+                $("#iletisimBilgisiAdres").val().trim() == "" ? reject("Lütfen İletişim Bilgisi Giriniz") : ""
+
+                resolve();
+            });
+            promise.catch(function (err) {
+                toastr.error(err);
+            })
+            promise.then(function (data) {
+                toastr.success("Kaydedildi");
+                //ajax
+            });
+        });
+
+        $('#sirketBilgisiKaydet').click(function () {
+            var promise = new Promise(function (resolve, reject) {
+
+                $("#sireketBilgiSirketUnvani").val().trim() == "" ? reject("Lütfen Şirket Ünvanı Giriniz") : ""
+
+                $("#sireketBilgiVergiDairesi").val().trim() == "" ? reject("Lütfen Vergi Dairesi Giriniz") : ""
+
+                $("#sireketBilgiVergiNo").val().trim() == "" ? reject("Lütfen Vergi Numarası Giriniz") : ""
+
+                $("#sireketBilgiIl").val().trim() == "" ? reject("Lütfen İl Giriniz") : ""
+
+                $("#sireketBilgiIlce").val().trim() == "" ? reject("Lütfen İlçe Giriniz") : ""
+
+                $("#sireketBilgiPostaKodu").val().trim() == "" ? reject("Lütfen Posta Kodu Giriniz") : ""
+
+                $("#sireketBilgiAdres").val().trim() == "" ? reject("Lütfen Adres Giriniz") : ""
+
+                resolve();
+            });
+            promise.catch(function (err) {
+                toastr.error(err);
+            })
+            promise.then(function (data) {
+                toastr.success("Kaydedildi");
+                //ajax
+            });
+        });
+
+        $('#ayarlarKayedet').click(function () {
+            var promise = new Promise(function (resolve, reject) {
+
+                $("#sifreDegistirEski").val().trim() == "" ? reject("Lütfen Eski Şifreyi Giriniz") :
+                    $("#sifreDegistirYeni").val().trim() == "" ? reject("Lütfen Yeni Şifreyi Giriniz") :
+                        $("#sifreDegistirEski").val() != $("#sifreDegistirYeni").val() ? reject("İki şifre Aynı Değil !") : ""
+
+                resolve();
+            });
+            promise.catch(function (err) {
+                toastr.error(err);
+            })
+            promise.then(function (data) {
+                toastr.success("Kaydedildi");
+                //ajax
+            });
+        });
+    </script>
+    @*end: Validation Kontrolleri*@
+
+}
 
 
 

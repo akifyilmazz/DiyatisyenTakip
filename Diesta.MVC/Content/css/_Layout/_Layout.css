@@ -10,3 +10,11 @@
     font-size: 2rem;
     vertical-align: text-bottom;
 }
+#sidenav-collapse-main {
+    margin: 25% 0 0 0;
+}
+.navbar-vertical .navbar-nav .nav-link > i {
+    font-size: 1.5375rem;
+    line-height: 2rem;
+    min-width: 3rem;
+}
